@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/07/17/QCQI Lesson DAY1/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
-<meta property="og:updated_time" content="2018-07-17T13:36:09.789Z">
+<meta property="og:updated_time" content="2018-07-17T13:45:56.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY1">
 <meta name="twitter:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
@@ -216,7 +216,7 @@ Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</s
 <p>If {<span class="math inline">\(|i\rangle||i\rangle\in\{1,...,n\}\)</span>} is orthonormal basis</p>
 <p>then <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I.\)</span></p>
 <p>Proof:</p>
-<p>$|x, |x=_{i=1}<sup>nx_i|i=<em>{i=1}^ni|x|i=</em>{i=1}</sup>n|ii|x$</p>
+<p><span class="math inline">\(\forall |x\rangle, |x\rangle=\sum\limits_{i=1}^nx_i|i\rangle=\sum\limits_{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle\)</span></p>
 <p>所以 <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I\)</span>。</p>
 </blockquote>
 <p><span class="math inline">\(I=|\lambda_+\rangle\langle\lambda_+|+|\lambda_-\rangle\langle\lambda_-|\)</span></p>
@@ -240,18 +240,18 @@ Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</s
 <li><h4 id="section-3">2.15</h4>
 <p>应用2.14的结果可得。</p></li>
 <li><h4 id="section-4">2.18 &amp; 2.22</h4>
-<p>对于表示一个向量x，在量子计算中尽量改为使用 $ |v$。</p></li>
+<p>对于表示一个向量x，在量子计算中尽量改为使用 <span class="math inline">\(|v\rangle\)</span>。</p></li>
 <li><h4 id="section-5">2.20</h4>
 <p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p></li>
 </ul>
 <blockquote>
 <p>预备知识：对同一个空间中的两组标准正交基</p>
-<p>$ {|v_i:i=1,…n} $ 和 $ {|w_j:j=1,…n} $</p>
-<p>$ |v_i$ 与 $ |w_j$通过一个 $ U=_{i=1}^n|ii| $ 关联。</p>
-<p>即 $ U|v_R=|w_R$</p>
-<p>注：$ U^U=I $</p>
+<p><span class="math inline">\(\{|v_i\rangle:i=1,...n\}\)</span> 和 <span class="math inline">\(\{|w_j\rangle:j=1,...n\}\)</span></p>
+<p><span class="math inline">\(|v_i\rangle\)</span> 与 <span class="math inline">\(|w_j\rangle\)</span>通过一个 <span class="math inline">\(U=\sum\limits_{i=1}^n|i\rangle\langle i|\)</span> 关联。</p>
+<p>即 <span class="math inline">\(U|v_R\rangle=|w_R\rangle\)</span></p>
+<p>注：<span class="math inline">\(U^\dagger U=I\)</span></p>
 </blockquote>
-<p>注意： $ <em>{i,j}|ii|A</em>{ij}|jj|=<em>{i,j}IA</em>{ij}I=A $</p>
+<p>注意： <span class="math inline">\(\sum\limits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\limits_{i,j}IA_{ij}I=A\)</span></p>
 <p>所以：</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
@@ -266,17 +266,17 @@ A&#39;&#39;_{ij}&amp;=\langle w_i|A|w_j\rangle\\
 &amp;=(U^*A&#39;U^\top)_{ij}
 \end{split}
 \end{equation}\]</span></p>
-<p>$ A’’=U^*A’U^$</p>
-<p>令 $ V = U^* $</p>
-<p>则 $ A’’=VA’V^$</p>
+<p><span class="math inline">\(\Rightarrow A&#39;&#39;=U^*A&#39;U^\top\)</span></p>
+<p>令 <span class="math inline">\(V = U^*\)</span></p>
+<p>则 <span class="math inline">\(A&#39;&#39;=VA&#39;V^\dagger\)</span></p>
 <p>还可以对结果进行验证，两个矩阵可表示为</p>
-<p>$ A’’=<em>{i,j}w_i|A|w_j|ij| A’=</em>{i,j}v_i|A|v_j|ij| $</p>
+<p><span class="math inline">\(A&#39;&#39;=\sum\limits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A&#39;=\sum\limits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|\)</span></p>
 <ul>
 <li><h4 id="section-6">2.26</h4>
-$ H^{n} $ 的一个用途：</li>
+<span class="math inline">\(H^{\oplus n}\)</span> 的一个用途：</li>
 </ul>
-<p>$ |+^{n}=_{x=1}<sup>{2</sup>n-1}|x$ 这个态的制备很简单，只要 1 个 <span class="math inline">\(H^{\otimes n}\)</span></p>
-<p>$ |0<sup>{n}|+</sup>{n} $</p>
+<p><span class="math inline">\(|+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle\)</span> 这个态的制备很简单，只要 1 个 <span class="math inline">\(H^{\otimes n}\)</span></p>
+<p><span class="math inline">\(|0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n}\)</span></p>
 <p>这将所有基态关联在了一起。 因为它涉及了所有可能的输入，很多实验的输入第一步都会做这个。</p>
 <ul>
 <li><h4 id="section-7">2.33</h4>
@@ -292,9 +292,9 @@ H^{\otimes n+1}&amp;=\displaystyle\frac{1}{\sqrt{2}}&amp;((-1)^{x_0y_0}|x_0\rang
 &amp;&amp;+(-1)^{x_1y_1}|x_1\rangle\langle y_1|)\ H^{\otimes n}
 \end{split}
 \end{equation}\]</span></p>
-<p>易见 $ x_0y_0=x_0y_1=x_1y_0=0x_1y_1=1 $</p>
-<p>令 $ x’,y’ $</p>
-<p>则有 $ H^{n+1}=_{x’,y’}(-1)^{x’y’}|x’y’| $</p>
+<p>易见 <span class="math inline">\(x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1\)</span></p>
+<p>令 <span class="math inline">\(x&#39;,y&#39;\)</span></p>
+<p>则有 <span class="math inline">\(H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x&#39;,y&#39;}(-1)^{x&#39;y&#39;}|x&#39;\rangle\langle y&#39;|\)</span></p>
 <ul>
 <li><h4 id="section-8">2.34</h4>
 不用解特征方程，通过观察 <span class="math display">\[\begin{equation}
@@ -312,11 +312,11 @@ M=
 \end{split}
 \end{equation}\]</span></li>
 </ul>
-<p>$ =|++|+|--| $</p>
-<p>$ =|++| $</p>
+<p><span class="math inline">\(\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|\)</span></p>
+<p><span class="math inline">\(\log{M}=\log{7}|+\rangle\langle+|\)</span></p>
 <ul>
 <li><h4 id="section-9">2.35</h4>
-通过特征值为 <span class="math inline">\(\pm 1\)</span> 得到 $ =|<em>+</em>+|-|<em>-</em>-| $ 则</li>
+通过特征值为 <span class="math inline">\(\pm 1\)</span> 得到 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span> 则</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
@@ -326,7 +326,7 @@ M=
 \end{equation}\]</span></p>
 <ul>
 <li><h4 id="section-10">2.37</h4>
-注意：AB不能直接交换，所以添加一个辅助的 $ |jj| $。</li>
+注意：AB不能直接交换，所以添加一个辅助的 <span class="math inline">\(|j\rangle\langle j|\)</span>。</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
@@ -338,10 +338,10 @@ tr(AB)&amp;=\sum\limits_{i}\langle i|AB|i\rangle\\
 \end{equation}\]</span></p>
 <ul>
 <li><h4 id="section-11">2.40</h4>
-$ X,Y,Z $ 一些有趣的性质。</li>
+<span class="math inline">\(X,Y,Z\)</span> 一些有趣的性质。</li>
 </ul>
-<p>$ XY=iZYZ=iXZX=iY $</p>
-<p>$ ZYZ=-YXZX=-ZYXY=ZXZ=-X $</p>
+<p><span class="math inline">\(XY=iZ\quad YZ=iX\quad ZX=iY\)</span></p>
+<p><span class="math inline">\(ZYZ=-Y\quad XZX=-Z\quad YXY=ZXZ=-X\)</span></p>
 <p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
 <ul>
 <li><h4 id="section-12">2.49</h4>
