@@ -151,19 +151,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-20180717" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-QCQI Lesson DAY1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/20180717/">QCQI Lesson DAY1</a>
+      <a class="article-title" href="/2018/07/17/QCQI Lesson DAY1/">QCQI Lesson DAY1</a>
     </h1>
   
 
         
-        <a href="/2018/07/17/20180717/" class="archive-article-date">
+        <a href="/2018/07/17/QCQI Lesson DAY1/" class="archive-article-date">
   	<time datetime="2018-07-17T03:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
 </a>
         
@@ -269,7 +269,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/20180717/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/17/QCQI Lesson DAY1/">展开全文 >></a>
         </p>
       
 
@@ -531,139 +531,6 @@ R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\b
 
 
   
-    <article id="post-QCQI Lesson DAY1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><p>-</p>
-<h4 id="2-9"><a href="#2-9" class="headerlink" title="2.9"></a>2.9</h4><p>Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维<br>$$| \quad \rangle$$<br>所以外积<br>$$| \quad \rangle\langle \quad |$$<br>的结果是 n $\times$ n 的矩阵，<br>而内积<br>$$\langle\quad | \quad \rangle$$<br>的结果是 1 $\times$ 1 的矩阵，即一个数（复数）。</p>
-<p>对于外积$|0\rangle\langle0|$，它代表的是矩阵<br>$$<br>  \left[<br>  \begin{matrix}<br>   a<em>{00} &amp; a</em>{01} \<br>   a<em>{10} &amp; a</em>{11}<br>  \end{matrix}<br>  \right]<br>$$<br>中，$a<em>{00}=1$。<br>所以，量子计算中，矩阵都可表示为<br>$$A=\sum\limits</em>{ij}a_{ij}|i\rangle\langle j|\ 。$$</p>
-<p>-</p>
-<h4 id="2-11"><a href="#2-11" class="headerlink" title="2.11"></a>2.11</h4><p>求特征值(eigenvalue)和特征向量(eigenvector)的方法有：</p>
-<ol>
-<li>解特征方程。</li>
-<li>在量子计算中，通过观察我们可以发现，<br>$$ X=|0\rangle\langle1|+|1\rangle\langle0| 。$$<br>而且<br>$$ X|0\rangle=|0\rangle\langle1|0\rangle+|1\rangle\langle0|0\rangle=|1\rangle $$<br>类似地，$X|1\rangle=|0\rangle$<br>所以有，<br>$$ X(|0\rangle+|1\rangle)=|0\rangle+|1\rangle $$<br>$$ X(|0\rangle-|1\rangle)=-(|0\rangle-|1\rangle) $$<br>再对$(|0\rangle+|1\rangle)$与$(|0\rangle-|1\rangle)$做归一化，即乘以$\frac{1}{\sqrt2}$。<br>那么得到 $X$ 其实是<br>$$ | + \rangle \longrightarrow | + \rangle $$<br>$$ | - \rangle \longrightarrow -| - \rangle $$<br>那么参照之前对$|0\rangle$与$|1\rangle$的运算<br>$$ X=|+\rangle\langle+|-|-\rangle\langle-| $$<br>而对于 $Y$ 类似可得<br>$$ Y(|0\rangle+i|1\rangle)=|0\rangle+i|1\rangle $$<br>$$ Y(|0\rangle-i|1\rangle)=-(|0\rangle-i|1\rangle) $$</li>
-</ol>
-<p>$X,Y,Z$ 的特征值都为 $\pm1$。<br>因为对于 $A\in{X,Y,Z}$<br>$$ tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1 $$ </p>
-<p>($ 对A可以做特征分解 A=U\Sigma U^+ $)</p>
-<p>又因为 $ \lambda_1+\lambda_2 = 0 \Rightarrow |\lambda_1|=|\lambda_2|=1 $</p>
-<p>另外，注意 $ \widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in{X,Y,Z}}n_i\sigma_i $ </p>
-<p>(注：$X,Y,Z$ 是反可交换的(anti-commutative)即 $ XY=-YX $ 等)</p>
-<p>其中，$ n_x^2+n_y^2+n_z^2=1 $</p>
-<p>所以，可以得到<br>$$\begin{equation}<br>\begin{split}<br>(\widehat{n}\cdot\widehat{\sigma})^2&amp;=(n_xX+n_yY+n_zZ)(n_xX+n_yY+n_zZ)\<br>&amp;=(n_x^2+n_y^2+n_z^2)I\<br>&amp;=I<br>\end{split}<br>\end{equation}$$</p>
-<p>所以对于 $ \widehat{n}\cdot\widehat{\sigma}=|\lambda<em>+\rangle\langle\lambda</em>+|-|\lambda<em>-\rangle\langle\lambda</em>-| $</p>
-<blockquote>
-<p>额外插入：一组标准正交基 $ |i\rangle $ 的重要性质</p>
-<p>If {$ |i\rangle||i\rangle\in{1,…,n} $} is orthonormal basis</p>
-<p>then $ \sum\limits_{i=1}^n|i\rangle\langle i|=I. $</p>
-<p>Proof:</p>
-<p>$ \forall |x\rangle, |x\rangle=\sum\limits_{i=1}^nx<em>i|i\rangle=\sum\limits</em>{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle $</p>
-<p>所以 $ \sum\limits_{i=1}^n|i\rangle\langle i|=I$。</p>
-</blockquote>
-<p>$ I=|\lambda<em>+\rangle\langle\lambda</em>+|+|\lambda<em>-\rangle\langle\lambda</em>-| $</p>
-<p>$ |\lambda<em>+\rangle\langle\lambda</em>+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda<em>-\rangle\langle\lambda</em>-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2} $</p>
-<p>-</p>
-<h4 id="2-13"><a href="#2-13" class="headerlink" title="2.13"></a>2.13</h4><p>记号的作用：如 $ |w\underline{\rangle|}v\rangle\langle v| $ (1 对应 $n$ 不能运算)</p>
-<p>应为$ |w\rangle\langle v| $ (注意：$ |w\rangle，<br>\ |v\rangle $维度可以不同)</p>
-<p>Proof</p>
-<p>$ \forall A,\ \exists A^+,\ \forall |x\rangle,|y\rangle,\ (A^dagger|x\rangle,|y\rangle)=(|x\rangle,A|y\rangle) $</p>
-<p>$$\begin{equation}<br>\begin{split}<br>((|w\rangle\langle v|)^\dagger|x\rangle,|y\rangle)&amp;=(|v\rangle\underline{\langle w||x\rangle},|y\rangle)\<br>&amp;=\langle w|x\rangle^*\langle v|y\rangle\<br>&amp;=\langle x|w\rangle\langle v|y\rangle<br>\end{split}<br>\end{equation}$$<br>注意：内积可取出，但要共轭。</p>
-<p>-</p>
-<h4 id="2-15"><a href="#2-15" class="headerlink" title="2.15"></a>2.15</h4><p>应用2.14的结果可得。</p>
-<p>-</p>
-<h4 id="2-18-amp-2-22"><a href="#2-18-amp-2-22" class="headerlink" title="2.18 &amp; 2.22"></a>2.18 &amp; 2.22</h4><p>对于表示一个向量x，在量子计算中尽量改为使用 $ |v\rangle $。</p>
-<p>-</p>
-<h4 id="2-20"><a href="#2-20" class="headerlink" title="2.20"></a>2.20</h4><p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p>
-<blockquote>
-<p>预备知识：对同一个空间中的两组标准正交基 </p>
-<p>$ {|v_i\rangle:i=1,…n} $ 和 $ {|w_j\rangle:j=1,…n} $</p>
-<p>$ |v_i\rangle $ 与 $ |w<em>j\rangle $通过一个 $ U=\sum\limits</em>{i=1}^n|i\rangle\langle i| $ 关联。</p>
-<p>即 $ U|v_R\rangle=|w_R\rangle $</p>
-<p>注：$ U^\dagger U=I $</p>
-</blockquote>
-<p>注意：$ \sum\limits<em>{i,j}|i\rangle\langle i|A</em>{ij}|j\rangle\langle j|=\sum\limits<em>{i,j}IA</em>{ij}I=A $</p>
-<p>所以：</p>
-<p>$$\begin{equation}<br>\begin{split}<br>A’_{ij}&amp;=\langle v_i|A|v<em>j\rangle\<br>A&amp;=\sum\limits</em>{i,j}|v<em>i\rangle A’</em>{ij}\langle v<em>j|\<br>&amp;=\sum\limits</em>{i,j}A’_{ij}|v_i\rangle\langle v<em>j|\<br>A’’</em>{ij}&amp;=\langle w_i|A|w_j\rangle\<br>&amp;=\langle w<em>i|\sum\limits</em>{k,l}|v<em>k\rangle A’</em>{kl}\langle v_l||w<em>j\rangle\<br>&amp;=\sum\limits</em>{k,l}A’_{kl}\langle w_i|v_k\rangle\langle v_l|w<em>j\rangle\/,Mfr<br>&amp;=\sum\limits</em>{k,l}A’<em>{kl}U^*</em>{ik}U<em>{jl}\<br>&amp;=\sum\limits</em>{k,l}U^<em><em>{ik}A’</em>{kl}U^\top_{lj}\<br>&amp;=(U^</em>A’U^\top)_{ij}<br>\end{split}<br>\end{equation}$$<br>$ \Rightarrow A’’=U^*A’U^\top $</p>
-<p>令 $ V = U^* $</p>
-<p>则 $ A’’=VA’V^\dagger $</p>
-<p>还可以对结果进行验证，两个矩阵可表示为</p>
-<p>$ A’’=\sum\limits_{i,j}\langle w_i|A|w<em>j\rangle|i\rangle\langle j| \quad A’=\sum\limits</em>{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j| $</p>
-<p>-</p>
-<h4 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h4><p>$ H^{\oplus n} $ 的一个用途：</p>
-<p>$ |+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle $<br>这个态的制备很简单，只要 1 个 $H^{\otimes n}$</p>
-<p>$ |0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n} $</p>
-<p>这将所有基态关联在了一起。<br>因为它涉及了所有可能的输入，很多实验的输入第一步都会做这个。</p>
-<p>-</p>
-<h4 id="2-33"><a href="#2-33" class="headerlink" title="2.33"></a>2.33</h4><p>使用数学归纳法(Mathematical Induction, MI)：</p>
-<p>Suppose</p>
-<p>$$ H^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x,y}(-1)^{xy}|x\rangle\langle y| $$</p>
-<p>$$\begin{equation}<br>\begin{split}<br>H^{\otimes n+1}&amp;=\displaystyle\frac{1}{\sqrt{2}}&amp;((-1)^{x_0y_0}|x_0\rangle\langle y_0|\<br>&amp;&amp;+(-1)^{x_0y_1}|x_0\rangle\langle y_1|\<br>&amp;&amp;+(-1)^{x_1y_0}|x_1\rangle\langle y_0|\<br>&amp;&amp;+(-1)^{x_1y_1}|x_1\rangle\langle y_1|)\ H^{\otimes n}<br>\end{split}<br>\end{equation}$$</p>
-<p>易见 $ x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1 $</p>
-<p>令 $ x’,y’ $</p>
-<p>则有 $ H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x’,y’}(-1)^{x’y’}|x’\rangle\langle y’| $</p>
-<p>-</p>
-<h4 id="2-34"><a href="#2-34" class="headerlink" title="2.34"></a>2.34</h4><p>不用解特征方程，通过观察<br>$$\begin{equation}<br>\begin{split}<br>M=<br>  \left[<br>  \begin{matrix}<br>   4 &amp; 3 \<br>   3 &amp; 4<br>  \end{matrix}<br>  \right]<br>  &amp;=4I+3X\<br>  &amp;=4(|+\rangle\langle+|+|-\rangle\langle-|)+3(|+\rangle\langle+|-|-\rangle\langle-|)\<br>  &amp;=7|+\rangle\langle+|+|-\rangle\langle-|<br>\end{split}<br>\end{equation}$$</p>
-<p>$ \sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-| $</p>
-<p>$ \log{M}=\log{7}|+\rangle\langle+| $</p>
-<p>-</p>
-<h4 id="2-35"><a href="#2-35" class="headerlink" title="2.35"></a>2.35</h4><p>通过特征值为 $\pm 1$ 得到<br>$ \widehat{n}\cdot\widehat{\sigma}=|\lambda<em>+\rangle\langle\lambda</em>+|-|\lambda<em>-\rangle\langle\lambda</em>-| $<br>则</p>
-<p>$$\begin{equation}<br>\begin{split}<br>|\mu\rangle&amp;=e^{i\theta}|\lambda<em>+\rangle\langle\lambda</em>+|+e^{-i\theta}|\lambda<em>-\rangle\langle\lambda</em>-|\<br>&amp;=\cos{\theta}I+i\sin{\theta}\widehat{n}\cdot\widehat{\sigma}<br>\end{split}<br>\end{equation}$$</p>
-<p>-</p>
-<h4 id="2-37"><a href="#2-37" class="headerlink" title="2.37"></a>2.37</h4><p>注意：AB不能直接交换，所以添加一个辅助的 $ |j\rangle\langle j| $。</p>
-<p>$$\begin{equation}<br>\begin{split}<br>tr(AB)&amp;=\sum\limits<em>{i}\langle i|AB|i\rangle\<br>&amp;=\sum\limits</em>{i,j}\langle i|A\underline{|j\rangle\langle j|}B|i\rangle\<br>&amp;=\sum\limits<em>{i,j}\langle j|B|i\rangle\langle j|A|j\rangle\<br>&amp;=\sum\limits</em>{j}\langle j|BA|j\rangle<br>\end{split}<br>\end{equation}$$</p>
-<p>-</p>
-<h4 id="2-40"><a href="#2-40" class="headerlink" title="2.40"></a>2.40</h4><p>$ X,Y,Z $ 一些有趣的性质。</p>
-<p>$ XY=iZ\quad YZ=iX\quad ZX=iY $</p>
-<p>$ ZYZ=-Y\quad XZX=-Z\quad YXY=ZXZ=-X $</p>
-<p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
-<p>-</p>
-<h4 id="2-49"><a href="#2-49" class="headerlink" title="2.49"></a>2.49</h4><p>目标是拆出一个半正定矩阵(Positive semi-definite matrix)。</p>
-<p>$$\begin{equation}<br>\begin{split}<br>A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda<em>i|\cdot|i\rangle\langle i|\<br>&amp;=\sum\limits</em>{i}\displaystyle\frac{\lambda_i}{|\lambda<em>i|}\cdot|i\rangle\langle i|\cdot\sum\limits</em>{j}|\lambda_j|\cdot|j\rangle\langle j|<br>\end{split}<br>\end{equation}$$</p>
-<p>因为 $|\lambda_j|\ge0$，所以得到的是一个酉矩阵乘一个半正定矩阵。</p>
-<p>Recall that: Exercise 2.18 $|\lambda_i|=1$.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/QCQI Lesson DAY1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-First-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -671,7 +538,7 @@ R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\b
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/01/First-Post/">First Post</a>
+      <a class="article-title" href="/2018/07/01/First-Post/">在macOS上编写java调用Matlab的函数时的一个报错</a>
     </h1>
   
 
@@ -684,7 +551,8 @@ R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\b
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="在macOS上编写java调用Matlab的函数时的一个报错"><a href="#在macOS上编写java调用Matlab的函数时的一个报错" class="headerlink" title="在macOS上编写java调用Matlab的函数时的一个报错"></a>在macOS上编写java调用Matlab的函数时的一个报错</h4><p>IDE：Eclipse</p>
+        <!-- #### 在macOS上编写java调用Matlab的函数时的一个报错 -->
+<p>IDE：Eclipse</p>
 <p>Matlab版本：R2017a</p>
 <p>报错信息：</p>
 <p>Exception in thread “main”<br>java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.<br>This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or<br>the current path configuration, or a mismatch with the architecture of the Java interpreter on the path.<br>MATLAB Runtime version this component is attempting to use: 9.2.<br>Java interpreter architecture: maci64.</p>
