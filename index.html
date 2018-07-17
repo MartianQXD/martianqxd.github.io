@@ -171,9 +171,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="chapter-2-exercise">### Chapter 2 Exercise</h2>
-<h4 id="section">2.9</h4>
-<p>Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</p>
+        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
+<ul>
+<li><h4 id="section">2.9</h4>
+Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</li>
+</ul>
 <p>对于外积<span class="math inline">\(|0\rangle\langle0|\)</span>，它代表的是矩阵 <span class="math display">\[
   \left[
   \begin{matrix}
@@ -181,13 +183,17 @@
    a_{10} &amp; a_{11}
   \end{matrix}
   \right]
-\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span> — #### 2.11 求特征值(eigenvalue)和特征向量(eigenvector)的方法有：</p>
+\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span></p>
+<ul>
+<li><h4 id="section-1">2.11</h4>
+求特征值(eigenvalue)和特征向量(eigenvector)的方法有：</li>
+</ul>
 <ol type="1">
 <li>解特征方程。</li>
 <li>在量子计算中，通过观察我们可以发现， <span class="math display">\[ X=|0\rangle\langle1|+|1\rangle\langle0| 。\]</span> 而且 <span class="math display">\[ X|0\rangle=|0\rangle\langle1|0\rangle+|1\rangle\langle0|0\rangle=|1\rangle \]</span> 类似地，<span class="math inline">\(X|1\rangle=|0\rangle\)</span> 所以有， <span class="math display">\[ X(|0\rangle+|1\rangle)=|0\rangle+|1\rangle \]</span> <span class="math display">\[ X(|0\rangle-|1\rangle)=-(|0\rangle-|1\rangle) \]</span> 再对<span class="math inline">\((|0\rangle+|1\rangle)\)</span>与<span class="math inline">\((|0\rangle-|1\rangle)\)</span>做归一化，即乘以<span class="math inline">\(\frac{1}{\sqrt2}\)</span>。 那么得到 <span class="math inline">\(X\)</span> 其实是 <span class="math display">\[ | + \rangle \longrightarrow | + \rangle \]</span> <span class="math display">\[ | - \rangle \longrightarrow -| - \rangle \]</span> 那么参照之前对<span class="math inline">\(|0\rangle\)</span>与<span class="math inline">\(|1\rangle\)</span>的运算 <span class="math display">\[ X=|+\rangle\langle+|-|-\rangle\langle-| \]</span> 而对于 <span class="math inline">\(Y\)</span> 类似可得 <span class="math display">\[ Y(|0\rangle+i|1\rangle)=|0\rangle+i|1\rangle \]</span> <span class="math display">\[ Y(|0\rangle-i|1\rangle)=-(|0\rangle-i|1\rangle) \]</span></li>
 </ol>
 <p><span class="math inline">\(X,Y,Z\)</span> 的特征值都为 <span class="math inline">\(\pm1\)</span>。 因为对于 <span class="math inline">\(A\in\{X,Y,Z\}\)</span> <span class="math display">\[ tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1 \]</span></p>
-<p>($ 对A可以做特征分解 A=UU^+ $)</p>
+<p>(对 <span class="math inline">\(A\)</span> 可以做特征分解 $ A=UU^+ $)</p>
 <p>又因为 $ _1+_2 = 0 |_1|=|_2|=1 $</p>
 <p>另外，注意 $ =_{i{X,Y,Z}}n_i_i $</p>
 <p>(注：<span class="math inline">\(X,Y,Z\)</span> 是反可交换的(anti-commutative)即 $ XY=-YX $ 等)</p>
@@ -212,9 +218,9 @@
 <p>所以 $ _{i=1}^n|ii|=I$。</p>
 </blockquote>
 <p>$ I=|<em>+</em>+|+|<em>-</em>-| $</p>
-<p>$ |<em>+</em>+|= |<em>-</em>-|= $</p>
+<p>$ |<em>+ </em>+|= |<em>-</em>-|= $</p>
 <ul>
-<li><h4 id="section-1">2.13</h4>
+<li><h4 id="section-2">2.13</h4>
 记号的作用：如 $ |wvv| $ (1 对应 <span class="math inline">\(n\)</span> 不能运算)</li>
 </ul>
 <p>应为$ |wv| $ (注意：$ |w，  |v$维度可以不同)</p>
@@ -229,11 +235,11 @@
 \end{equation}\]</span></p>
 <p>注意：内积可取出，但要共轭。</p>
 <ul>
-<li><h4 id="section-2">2.15</h4>
+<li><h4 id="section-3">2.15</h4>
 <p>应用2.14的结果可得。</p></li>
-<li><h4 id="section-3">2.18 &amp; 2.22</h4>
+<li><h4 id="section-4">2.18 &amp; 2.22</h4>
 <p>对于表示一个向量x，在量子计算中尽量改为使用 $ |v$。</p></li>
-<li><h4 id="section-4">2.20</h4>
+<li><h4 id="section-5">2.20</h4>
 <p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p></li>
 </ul>
 <blockquote>
@@ -264,14 +270,14 @@ A&#39;&#39;_{ij}&amp;=\langle w_i|A|w_j\rangle\\
 <p>还可以对结果进行验证，两个矩阵可表示为</p>
 <p>$ A’’=<em>{i,j}w_i|A|w_j|ij| A’=</em>{i,j}v_i|A|v_j|ij| $</p>
 <ul>
-<li><h4 id="section-5">2.26</h4>
+<li><h4 id="section-6">2.26</h4>
 $ H^{n} $ 的一个用途：</li>
 </ul>
 <p>$ |+^{n}=_{x=1}<sup>{2</sup>n-1}|x$ 这个态的制备很简单，只要 1 个 <span class="math inline">\(H^{\otimes n}\)</span></p>
 <p>$ |0<sup>{n}|+</sup>{n} $</p>
 <p>这将所有基态关联在了一起。 因为它涉及了所有可能的输入，很多实验的输入第一步都会做这个。</p>
 <ul>
-<li><h4 id="section-6">2.33</h4>
+<li><h4 id="section-7">2.33</h4>
 使用数学归纳法(Mathematical Induction, MI)：</li>
 </ul>
 <p>Suppose</p>
@@ -288,7 +294,7 @@ H^{\otimes n+1}&amp;=\displaystyle\frac{1}{\sqrt{2}}&amp;((-1)^{x_0y_0}|x_0\rang
 <p>令 $ x’,y’ $</p>
 <p>则有 $ H^{n+1}=_{x’,y’}(-1)^{x’y’}|x’y’| $</p>
 <ul>
-<li><h4 id="section-7">2.34</h4>
+<li><h4 id="section-8">2.34</h4>
 不用解特征方程，通过观察 <span class="math display">\[\begin{equation}
 \begin{split}
 M=
@@ -307,7 +313,7 @@ M=
 <p>$ =|++|+|--| $</p>
 <p>$ =|++| $</p>
 <ul>
-<li><h4 id="section-8">2.35</h4>
+<li><h4 id="section-9">2.35</h4>
 通过特征值为 <span class="math inline">\(\pm 1\)</span> 得到 $ =|<em>+</em>+|-|<em>-</em>-| $ 则</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
@@ -317,7 +323,7 @@ M=
 \end{split}
 \end{equation}\]</span></p>
 <ul>
-<li><h4 id="section-9">2.37</h4>
+<li><h4 id="section-10">2.37</h4>
 注意：AB不能直接交换，所以添加一个辅助的 $ |jj| $。</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
@@ -329,14 +335,14 @@ tr(AB)&amp;=\sum\limits_{i}\langle i|AB|i\rangle\\
 \end{split}
 \end{equation}\]</span></p>
 <ul>
-<li><h4 id="section-10">2.40</h4>
+<li><h4 id="section-11">2.40</h4>
 $ X,Y,Z $ 一些有趣的性质。</li>
 </ul>
 <p>$ XY=iZYZ=iXZX=iY $</p>
 <p>$ ZYZ=-YXZX=-ZYXY=ZXZ=-X $</p>
 <p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
 <ul>
-<li><h4 id="section-11">2.49</h4>
+<li><h4 id="section-12">2.49</h4>
 目标是拆出一个半正定矩阵(Positive semi-definite matrix)。</li>
 </ul>
 <p><span class="math display">\[\begin{equation}
