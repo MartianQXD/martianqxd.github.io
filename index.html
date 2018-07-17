@@ -194,10 +194,10 @@ Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</s
 </ol>
 <p><span class="math inline">\(X,Y,Z\)</span> 的特征值都为 <span class="math inline">\(\pm1\)</span>。 因为对于 <span class="math inline">\(A\in\{X,Y,Z\}\)</span> <span class="math display">\[ tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1 \]</span></p>
 <p>(对 <span class="math inline">\(A\)</span> 可以做特征分解 $ A=UU^+ $)</p>
-<p>又因为 $ _1+_2 = 0 |_1|=|_2|=1 $</p>
-<p>另外，注意 $ =_{i{X,Y,Z}}n_i_i $</p>
-<p>(注：<span class="math inline">\(X,Y,Z\)</span> 是反可交换的(anti-commutative)即 $ XY=-YX $ 等)</p>
-<p>其中， $ n_x<sup>2+n_y</sup>2+n_z^2=1 $</p>
+<p>又因为 <span class="math inline">\(\lambda_1+\lambda_2 = 0 \Rightarrow |\lambda_1|=|\lambda_2|=1\)</span></p>
+<p>另外，注意 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in\{X,Y,Z\}}n_i\sigma_i\)</span></p>
+<p>(注：<span class="math inline">\(X,Y,Z\)</span> 是反可交换的(anti-commutative)即 <span class="math inline">\(XY=-YX\)</span> 等)</p>
+<p>其中， <span class="math inline">\(n_x^2+n_y^2+n_z^2=1\)</span></p>
 <p>所以，可以得到</p>
 <p><span class="math display">\[
 \begin{equation}
@@ -208,24 +208,24 @@ Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</s
 \end{split}
 \end{equation}
 \]</span></p>
-<p>所以对于 $ =|<em>+</em>+|-|<em>-</em>-| $</p>
+<p>所以对于 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span></p>
 <blockquote>
-<p>额外插入：一组标准正交基 $ |i$ 的重要性质</p>
-<p>If {$ |i||i{1,…,n} $} is orthonormal basis</p>
-<p>then $ _{i=1}^n|ii|=I. $</p>
+<p>额外插入：一组标准正交基 <span class="math inline">\(|i\rangle\)</span> 的重要性质</p>
+<p>If {<span class="math inline">\(|i\rangle||i\rangle\in\{1,...,n\}\)</span>} is orthonormal basis</p>
+<p>then <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I.\)</span></p>
 <p>Proof:</p>
-<p>$ |x, |x=_{i=1}<sup>nx_i|i=<em>{i=1}^ni|x|i=</em>{i=1}</sup>n|ii|x$</p>
-<p>所以 $ _{i=1}^n|ii|=I$。</p>
+<p>$|x, |x=_{i=1}<sup>nx_i|i=<em>{i=1}^ni|x|i=</em>{i=1}</sup>n|ii|x$</p>
+<p>所以 <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I\)</span>。</p>
 </blockquote>
-<p>$ I=|<em>+</em>+|+|<em>-</em>-| $</p>
-<p>$ |<em>+ </em>+|= |<em>-</em>-|= $</p>
+<p><span class="math inline">\(I=|\lambda_+\rangle\langle\lambda_+|+|\lambda_-\rangle\langle\lambda_-|\)</span></p>
+<p><span class="math inline">\(|\lambda_+ \rangle \langle \lambda_+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda_-\rangle\langle\lambda_-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2}\)</span></p>
 <ul>
 <li><h4 id="section-2">2.13</h4>
-记号的作用：如 $ |wvv| $ (1 对应 <span class="math inline">\(n\)</span> 不能运算)</li>
+记号的作用：如 <span class="math inline">\(|w\underline{\rangle|}v\rangle\langle v|\)</span> (1 对应 <span class="math inline">\(n\)</span> 不能运算)</li>
 </ul>
-<p>应为$ |wv| $ (注意：$ |w，  |v$维度可以不同)</p>
+<p>应为<span class="math inline">\(|w\rangle \langle v|\)</span> (注意：<span class="math inline">\(|w\rangle， \ |v\rangle\)</span>维度可以不同)</p>
 <p>Proof</p>
-<p>$ A, A<sup>+, |x,|y, (A</sup>dagger|x,|y)=(|x,A|y) $</p>
+<p><span class="math inline">\(\forall A,\ \exists A^+,\ \forall |x\rangle,|y\rangle,\ (A^dagger|x\rangle,|y\rangle)=(|x\rangle,A|y\rangle)\)</span></p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 ((|w\rangle\langle v|)^\dagger|x\rangle,|y\rangle)&amp;=(|v\rangle\underline{\langle w||x\rangle},|y\rangle)\\
