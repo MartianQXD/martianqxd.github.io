@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hi, I&#39;m MartianQXD. Hello, World!</title>
+  <title>QCQI Lesson DAY1 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
+<meta name="keywords" content="quantum computation, quantum information">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QCQI Lesson DAY1">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/QCQI-Lesson-DAY1/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta property="og:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
+<meta property="og:updated_time" content="2018-07-20T08:05:04.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta name="twitter:title" content="QCQI Lesson DAY1">
+<meta name="twitter:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -149,452 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-QCQI-Lesson-DAY5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-QCQI-Lesson-DAY1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY5/">QCQI Lesson DAY5</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY5/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:03:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-2-4-习题分析">Chapter 2, 4 习题分析</h3>
-<ul>
-<li><h4 id="section">2.73</h4>
-预备条件：</li>
-</ul>
-<p><span class="math inline">\(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\)</span></p>
-<p><span class="math inline">\(Recall\ that\)</span></p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-  &amp;span\{|\widetilde{k}\rangle:k=1,...,k\}\\
-= &amp;span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
-= &amp;span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
-\end{split}
-\end{equation}\]</span> <span class="math display">\[ \sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|\]</span></p>
-<p>其中，<span class="math inline">\(span\{|\widetilde{k}\rangle\}\)</span>是最小的。若再在其中增加<span class="math inline">\(|\psi\rangle\)</span>，则<span class="math inline">\(|\psi\rangle\)</span>是<span class="math inline">\(\{|\widetilde{k}\rangle\}\)</span>的线性组合。(增加了冗余)</p>
-<p>理解问题：</p>
-<ol type="1">
-<li><p>$ |supp(),\  minimal essemble {p_i, |_i}, |{|_i}\ s.t. $</p></li>
-<li><p>$  such a minimal essemble p()=|<sup>{-1}|</sup>{-1}$</p></li>
-</ol>
-<p>思路：使用定理2.6的两个方向证明</p>
-<p>则对问题1) 使用定理2.6构造 <span class="math inline">\(u_{ij}\)</span></p>
-<p>密度算子 <span class="math inline">\(\rho\)</span> 有谱分解 <span class="math display">\[ \rho=\sum\limits_{i=1}^n\lambda_i|i\rangle\langle i|,\{|i\rangle\}\ are\ orthonormal \]</span></p>
-<p>目标构造 <span class="math inline">\(u_{ij}\)</span> ，使得</p>
-<p><span class="math display">\[ \sqrt{p}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle,\ |\psi\rangle\in\{|\psi_i\rangle\}\]</span></p>
-<p>因为 <span class="math inline">\(|\psi\rangle\)</span> 是 <span class="math inline">\(\rho\)</span> 的 support 中的任意 state，所以 <span class="math inline">\(|\psi\rangle\)</span> 有</p>
-<p><span class="math display">\[ \exists c_i\in\mathbb{C},\ |\psi\rangle=\sum\limits_{i=1}^n c_i|i\rangle, c_i=\langle i|\psi\rangle \]</span></p>
-<p>将 <span class="math inline">\(|\psi\rangle\)</span> 代入之前的式子</p>
-<p><span class="math display">\[ \sqrt{p}|\psi\rangle=\sum\limits_{i=1}^n \sqrt{p}c_i|i\rangle= \sum\limits_{i=1}^n \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i\sqrt{\lambda_i}|i\rangle\]</span></p>
-<p>易见</p>
-<p><span class="math display">\[ d_{i}\equiv \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i \]</span></p>
-<p>若 <span class="math inline">\(d_{i}\)</span> 是单位向量，则通过Gram-Schmidt正交化可以得到一组标准正交基，进而求得 <span class="math inline">\(u_{ij}\)</span>。</p>
-<blockquote>
-<p>题外话： Gilbert Strang在他的公开课里提到，对结果再做一步normalize是Schmidt对此公式的唯一贡献，然而这公式经常被称为“施密特正交化”。</p>
-</blockquote>
-<p>所以有</p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-\sum\limits_{i=1}^n|d_i|^2&amp;=\sum\limits_{i=1}^n\frac{p}{\lambda_i}c_i^*c_i\\
-  &amp; = \sum\limits_{i=1}^n\frac{p}{\lambda_i}\langle \psi|i\rangle\langle i|\psi\rangle\\
-  &amp; = \sum\limits_{i=1}^np\langle \psi|(\frac{1}{\lambda_i}|i\rangle\langle i|)|\psi\rangle\\
-  &amp; = 1
-\end{split}
-\end{equation}\]</span></p>
-<p>(这里其实已经可以看见有 <span class="math inline">\(\frac{1}{\lambda_i}|i\rangle\langle i|=\rho^{-1}\)</span>)</p>
-<p>构造 <span class="math inline">\(u_{ij}\)</span></p>
-<p><span class="math inline">\(\exists U=(u_{ij})_{ij=1}^n,\ u_{ij}=d_j,\ \forall j=1,...,n\\)</span></p>
-<p>s.t. Let <span class="math inline">\(| \widetilde{\psi_j} \rangle=\sum\limits_{k=1}^n u_{jk}\sqrt{\lambda_k}|k\rangle,\ j=2,...,n\)</span></p>
-<p><span class="math inline">\(|\widetilde{\psi}\rangle=\sum\limits_{k=1}^nu_{1k}\sqrt{\lambda_k}|k\rangle\)</span></p>
-<p>$ _{i=2}^n||+p||=\ essemble is  {p_i, |<em>i}</em>{i=2}^n{p, |} $</p>
-<p>通过等式</p>
-<p><span class="math inline">\(\sqrt{p_i}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda}|j\rangle\Rightarrow u_{ij}=\frac{\langle j|\sqrt{p_i}|\psi\rangle}{\sqrt{\lambda_i}}\)</span></p>
-<p>则对问题2)</p>
-<p>理解问题： 更一般化一点的描述，</p>
-<p><span class="math display">\[ \forall\ minimal\ essemble\ \{p_i,|\psi\rangle\}_{i=1}^n\\p(\psi_i)=\langle\psi_i|\rho^{-1}|\psi_i\rangle^{-1} \]</span></p>
-<p>使用定理2.6的另一个方向，已经有</p>
-<p><span class="math display">\[ \exists u_{ij},\ \sqrt{\lambda_i}|i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{p_j}|\psi_j\rangle \]</span></p>
-<p>注意：$ n, 1= <em>{j=1}^n |u</em>{ij}|^2$</p>
-<p>为了拿出 <span class="math inline">\(u_{ij}\)</span>, 改为</p>
-<p><span class="math display">\[ \sqrt{p_i}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle \]</span></p>
-<p>因为 $ |j$ 是标准正交的，所以</p>
-<p><span class="math display">\[ u_{ij}=\frac{\langle j|\sqrt{p_i}|\psi\rangle}{\sqrt{\lambda_i}} \]</span></p>
-<p>代入前面的式子</p>
-<p><span class="math display">\[\forall n,\ 1=\sum\limits_{j=1}^n |u_{ij}|^2=\sum\limits_{j=1}^n\frac{p_i\langle j|\psi_i\rangle\langle\psi_i|j\rangle}{\sqrt{\lambda_i}}\]</span></p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-p_i &amp;= \langle \psi_i|(\sum\limits_{j=1}^n\frac{1}{\lambda_j}|j\rangle\langle j|)|\psi_i\rangle
-    &amp;= \langle \psi_i|\rho^{-1}|\psi_i\rangle
-\end{split}
-\end{equation}\]</span></p>
-<ul>
-<li><h4 id="section-1">2.81</h4>
-理解问题：</li>
-</ul>
-<p>If $tr_R|AR_1AR_1|=tr_R|AR_2AR_2| $</p>
-<p>then <span class="math inline">\(\exists U\ |AR_1\rangle=(I \otimes U)|AR_2\rangle\)</span></p>
-<p>技巧：使用Schmidt分解</p>
-<p>方法1：</p>
-<p>$ |AR_1= _i_i|i_A|i_B$</p>
-<p>Let $ |AR_2= <em>{i=1,j=1}^{m,m’}u</em>{ij}|i_A|<em>j, m,m’n, u</em>{ij}$</p>
-<blockquote>
-<p>因为 $tr_R|AR_1AR_1|=tr_R|AR_2AR_2| $</p>
-</blockquote>
-<blockquote>
-<p><span class="math inline">\(\rho^A=\sum\limits_{i=1}^n\lambda_i^2|i_A\rangle\langle i_A|=\sum\limits_{i,i&#39;,j,j&#39;}^{m,m&#39;}u_{ij}u_{ij}^*|i_A\rangle\langle i&#39;_A|\langle\phi_{j&#39;}|\phi_j\rangle\)</span></p>
-</blockquote>
-<blockquote>
-<p>又因为 <span class="math inline">\(|i_A\rangle\)</span>, <span class="math inline">\(|\phi_j\rangle\)</span> 都是标准正交基</p>
-</blockquote>
-<blockquote>
-<p>$ i,i’, _{j=1}<sup>{m’}u_{ij}u_{ij}</sup>*=(UU^)<em>{ii’}=</em>{ii’}_{i}^2 $</p>
-</blockquote>
-<p>令 <span class="math inline">\(m=n\)</span></p>
-<p>则 <span class="math display">\[ |AR_2\rangle = \sum\limits_{i=1}^{n}\lambda_i|i_A\rangle(\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle) \]</span></p>
-<p>其中 <span class="math display">\[ |\Phi_i\rangle\equiv\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle \]</span></p>
-<p>证明存在 <span class="math inline">\(U\)</span> ，需要证明</p>
-<ol type="1">
-<li><p>$ m’=n $, 然而其实不用证明，因为定义时已有 $ i=1,…,n $ 无须$ m’=n $</p></li>
-<li><p>$ {<em>i}</em>{i=1}^n is orthonormal$ <span class="math display">\[\begin{equation}
-\begin{split}
-\langle\Phi_i|\Phi_j\rangle&amp;=\sum\limits_{k=1}^{m&#39;}\frac{u_{jk}u_{ik}^*}{\lambda_i\lambda_j}\\
-(引入上式)&amp;=\frac{(UU^\dagger)_{ji}}{\lambda_i\lambda_j}\\
-&amp;=\frac{\delta_{ij}\lambda_i^2}{\lambda_i^2}=\delta_{ij}
-\end{split}
-\end{equation}\]</span> 得证</p></li>
-</ol>
-<ul>
-<li>方法2：更简易的方法</li>
-</ul>
-<p>Let $ |AR_2= _{i=1}^{m}|i_A|$</p>
-<p>(<span class="math inline">\(|\widetilde{\phi_i}\rangle\)</span>无归一化)</p>
-<p><span class="math inline">\(\rho^A=\sum\limits_{i=1}^n\lambda_i^2|i_A\rangle\langle i_A|=\sum\limits_{i,j=1}^{m}\langle\widetilde{\phi_i}|\widetilde{\phi_j}\rangle|i_A\rangle\langle j_A|\)</span></p>
-<p>令 $ m=n $ 有 $ |=_{ij}_i^2 $</p>
-<p>再取 $ |_i= $ 代入</p>
-<p>则有 $ _i|<em>j=</em>{ij}$</p>
-<ul>
-<li><h4 id="problem-2.1">Problem 2.1</h4>
-因为已知 $  =|<em>+</em>+|-|<em>-</em>-| $，</li>
-</ul>
-<p>所以 <span class="math display">\[\begin{equation}
-\begin{split}
-f(\theta\overrightarrow{n} \cdot \overrightarrow{\sigma})&amp;=f(\theta)|\lambda_+\rangle\langle\lambda_+|+f(-\theta)|\lambda_-\rangle\langle\lambda_-|\\
-&amp;=f(\theta)(\frac{I+\overrightarrow{n}\cdot \overrightarrow{\sigma}}{2})+f(-\theta)(\frac{I-\overrightarrow{n}\cdot \overrightarrow{\sigma}}{2})\\
-&amp;=(\frac{f(\theta)+f(-\theta)}{2})I+(\frac{f(\theta)-f(-\theta)}{2})\overrightarrow{n}\cdot \overrightarrow{\sigma}
-\end{split}
-\end{equation}\]</span></p>
-<ul>
-<li><h4 id="problem-2.2">Problem 2.2</h4>
-$ |=_{i=1}^n_i|i_A|i_B$</li>
-</ul>
-<ol type="1">
-<li><p>$ _A $ 有谱分解：$ <em>A=</em>{i=1}^n_i|i_Ai_A| rank(_n)=n $</p></li>
-<li><p>If $ |=_{j=1}^n|_j|_j$</p></li>
-</ol>
-<p>已知 $ _i&gt;0, _i_i^2=1 $。</p>
-<p><span class="math inline">\(\rho_A=\sum\limits_{j,j&#39;=1}^n\langle\beta_j|\beta_{j&#39;}\rangle|\alpha_{j&#39;}\rangle\langle \alpha_j| \Rightarrow m\ge n\)</span></p>
-<ol start="3" type="1">
-<li>$ |=_{i=1}^n_i|i_A|i_B=|+|$</li>
-</ol>
-<p><span class="math inline">\(\Rightarrow Sch(\psi)\le Sch(\phi)+ Sch(\gamma)\)</span></p>
-<p>根据2) <span class="math inline">\(Sch(\psi)\ge Sch(\phi)\)</span></p>
-<p><span class="math inline">\(\Rightarrow Sch(\psi)-2Sch(\psi)\le Sch(\phi)+ Sch(\gamma)-2Sch(\phi)\)</span></p>
-<p><span class="math inline">\(\Rightarrow Sch(\psi)\ge Sch(\phi)- Sch(\gamma)\)</span></p>
-<p>对称的情况，同样可得 <span class="math inline">\(\Rightarrow Sch(\psi)\ge Sch(\gamma)- Sch(\phi)\)</span></p>
-<ul>
-<li><h4 id="problem-2.3">Problem 2.3</h4>
-利用 <span class="math inline">\(R^2=Q^2=S^2=T^2=I\)</span> 消项。</li>
-</ul>
-<p>$ (R+Q)<sup>2+(R-Q)</sup>2=4I $</p>
-<p>$ (R+Q)(R-Q)=R<sup>2-Q</sup>2+QR-RQ=[Q,R] $</p>
-<p>$ (R-Q)(R+Q)=R<sup>2-Q</sup>2+RQ-QR=-[Q,R] $</p>
-<p>则 <span class="math display">\[\begin{equation}
-\begin{split}
-左式&amp;=((R+Q)\otimes S+(R-Q)\otimes T)^2\\
-   &amp;=4I+[Q,R]\otimes ST+[Q,R]\otimes -TS\\
-   &amp;=4I+[Q,R]\otimes [S,T]
-\end{split}
-\end{equation}\]</span></p>
-<p>对 $ QRST$，令 $ M=QRST $，则有 <span class="math inline">\(M^\dagger M=I\)</span>。</p>
-<p>所以利用Cauchy–Schwarz不等式(Box 2.1)</p>
-<p><span class="math display">\[ \langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle=|\langle \phi|\phi\rangle|^2\le 1 \]</span></p>
-<p>所以 <span class="math display">\[ \langle QR\otimes ST\rangle\le 1 \]</span></p>
-<p>其他项也相同</p>
-<p><span class="math inline">\(\Rightarrow\)</span></p>
-<p>Let $ M=QS+RS+RT-QT $</p>
-<p>Then $ M=QS+RS+RT-QT$</p>
-<p>因为 $ QRST1 $ 且其他项也是相同情况 <span class="math display">\[ \langle M^2\rangle=\langle 4I+[Q,R]\otimes [S,T]\rangle\le 8 \]</span></p>
-<p>再利用Cauchy–Schwarz不等式(Box 2.1)</p>
-<p><span class="math display">\[ \langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle\le\langle\phi|M^2|\phi\rangle=\langle M^2\rangle\]</span></p>
-<p><span class="math inline">\(\Rightarrow\)</span></p>
-<p><span class="math display">\[ \langle M\rangle^2\le8 \Rightarrow \langle M\rangle\le2\sqrt{2}\]</span></p>
-<p>因此可知(2.230)，是违背Bell不等式最大的情况。</p>
-<ul>
-<li><h4 id="section-2">4.4</h4></li>
-</ul>
-<ol type="1">
-<li><p>使用 <span class="math inline">\(X\)</span>-<span class="math inline">\(Y decomposition\)</span> 计算</p></li>
-<li><p>观察到</p></li>
-</ol>
-<p>$ H: |+|0\  |-|1$</p>
-<p>$ |+, |-$是x轴两端， $ |0, |1$是z轴两端。</p>
-<p>从 <span class="math inline">\(|0\rangle\)</span> 转为 <span class="math inline">\(|+\rangle\)</span> 可以绕x轴旋转 <span class="math inline">\(\frac{\pi}{2}\)</span>，再绕z轴旋转 <span class="math inline">\(\frac{\pi}{2}\)</span>。而反过来则是先绕z轴，再绕x轴。所以有</p>
-<p><span class="math display">\[ H=e^{i\phi}R_z(\frac{\pi}{2})R_x(\frac{\pi}{2})R_z(\frac{\pi}{2}) \]</span></p>
-<p>因为这里</p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-R_z(\frac{\pi}{2})R_x(\frac{\pi}{2})R_z(\frac{\pi}{2})
-&amp;=
-\left[
-  \begin{matrix}
-   \frac{\sqrt{2}}{2}e^{-i\frac{\pi}{2}} &amp; -i\frac{\sqrt{2}}{2} \\
-   -i\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}e^{i\frac{\pi}{2}}
-  \end{matrix}
-  \right]\\
-&amp;=
-\left[
-  \begin{matrix}
-   -i\frac{\sqrt{2}}{2} &amp; -i\frac{\sqrt{2}}{2} \\
-   -i\frac{\sqrt{2}}{2} &amp; i\frac{\sqrt{2}}{2}
-  \end{matrix}
-  \right]
-\end{split}
-\end{equation}\]</span></p>
-<p>取 $ e^{i} = i = $</p>
-<blockquote>
-<p>同样，按照 <span class="math inline">\(H\)</span> 的旋转，还能根据</p>
-<p><span class="math inline">\(X=|+\rangle\langle+|-|-\rangle\langle-|\)</span></p>
-<p><span class="math inline">\(Z=|0\rangle\langle0|-|1\rangle\langle1|\)</span></p>
-<p><span class="math inline">\(Y=|+_i\rangle\langle+_i|-|-_i\rangle\langle-_i|\)</span></p>
-<p><span class="math inline">\(\Rightarrow HXH=Z\)</span> <span class="math inline">\(HYH=-Y\)</span></p>
-<p>$HZH=X $</p>
-</blockquote>
-<ul>
-<li><h4 id="section-3">4.8</h4></li>
-</ul>
-<ol type="1">
-<li><p><span class="math display">\[\begin{equation}
-\begin{split}
-R_{\widehat{n}}(\theta)
-&amp;=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\\
-&amp;=e^{\frac{-i\theta}{2}}(\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2})+e^{\frac{i\theta}{2}}(\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2})\\
-&amp;=\frac{1}{2}[(e^{\frac{-i\theta}{2}}+e^{\frac{i\theta}{2}})I+(e^{\frac{-i\theta}{2}}-e^{\frac{i\theta}{2}})\widehat{n}\cdot\widehat{\sigma}]\\
-&amp;=\cos{\frac{\theta}{2}}I-isin{\frac{\theta}{2}}\widehat{n}\cdot\widehat{\sigma}
-\end{split}
-\end{equation}\]</span></p></li>
-<li></li>
-</ol>
-<ol type="1">
-<li><p>展开公式计算</p></li>
-<li><p>根据观察</p></li>
-</ol>
-<p>将 $ H=(X+Z) $ 代入</p>
-<p>$ U=e^{i}(I-isin{}(n_xX+n_yY+n_zZ)) $</p>
-<p>可以取 $ ===(,0,) $</p>
-<p><span class="math inline">\(S\)</span> 类似，有 <span class="math display">\[\begin{equation}
-\begin{split}
-S&amp;=\left[
-  \begin{matrix}
-   1 &amp; 0 \\
-   0 &amp; i
-  \end{matrix}
-  \right]=|0\rangle\langle0|+i|1\rangle\langle1|\\
-  &amp;=\frac{I+Z}{2}+i\frac{I-Z}{2}=\frac{1+i}{2}I+\frac{1-i}{2}Z=\frac{1}{\sqrt{2}}(e^{i\frac{\pi}{4}}I+e^{-i\frac{\pi}{4}}Z)\\
-  &amp;=e^{i\frac{\pi}{4}}(\frac{1}{\sqrt{2}}I-i\frac{1}{\sqrt{2}}Z)
-\end{split}
-\end{equation}
-\]</span></p>
-<p>可以取 $ ===(0,0,1) $</p>
-<ul>
-<li><h4 id="section-4">4.13</h4>
-<p>4.4已证明</p></li>
-<li><h4 id="section-5">4.14</h4>
-<p>根据式(4.3) $ T $ 的定义</p></li>
-</ul>
-<p><span class="math display">\[ T=e^{\frac{i\pi}{8}}R_z(\frac{\pi}{4}) \]</span></p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-HTH&amp;=e^{\frac{i\pi}{8}}(HR_z(\frac{\pi}{4})H)\\
-&amp;=e^{\frac{i\pi}{8}}[H(\cos{\frac{\pi}{8}}I-i\sin{\frac{\pi}{8}}Z)H]\\
-&amp;=e^{\frac{i\pi}{8}}(\cos{\frac{\pi}{8}}I-i\sin{\frac{\pi}{8}}HZH)\\
-&amp;=e^{\frac{i\pi}{8}}(\cos{\frac{\pi}{8}}I-i\sin{\frac{\pi}{8}}X)\\
-&amp;=e^{\frac{i\pi}{8}}R_x(\frac{\pi}{4})
-\end{split}
-\end{equation}\]</span></p>
-<!---
-#### 4.15
-(1) (存疑)
-
-根据式(4.8)
-
-$R_{\widehat{n}_i}(\beta_i)\equiv c_iI-s_ii\widehat{n}_i\cdot\widehat{\sigma}$
-
-因为 {$I,X,Y,Z$} 是一组正交基
-
-$ c_1c_2I-s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}=c_1c_2I-s_1s_2\widehat{n}_1\widehat{n}_2I $
-
-$ -c_1s_2i\widehat{n}_2\cdot\widehat{\sigma}-c_2s_1i\widehat{n}_1\cdot\widehat{\sigma}=-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma} $
-
-$$\begin{equation}
-\begin{split}
-R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\beta_2)\\
-&=(c_1c_2-s_1s_2\widehat{n}_1\widehat{n}_2)I-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}
-\end{split}
-\end{equation}$$
-
-问题：叉乘的来源？
-
-(2) 代入 $c,s,\widehat{z}$ 即得结果
--->
-<ul>
-<li><h4 id="extra">Extra</h4>
-Lemma：Let <span class="math inline">\(U\)</span> be a unitary operator on <span class="math inline">\(H_2\)</span>. Then <span class="math inline">\(U^\dagger=U\)</span> iff <span class="math inline">\(U=\pm I\)</span> or <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}\)</span> for some unit 3-dim vector <span class="math inline">\(\widehat{n}\)</span>.</li>
-</ul>
-<p>Proof: <span class="math inline">\(U\)</span> 有谱分解 <span class="math inline">\(U=\lambda_1|\lambda_1\rangle\langle\lambda_1|+\lambda_2|\lambda_2\rangle\langle\lambda_2|\)</span></p>
-<p>“<span class="math inline">\(\Rightarrow\)</span>”</p>
-<p><span class="math inline">\(U^{\dagger}=U \Rightarrow U^2=I\)</span></p>
-<p><span class="math inline">\(\lambda_1^2|\lambda_1\rangle\langle\lambda_1|+\lambda_2^2|\lambda_2\rangle\langle\lambda_2|=|\lambda_1\rangle\langle\lambda_1|+|\lambda_2\rangle\langle\lambda_2|\)</span></p>
-<p>Then have <span class="math inline">\(\lambda_1=\pm1\)</span> <span class="math inline">\(\lambda_2=\pm1\)</span> <span class="math inline">\(\Rightarrow U=\pm I\ or\ \widehat{n}\cdot\widehat{\sigma}\)</span></p>
-<p>“<span class="math inline">\(\Leftarrow\)</span>”</p>
-<p><span class="math inline">\(U=\pm I\ or\ \widehat{n}\cdot\widehat{\sigma} \Rightarrow U^2=I\Rightarrow U^\dagger=U\)</span></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY2/">QCQI Lesson DAY2</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY2/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:00:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/QCQI-Lesson-DAY1/">QCQI Lesson DAY1</a>
+    <h1 class="article-title" itemprop="name">
+      QCQI Lesson DAY1
     </h1>
   
 
@@ -793,6 +360,27 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -811,16 +399,84 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/QCQI-Lesson-DAY1/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/07/17/QCQI-Lesson-DAY1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/20/QCQI-Lesson-DAY2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          QCQI Lesson DAY2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/01/First-Post/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在macOS上编写java调用Matlab的函数时的一个报错</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -840,81 +496,12 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
 
 
 
-
   
-    <article id="post-First-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/01/First-Post/">在macOS上编写java调用Matlab的函数时的一个报错</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/01/First-Post/" class="archive-article-date">
-  	<time datetime="2018-07-01T14:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- #### 在macOS上编写java调用Matlab的函数时的一个报错 -->
-<p>IDE：Eclipse</p>
-<p>Matlab版本：R2017a</p>
-<p>报错信息：</p>
-<p>Exception in thread “main” java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or the current path configuration, or a mismatch with the architecture of the Java interpreter on the path. MATLAB Runtime version this component is attempting to use: 9.2. Java interpreter architecture: maci64.</p>
-<p>解决方法：</p>
-<p>查询过其他系统/环境下的类似问题后，发现MATLAB Runtime其实就是其他问题中提到的MCR（Matlab Compiler Runtime）。 所以处理方法应该类似。在/Applications/MATLAB_R2017a.app/toolbox/compiler/deploy中找到maci64（不同的OS这个文件夹是不同的）。解压MCRInstaller.zip并安装。</p>
-<p><strong>结果：仍然报错。</strong></p>
-<p>解决方法2:</p>
-<p>添加环境变量指明MCR的位置。 打开Terminal，输入open ～/.bash_profile（没有的话可以先touch ～/.bash_profile）。 添加语句 export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64 。 当然，也可以直接在终端中输入export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64。 输入echo $LD_LIBRARY_PATH，确认环境变量设置完成。</p>
-<p><strong>结果：仍然报错，路径改为DYLD_LIBRARY_PATH仍然报错。</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/01/First-Post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -937,8 +524,8 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
