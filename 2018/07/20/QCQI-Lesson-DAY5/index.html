@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/07/20/QCQI-Lesson-DAY5/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="Chapter 2, 4 Exercise  2.73 预备条件：  \(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\) \(Recall\ that\) \[\be">
-<meta property="og:updated_time" content="2018-07-20T08:06:56.003Z">
+<meta property="og:updated_time" content="2018-08-12T15:33:28.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY5">
 <meta name="twitter:description" content="Chapter 2, 4 Exercise  2.73 预备条件：  \(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\) \(Recall\ that\) \[\be">
@@ -322,9 +322,9 @@ $ |=_{i=1}^n_i|i_A|i_B$</li>
 <li><h4 id="problem-2.3">Problem 2.3</h4>
 利用 <span class="math inline">\(R^2=Q^2=S^2=T^2=I\)</span> 消项。</li>
 </ul>
-<p>$ (R+Q)<sup>2+(R-Q)</sup>2=4I $</p>
-<p>$ (R+Q)(R-Q)=R<sup>2-Q</sup>2+QR-RQ=[Q,R] $</p>
-<p>$ (R-Q)(R+Q)=R<sup>2-Q</sup>2+RQ-QR=-[Q,R] $</p>
+<p><span class="math inline">\((R+Q)^2+(R-Q)^2=4I\)</span></p>
+<p><span class="math inline">\((R+Q)\otimes(R-Q)=R^2-Q^2+Q\otimes R-R\otimes Q=[Q,R]\)</span></p>
+<p><span class="math inline">\((R-Q)\otimes(R+Q)=R^2-Q^2+R\otimes Q-Q\otimes R=-[Q,R]\)</span></p>
 <p>则 <span class="math display">\[\begin{equation}
 \begin{split}
 左式&amp;=((R+Q)\otimes S+(R-Q)\otimes T)^2\\
@@ -332,19 +332,19 @@ $ |=_{i=1}^n_i|i_A|i_B$</li>
    &amp;=4I+[Q,R]\otimes [S,T]
 \end{split}
 \end{equation}\]</span></p>
-<p>对 $ QRST$，令 $ M=QRST $，则有 <span class="math inline">\(M^\dagger M=I\)</span>。</p>
+<p>对 $QRST$，令 $ M=QRST$，则有 <span class="math inline">\(M^\dagger M=I\)</span>。</p>
 <p>所以利用Cauchy–Schwarz不等式(Box 2.1)</p>
-<p><span class="math display">\[ \langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle=|\langle \phi|\phi\rangle|^2\le 1 \]</span></p>
-<p>所以 <span class="math display">\[ \langle QR\otimes ST\rangle\le 1 \]</span></p>
+<p><span class="math display">\[\langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle=|\langle \phi|\phi\rangle|^2\le 1\]</span></p>
+<p>所以 <span class="math display">\[\langle QR\otimes ST\rangle\le 1\]</span></p>
 <p>其他项也相同</p>
 <p><span class="math inline">\(\Rightarrow\)</span></p>
-<p>Let $ M=QS+RS+RT-QT $</p>
-<p>Then $ M=QS+RS+RT-QT$</p>
-<p>因为 $ QRST1 $ 且其他项也是相同情况 <span class="math display">\[ \langle M^2\rangle=\langle 4I+[Q,R]\otimes [S,T]\rangle\le 8 \]</span></p>
+<p>Let <span class="math inline">\(M=Q\otimes S+R\otimes S+R\otimes T-Q\otimes T\)</span></p>
+<p>Then <span class="math inline">\(\langle M\rangle=\langle Q\otimes S\rangle+\langle R\otimes S\rangle+\langle R\otimes T\rangle-\langle Q\otimes T\rangle\)</span></p>
+<p>因为 <span class="math inline">\(\langle QR\otimes ST\rangle\le 1\)</span> 且其他项也是相同情况 <span class="math display">\[\langle M^2\rangle=\langle 4I+[Q,R]\otimes [S,T]\rangle\le 8\]</span></p>
 <p>再利用Cauchy–Schwarz不等式(Box 2.1)</p>
-<p><span class="math display">\[ \langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle\le\langle\phi|M^2|\phi\rangle=\langle M^2\rangle\]</span></p>
+<p><span class="math display">\[\langle M\rangle^2=|\langle \phi|M|\phi\rangle|^2\le \langle\phi|\phi\rangle\langle\phi|M^\dagger M|\phi\rangle\le\langle\phi|M^2|\phi\rangle=\langle M^2\rangle\]</span></p>
 <p><span class="math inline">\(\Rightarrow\)</span></p>
-<p><span class="math display">\[ \langle M\rangle^2\le8 \Rightarrow \langle M\rangle\le2\sqrt{2}\]</span></p>
+<p><span class="math display">\[\langle M\rangle^2\le8 \Rightarrow \langle M\rangle\le2\sqrt{2}\]</span></p>
 <p>因此可知(2.230)，是违背Bell不等式最大的情况。</p>
 <ul>
 <li><h4 id="section-2">4.4</h4></li>
@@ -353,10 +353,10 @@ $ |=_{i=1}^n_i|i_A|i_B$</li>
 <li><p>使用 <span class="math inline">\(X\)</span>-<span class="math inline">\(Y decomposition\)</span> 计算</p></li>
 <li><p>观察到</p></li>
 </ol>
-<p>$ H: |+|0\  |-|1$</p>
-<p>$ |+, |-$是x轴两端， $ |0, |1$是z轴两端。</p>
+<p><span class="math inline">\(H: |+\rangle\leftrightarrow |0\rangle\\\ \quad\ |-\rangle\leftrightarrow |1\rangle\)</span></p>
+<p>$|+, |-$是x轴两端， $ |0, |1$是z轴两端。</p>
 <p>从 <span class="math inline">\(|0\rangle\)</span> 转为 <span class="math inline">\(|+\rangle\)</span> 可以绕x轴旋转 <span class="math inline">\(\frac{\pi}{2}\)</span>，再绕z轴旋转 <span class="math inline">\(\frac{\pi}{2}\)</span>。而反过来则是先绕z轴，再绕x轴。所以有</p>
-<p><span class="math display">\[ H=e^{i\phi}R_z(\frac{\pi}{2})R_x(\frac{\pi}{2})R_z(\frac{\pi}{2}) \]</span></p>
+<p><span class="math display">\[H=e^{i\phi}R_z(\frac{\pi}{2})R_x(\frac{\pi}{2})R_z(\frac{\pi}{2})\]</span></p>
 <p>因为这里</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
@@ -377,14 +377,14 @@ R_z(\frac{\pi}{2})R_x(\frac{\pi}{2})R_z(\frac{\pi}{2})
   \right]
 \end{split}
 \end{equation}\]</span></p>
-<p>取 $ e^{i} = i = $</p>
+<p>取 <span class="math inline">\(e^{i\phi} = i \Rightarrow \phi= \frac{\pi}{2}\)</span></p>
 <blockquote>
 <p>同样，按照 <span class="math inline">\(H\)</span> 的旋转，还能根据</p>
 <p><span class="math inline">\(X=|+\rangle\langle+|-|-\rangle\langle-|\)</span></p>
 <p><span class="math inline">\(Z=|0\rangle\langle0|-|1\rangle\langle1|\)</span></p>
 <p><span class="math inline">\(Y=|+_i\rangle\langle+_i|-|-_i\rangle\langle-_i|\)</span></p>
 <p><span class="math inline">\(\Rightarrow HXH=Z\)</span> <span class="math inline">\(HYH=-Y\)</span></p>
-<p>$HZH=X $</p>
+<p><span class="math inline">\(\quad HZH=X\)</span></p>
 </blockquote>
 <ul>
 <li><h4 id="section-3">4.8</h4></li>
@@ -405,9 +405,9 @@ R_{\widehat{n}}(\theta)
 <li><p>展开公式计算</p></li>
 <li><p>根据观察</p></li>
 </ol>
-<p>将 $ H=(X+Z) $ 代入</p>
-<p>$ U=e^{i}(I-isin{}(n_xX+n_yY+n_zZ)) $</p>
-<p>可以取 $ ===(,0,) $</p>
+<p>将 <span class="math inline">\(H=\frac{1}{\sqrt{2}}(X+Z)\)</span> 代入</p>
+<p><span class="math inline">\(U=e^{i\alpha}(\cos{\frac{\theta}{2}}I-isin{\frac{\theta}{2}}(n_xX+n_yY+n_zZ))\)</span></p>
+<p>可以取 <span class="math inline">\(\alpha=\frac{\pi}{2}\quad \theta=\pi\quad \widehat{n}=(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}})\)</span></p>
 <p><span class="math inline">\(S\)</span> 类似，有 <span class="math display">\[\begin{equation}
 \begin{split}
 S&amp;=\left[
@@ -421,14 +421,14 @@ S&amp;=\left[
 \end{split}
 \end{equation}
 \]</span></p>
-<p>可以取 $ ===(0,0,1) $</p>
+<p>可以取 <span class="math inline">\(\alpha=\frac{\pi}{4}\quad \theta=\frac{\pi}{2}\quad \widehat{n}=(0,0,1)\)</span></p>
 <ul>
 <li><h4 id="section-4">4.13</h4>
 <p>4.4已证明</p></li>
 <li><h4 id="section-5">4.14</h4>
-<p>根据式(4.3) $ T $ 的定义</p></li>
+<p>根据式(4.3) <span class="math inline">\(T\)</span> 的定义</p></li>
 </ul>
-<p><span class="math display">\[ T=e^{\frac{i\pi}{8}}R_z(\frac{\pi}{4}) \]</span></p>
+<p><span class="math display">\[T=e^{\frac{i\pi}{8}}R_z(\frac{\pi}{4})\]</span></p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 HTH&amp;=e^{\frac{i\pi}{8}}(HR_z(\frac{\pi}{4})H)\\
@@ -725,11 +725,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
             
             <div class="clearfix"></div>
