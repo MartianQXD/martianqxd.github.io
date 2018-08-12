@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/07/20/QCQI-Lesson-DAY5/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="Chapter 2, 4 Exercise  2.73 预备条件：  \(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\) \(Recall\ that\) \[\be">
-<meta property="og:updated_time" content="2018-08-12T15:33:28.974Z">
+<meta property="og:updated_time" content="2018-08-12T15:38:43.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY5">
 <meta name="twitter:description" content="Chapter 2, 4 Exercise  2.73 预备条件：  \(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\) \(Recall\ that\) \[\be">
@@ -191,20 +191,20 @@
 <p>其中，<span class="math inline">\(span\{|\widetilde{k}\rangle\}\)</span>是最小的。若再在其中增加<span class="math inline">\(|\psi\rangle\)</span>，则<span class="math inline">\(|\psi\rangle\)</span>是<span class="math inline">\(\{|\widetilde{k}\rangle\}\)</span>的线性组合。(增加了冗余)</p>
 <p>理解问题：</p>
 <ol type="1">
-<li><p>$ |supp(),\  minimal essemble {p_i, |_i}, |{|_i}\ s.t. $</p></li>
-<li><p>$  such a minimal essemble p()=|<sup>{-1}|</sup>{-1}$</p></li>
+<li><p><span class="math inline">\(\forall |\psi\rangle\in supp(\rho),\\ \exists\ minimal\ essemble\ \{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\ s.t.\)</span></p></li>
+<li><p><span class="math inline">\(\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}\)</span></p></li>
 </ol>
 <p>思路：使用定理2.6的两个方向证明</p>
 <p>则对问题1) 使用定理2.6构造 <span class="math inline">\(u_{ij}\)</span></p>
-<p>密度算子 <span class="math inline">\(\rho\)</span> 有谱分解 <span class="math display">\[ \rho=\sum\limits_{i=1}^n\lambda_i|i\rangle\langle i|,\{|i\rangle\}\ are\ orthonormal \]</span></p>
+<p>密度算子 <span class="math inline">\(\rho\)</span> 有谱分解 <span class="math display">\[\rho=\sum\limits_{i=1}^n\lambda_i|i\rangle\langle i|,\{|i\rangle\}\ are\ orthonormal\]</span></p>
 <p>目标构造 <span class="math inline">\(u_{ij}\)</span> ，使得</p>
-<p><span class="math display">\[ \sqrt{p}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle,\ |\psi\rangle\in\{|\psi_i\rangle\}\]</span></p>
+<p><span class="math display">\[\sqrt{p}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle,\ |\psi\rangle\in\{|\psi_i\rangle\}\]</span></p>
 <p>因为 <span class="math inline">\(|\psi\rangle\)</span> 是 <span class="math inline">\(\rho\)</span> 的 support 中的任意 state，所以 <span class="math inline">\(|\psi\rangle\)</span> 有</p>
-<p><span class="math display">\[ \exists c_i\in\mathbb{C},\ |\psi\rangle=\sum\limits_{i=1}^n c_i|i\rangle, c_i=\langle i|\psi\rangle \]</span></p>
+<p><span class="math display">\[\exists c_i\in\mathbb{C},\ |\psi\rangle=\sum\limits_{i=1}^n c_i|i\rangle, c_i=\langle i|\psi\rangle\]</span></p>
 <p>将 <span class="math inline">\(|\psi\rangle\)</span> 代入之前的式子</p>
-<p><span class="math display">\[ \sqrt{p}|\psi\rangle=\sum\limits_{i=1}^n \sqrt{p}c_i|i\rangle= \sum\limits_{i=1}^n \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i\sqrt{\lambda_i}|i\rangle\]</span></p>
+<p><span class="math display">\[\sqrt{p}|\psi\rangle=\sum\limits_{i=1}^n \sqrt{p}c_i|i\rangle= \sum\limits_{i=1}^n \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i\sqrt{\lambda_i}|i\rangle\]</span></p>
 <p>易见</p>
-<p><span class="math display">\[ d_{i}\equiv \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i \]</span></p>
+<p><span class="math display">\[d_{i}\equiv \frac{\sqrt{p}}{\sqrt{\lambda_i}}c_i\]</span></p>
 <p>若 <span class="math inline">\(d_{i}\)</span> 是单位向量，则通过Gram-Schmidt正交化可以得到一组标准正交基，进而求得 <span class="math inline">\(u_{ij}\)</span>。</p>
 <blockquote>
 <p>题外话： Gilbert Strang在他的公开课里提到，对结果再做一步normalize是Schmidt对此公式的唯一贡献，然而这公式经常被称为“施密特正交化”。</p>
@@ -223,19 +223,19 @@
 <p><span class="math inline">\(\exists U=(u_{ij})_{ij=1}^n,\ u_{ij}=d_j,\ \forall j=1,...,n\\)</span></p>
 <p>s.t. Let <span class="math inline">\(| \widetilde{\psi_j} \rangle=\sum\limits_{k=1}^n u_{jk}\sqrt{\lambda_k}|k\rangle,\ j=2,...,n\)</span></p>
 <p><span class="math inline">\(|\widetilde{\psi}\rangle=\sum\limits_{k=1}^nu_{1k}\sqrt{\lambda_k}|k\rangle\)</span></p>
-<p>$ _{i=2}^n||+p||=\ essemble is  {p_i, |<em>i}</em>{i=2}^n{p, |} $</p>
+<p><span class="math inline">\(\sum\limits_{i=2}^n|\widetilde{\psi_j}\rangle\langle\widetilde{\psi_j}|+p|\psi\rangle\langle\psi|=\rho\\ \Rightarrow essemble\ is\  \{p_i,\ |\psi_i\rangle\}_{i=2}^n\cup\{p,\ |\psi\rangle\}\)</span></p>
 <p>通过等式</p>
 <p><span class="math inline">\(\sqrt{p_i}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda}|j\rangle\Rightarrow u_{ij}=\frac{\langle j|\sqrt{p_i}|\psi\rangle}{\sqrt{\lambda_i}}\)</span></p>
 <p>则对问题2)</p>
 <p>理解问题： 更一般化一点的描述，</p>
-<p><span class="math display">\[ \forall\ minimal\ essemble\ \{p_i,|\psi\rangle\}_{i=1}^n\\p(\psi_i)=\langle\psi_i|\rho^{-1}|\psi_i\rangle^{-1} \]</span></p>
+<p><span class="math display">\[\forall\ minimal\ essemble\ \{p_i,|\psi\rangle\}_{i=1}^n\\p(\psi_i)=\langle\psi_i|\rho^{-1}|\psi_i\rangle^{-1}\]</span></p>
 <p>使用定理2.6的另一个方向，已经有</p>
-<p><span class="math display">\[ \exists u_{ij},\ \sqrt{\lambda_i}|i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{p_j}|\psi_j\rangle \]</span></p>
-<p>注意：$ n, 1= <em>{j=1}^n |u</em>{ij}|^2$</p>
+<p><span class="math display">\[\exists u_{ij},\ \sqrt{\lambda_i}|i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{p_j}|\psi_j\rangle\]</span></p>
+<p>注意：<span class="math inline">\(\forall n,\ 1= \sum\limits_{j=1}^n |u_{ij}|^2\)</span></p>
 <p>为了拿出 <span class="math inline">\(u_{ij}\)</span>, 改为</p>
-<p><span class="math display">\[ \sqrt{p_i}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle \]</span></p>
-<p>因为 $ |j$ 是标准正交的，所以</p>
-<p><span class="math display">\[ u_{ij}=\frac{\langle j|\sqrt{p_i}|\psi\rangle}{\sqrt{\lambda_i}} \]</span></p>
+<p><span class="math display">\[\sqrt{p_i}|\psi_i\rangle=\sum\limits_{j=1}^n u_{ij}\sqrt{\lambda_j}|j\rangle\]</span></p>
+<p>因为 <span class="math inline">\(|j\rangle\)</span> 是标准正交的，所以</p>
+<p><span class="math display">\[u_{ij}=\frac{\langle j|\sqrt{p_i}|\psi\rangle}{\sqrt{\lambda_i}}\]</span></p>
 <p>代入前面的式子</p>
 <p><span class="math display">\[\forall n,\ 1=\sum\limits_{j=1}^n |u_{ij}|^2=\sum\limits_{j=1}^n\frac{p_i\langle j|\psi_i\rangle\langle\psi_i|j\rangle}{\sqrt{\lambda_i}}\]</span></p>
 <p><span class="math display">\[\begin{equation}
@@ -252,10 +252,10 @@ p_i &amp;= \langle \psi_i|(\sum\limits_{j=1}^n\frac{1}{\lambda_j}|j\rangle\langl
 <p>then <span class="math inline">\(\exists U\ |AR_1\rangle=(I \otimes U)|AR_2\rangle\)</span></p>
 <p>技巧：使用Schmidt分解</p>
 <p>方法1：</p>
-<p>$ |AR_1= _i_i|i_A|i_B$</p>
-<p>Let $ |AR_2= <em>{i=1,j=1}^{m,m’}u</em>{ij}|i_A|<em>j, m,m’n, u</em>{ij}$</p>
+<p><span class="math inline">\(|AR_1\rangle = \sum\limits_i\lambda_i|i_A\rangle|i_B\rangle\)</span></p>
+<p>Let <span class="math inline">\(|AR_2\rangle = \sum\limits_{i=1,j=1}^{m,m&#39;}u_{ij}|i_A\rangle|\phi_j\rangle,\ m,m&#39;\ge n,\ u_{ij}\in \mathbb{C}\)</span></p>
 <blockquote>
-<p>因为 $tr_R|AR_1AR_1|=tr_R|AR_2AR_2| $</p>
+<p>因为 <span class="math inline">\(tr_R|AR_1\rangle\langle AR_1|=tr_R|AR_2\rangle\langle AR_2|\)</span></p>
 </blockquote>
 <blockquote>
 <p><span class="math inline">\(\rho^A=\sum\limits_{i=1}^n\lambda_i^2|i_A\rangle\langle i_A|=\sum\limits_{i,i&#39;,j,j&#39;}^{m,m&#39;}u_{ij}u_{ij}^*|i_A\rangle\langle i&#39;_A|\langle\phi_{j&#39;}|\phi_j\rangle\)</span></p>
@@ -264,15 +264,15 @@ p_i &amp;= \langle \psi_i|(\sum\limits_{j=1}^n\frac{1}{\lambda_j}|j\rangle\langl
 <p>又因为 <span class="math inline">\(|i_A\rangle\)</span>, <span class="math inline">\(|\phi_j\rangle\)</span> 都是标准正交基</p>
 </blockquote>
 <blockquote>
-<p>$ i,i’, _{j=1}<sup>{m’}u_{ij}u_{ij}</sup>*=(UU^)<em>{ii’}=</em>{ii’}_{i}^2 $</p>
+<p><span class="math inline">\(\forall i,i&#39;,\ \sum\limits_{j=1}^{m&#39;}u_{ij}u_{ij}^*=(UU^\dagger)_{ii&#39;}=\delta_{ii&#39;}\lambda_{i}^2\)</span></p>
 </blockquote>
 <p>令 <span class="math inline">\(m=n\)</span></p>
-<p>则 <span class="math display">\[ |AR_2\rangle = \sum\limits_{i=1}^{n}\lambda_i|i_A\rangle(\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle) \]</span></p>
-<p>其中 <span class="math display">\[ |\Phi_i\rangle\equiv\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle \]</span></p>
+<p>则 <span class="math display">\[|AR_2\rangle = \sum\limits_{i=1}^{n}\lambda_i|i_A\rangle(\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle)\]</span></p>
+<p>其中 <span class="math display">\[|\Phi_i\rangle\equiv\sum\limits_{j=1}^{m&#39;}\frac{u_{ij}}{\lambda_i}|\phi_j\rangle\]</span></p>
 <p>证明存在 <span class="math inline">\(U\)</span> ，需要证明</p>
 <ol type="1">
-<li><p>$ m’=n $, 然而其实不用证明，因为定义时已有 $ i=1,…,n $ 无须$ m’=n $</p></li>
-<li><p>$ {<em>i}</em>{i=1}^n is orthonormal$ <span class="math display">\[\begin{equation}
+<li><p><span class="math inline">\(m&#39;=n\)</span>, 然而其实不用证明，因为定义时已有 <span class="math inline">\(i=1,...,n\)</span> 无须<span class="math inline">\(m&#39;=n\)</span></p></li>
+<li><p><span class="math inline">\(\{\Phi_i\}_{i=1}^n\ is\ orthonormal\)</span> <span class="math display">\[\begin{equation}
 \begin{split}
 \langle\Phi_i|\Phi_j\rangle&amp;=\sum\limits_{k=1}^{m&#39;}\frac{u_{jk}u_{ik}^*}{\lambda_i\lambda_j}\\
 (引入上式)&amp;=\frac{(UU^\dagger)_{ji}}{\lambda_i\lambda_j}\\
@@ -283,15 +283,15 @@ p_i &amp;= \langle \psi_i|(\sum\limits_{j=1}^n\frac{1}{\lambda_j}|j\rangle\langl
 <ul>
 <li>方法2：更简易的方法</li>
 </ul>
-<p>Let $ |AR_2= _{i=1}^{m}|i_A|$</p>
+<p>Let <span class="math inline">\(|AR_2\rangle = \sum\limits_{i=1}^{m}|i_A\rangle|\widetilde{\phi_i}\rangle\)</span></p>
 <p>(<span class="math inline">\(|\widetilde{\phi_i}\rangle\)</span>无归一化)</p>
 <p><span class="math inline">\(\rho^A=\sum\limits_{i=1}^n\lambda_i^2|i_A\rangle\langle i_A|=\sum\limits_{i,j=1}^{m}\langle\widetilde{\phi_i}|\widetilde{\phi_j}\rangle|i_A\rangle\langle j_A|\)</span></p>
-<p>令 $ m=n $ 有 $ |=_{ij}_i^2 $</p>
-<p>再取 $ |_i= $ 代入</p>
-<p>则有 $ _i|<em>j=</em>{ij}$</p>
+<p>令 <span class="math inline">\(m=n\)</span> 有 <span class="math inline">\(\langle\widetilde{\phi_i}|\widetilde{\phi_j}\rangle=\delta_{ij}\lambda_i^2\)</span></p>
+<p>再取 <span class="math inline">\(|\phi_i\rangle=\frac{|\widetilde{\phi_i}\rangle}{\lambda_i}\)</span> 代入</p>
+<p>则有 <span class="math inline">\(\langle\phi_i|\phi_j\rangle=\delta_{ij}\)</span></p>
 <ul>
 <li><h4 id="problem-2.1">Problem 2.1</h4>
-因为已知 $  =|<em>+</em>+|-|<em>-</em>-| $，</li>
+因为已知 <span class="math inline">\(\overrightarrow{n} \cdot \overrightarrow{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span>，</li>
 </ul>
 <p>所以 <span class="math display">\[\begin{equation}
 \begin{split}
@@ -302,16 +302,16 @@ f(\theta\overrightarrow{n} \cdot \overrightarrow{\sigma})&amp;=f(\theta)|\lambda
 \end{equation}\]</span></p>
 <ul>
 <li><h4 id="problem-2.2">Problem 2.2</h4>
-$ |=_{i=1}^n_i|i_A|i_B$</li>
+<span class="math inline">\(|\psi\rangle=\sum\limits_{i=1}^n\lambda_i|i_A\rangle|i_B\rangle\)</span></li>
 </ul>
 <ol type="1">
-<li><p>$ _A $ 有谱分解：$ <em>A=</em>{i=1}^n_i|i_Ai_A| rank(_n)=n $</p></li>
-<li><p>If $ |=_{j=1}^n|_j|_j$</p></li>
+<li><p><span class="math inline">\(\rho_A\)</span> 有谱分解：<span class="math inline">\(\rho_A=\sum\limits_{i=1}^n\lambda_i|i_A\rangle\langle i_A| \Rightarrow rank(\rho_n)=n\)</span></p></li>
+<li><p>If <span class="math inline">\(|\psi\rangle=\sum\limits_{j=1}^n|\alpha_j\rangle|\beta_j\rangle\)</span></p></li>
 </ol>
-<p>已知 $ _i&gt;0, _i_i^2=1 $。</p>
+<p>已知 <span class="math inline">\(\lambda_i&gt;0,\ \sum\limits_i\lambda_i^2=1\)</span>。</p>
 <p><span class="math inline">\(\rho_A=\sum\limits_{j,j&#39;=1}^n\langle\beta_j|\beta_{j&#39;}\rangle|\alpha_{j&#39;}\rangle\langle \alpha_j| \Rightarrow m\ge n\)</span></p>
 <ol start="3" type="1">
-<li>$ |=_{i=1}^n_i|i_A|i_B=|+|$</li>
+<li><span class="math inline">\(|\psi\rangle=\sum\limits_{i=1}^n\lambda_i|i_A\rangle|i_B\rangle=\alpha|\phi\rangle+\beta|\gamma\rangle\)</span></li>
 </ol>
 <p><span class="math inline">\(\Rightarrow Sch(\psi)\le Sch(\phi)+ Sch(\gamma)\)</span></p>
 <p>根据2) <span class="math inline">\(Sch(\psi)\ge Sch(\phi)\)</span></p>
