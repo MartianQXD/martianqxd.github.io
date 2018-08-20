@@ -151,6 +151,204 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-QCQI-Lesson-DAY6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/10/QCQI-Lesson-DAY6/">QCQI Lesson DAY 6</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/10/QCQI-Lesson-DAY6/" class="archive-article-date">
+  	<time datetime="2018-08-10T01:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="chapter-4-its-exercise">Chapter 4 &amp; its Exercise</h3>
+<ul>
+<li><h4 id="section">4.8</h4>
+补充： <span class="math display">\[R_{\widehat{n}}(\theta)
+=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\]</span> 的来源。是根据 <span class="math inline">\(U\)</span> 的谱分解 <span class="math display">\[\begin{equation}
+\begin{split}
+U
+&amp;=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
+&amp;=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
+\end{split}
+\end{equation}\]</span></li>
+</ul>
+<p>这里全局相位可以省略。希望 <span class="math inline">\(U\)</span> 等于 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span>。</p>
+<p>取 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span></p>
+<p>则有</p>
+<p><span class="math inline">\(\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
+<p><span class="math inline">\(U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
+<p>所以 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span> 满足我们想要的，代回 <span class="math inline">\(U\)</span> 中，得 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span> 的形式。</p>
+<ul>
+<li><h4 id="extra">4.4 Extra</h4>
+用 <span class="math inline">\(R_{x}(\theta)\)</span> 和 <span class="math inline">\(R_{y}(\theta)\)</span> 和全局相位表示 <span class="math inline">\(H\)</span>。 <span class="math display">\[\begin{equation}
+\begin{split}
+H&amp;=\displaystyle\frac{X+Z}{\sqrt{2}}=\displaystyle\frac{X(I-iY)}{\sqrt{2}}\\
+&amp;=X(cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y)
+\end{split}
+\end{equation}\]</span></li>
+</ul>
+<p>可以取</p>
+<p><span class="math inline">\(X=e^{i\frac{\pi}{4}}R_{x}(\pi)\)</span></p>
+<p><span class="math inline">\(cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y=R_{y}(\displaystyle\frac{\pi}{4})\)</span></p>
+<ul>
+<li><h4 id="section-1">4.15</h4></li>
+</ul>
+<ol type="1">
+<li>根据式(4.8)</li>
+</ol>
+<p><span class="math inline">\(R_{\widehat{n}_i}(\beta_i)\equiv c_iI-s_ii\widehat{n}_i\cdot\widehat{\sigma}\)</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}&amp;=s_1s_2\widehat{n}_1\widehat{n}_2I+((n_{1x}n_{2y}-n_{2y}n_{1x})iZ+...)\\
+&amp;=s_1s_2\widehat{n}_1\widehat{n}_2I+i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(c_1c_2I-s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}=c_1c_2I-s_1s_2\widehat{n}_1\widehat{n}_2I-i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}\)</span></p>
+<p><span class="math inline">\(-c_1s_2i\widehat{n}_2\cdot\widehat{\sigma}-c_2s_1i\widehat{n}_1\cdot\widehat{\sigma}=-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}\)</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+R_{\widehat{n}_{12}}(\beta_{12})&amp;=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\beta_2)\\
+&amp;=(c_1c_2-s_1s_2\widehat{n}_1\widehat{n}_2)I-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}
+\end{split}
+\end{equation}\]</span></p>
+<ol start="2" type="1">
+<li>代入 <span class="math inline">\(c,s,\widehat{z}\)</span> 即得结果</li>
+</ol>
+<p>Furthermore,</p>
+<p>如果 <span class="math inline">\(\widehat{n}_1\bot\widehat{n}_2\)</span> 且 <span class="math inline">\(\beta_1=\beta_2=\pi\)</span></p>
+<p>求 <span class="math inline">\(R_{\widehat{n}_1}(\pi)R_{\widehat{n}_2}(\pi)\)</span>。 因为 <span class="math inline">\(\widehat{n}_1\)</span> 和 <span class="math inline">\(\widehat{n}_2\)</span> 是Bloch球上的一条直径的两端，所以它构成一个轴。而绕它转两个 <span class="math inline">\(\pi\)</span> 回到了原位，即 <span class="math inline">\(R_{\widehat{n}_1\times\widehat{n}_2}(0)\)</span>。</p>
+<p>增加难度，</p>
+<p>现在只有 <span class="math inline">\(\beta_1=\beta_2=\pi\)</span>。</p>
+<p><span class="math inline">\(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{r}}(\theta)\)</span></p>
+<p>代入之前的结果(4.19)和(4.20)。</p>
+<p><span class="math inline">\(s_{12}\widehat{r}=\widehat{m}\times\widehat{n}\quad cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}\)</span></p>
+<p>这现在我们有</p>
+<ol type="1">
+<li><p><span class="math inline">\((\widehat{n}\cdot\widehat{\sigma})(\widehat{m}\cdot\widehat{\sigma})=\widehat{n}\cdot\widehat{m}I+i\widehat{m}\times\widehat{n}\cdot\widehat{\sigma}\)</span></p></li>
+<li><p><span class="math inline">\(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{m}\times\widehat{n}}(\theta)\ s.t.\ cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}\)</span></p></li>
+</ol>
+<p><span class="math inline">\(Lemma:\)</span></p>
+<p>Let <span class="math inline">\(\widehat{n}\bot\widehat{m}\)</span>. For any <span class="math inline">\(U\)</span> there are <span class="math inline">\(\alpha,\beta,\gamma,\delta\)</span> s.t. <span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}}(\gamma)R_{\widehat{n}}(\delta)\)</span></p>
+<p>如果能找到一个 <span class="math inline">\(V\)</span>，使得</p>
+<p><span class="math display">\[\widehat{n}\leftrightarrow\widehat{z}\quad\widehat{m}\leftrightarrow\widehat{y}\]</span></p>
+<p>即要求</p>
+<p><span class="math display">\[|\lambda_{n}\rangle\leftrightarrow|0\rangle\quad|\lambda_{n^\bot}\rangle\leftrightarrow|1\rangle\]</span> <span class="math display">\[|\lambda_{m}\rangle\leftrightarrow|+_i\rangle\quad|\lambda_{m^\bot}\rangle\leftrightarrow|-_i\rangle\]</span></p>
+<p>那么就有</p>
+<p><span class="math inline">\(VUV^{\dagger}=e^{i\alpha}(VR_{\widehat{n}}(\beta)V^\dagger)(VR_{\widehat{m}}(\gamma)V^\dagger)(VR_{\widehat{n}}(\delta)V^\dagger)\)</span></p>
+<ul>
+<li><h4 id="section-2">4.11</h4>
+由于没有 <span class="math inline">\(\widehat{n}\bot\widehat{m}\)</span> 了，所以情况变得复杂。</li>
+</ul>
+<p>考虑在Bloch球中的位置变换，</p>
+<p>Th 4.1 给我们提示，能改变纬度的只有 <span class="math inline">\(R_{y}(\gamma)\)</span>。</p>
+<p>那 4.11 中，能改变纬度的也只有 <span class="math inline">\(R_{\widehat{m}}(\gamma)\)</span>。</p>
+<p>那么若是 <span class="math inline">\(\widehat{n}\)</span> 和 <span class="math inline">\(\widehat{m}\)</span> 的夹角很小，则仅一次旋转不可能从南极转到北极。（所以旧版的式子存在问题，新版已修正）</p>
+<p>需要重复 <span class="math inline">\(k\)</span> 次 <span class="math inline">\(R_{\widehat{m}}(\gamma_i)R_{\widehat{n}}(\beta_i)\)</span>，即绕 <span class="math inline">\(\widehat{m}\rightarrow\widehat{n}\rightarrow\widehat{m}\rightarrow\widehat{n}\rightarrow...\)</span></p>
+<p>而转过的角度为 <span class="math inline">\(\theta\rightarrow2\theta\rightarrow...\)</span></p>
+<p>所以有 <span class="math display">\[k\ge\lceil \displaystyle\frac{\pi}{2\theta}\rceil\]</span> 当 <span class="math inline">\(\theta=\displaystyle\frac{\pi}{2}\)</span> 时，<span class="math inline">\(k=1\)</span>，即可以一次旋转完成。</p>
+<p>现在得到了一个下界，但是期望找到一个上界，或者找到 <span class="math inline">\(\gamma\)</span>。</p>
+<p>思路1:</p>
+<p>代入Exercise 4.15扩展的结果1）和结果2）。</p>
+<p><span class="math inline">\((R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}=R_{\widehat{m}\times\widehat{n}}(k\theta)\)</span></p>
+<p>则 <span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\)</span>。</p>
+<p>这里若 <span class="math inline">\(r=k\theta\)</span>，便直接成功了，但实际不一定成立。</p>
+<p>可以取 <span class="math inline">\(|r-k\theta|&lt;\theta\)</span>，即差一次(小于<span class="math inline">\(\theta\)</span>的)旋转到 <span class="math inline">\(r\)</span>。</p>
+<p>但这样又要补一步，</p>
+<p><span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}R_{\widehat{n}}(\delta)R_{\widehat{m}}(\delta‘)\)</span></p>
+<p>其实也不好取。</p>
+<p>思路2:</p>
+<ol type="1">
+<li>可以推出</li>
+</ol>
+<p><span class="math inline">\(R_{\widehat{m}}(\theta)=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\Rightarrow R_{\widehat{m}\times\widehat{n}}(\gamma)=e^{-i\alpha}R_{\widehat{n}}(-\beta)R_{\widehat{m}}(\theta)R_{\widehat{n}}(-\delta)\)</span></p>
+<ol start="2" type="1">
+<li>将1）代入的话，有</li>
+</ol>
+<p><span class="math inline">\(U=e^{i\alpha&#39;}R_{\widehat{n}}(\beta&#39;)R_{\widehat{m}\times\widehat{n}}(\gamma&#39;)R_{\widehat{n}}(\delta&#39;)=e^{i\alpha&#39;&#39;}R_{\widehat{n}}(\beta&#39;&#39;)R_{\widehat{m}}(\theta)R_{\widehat{n}}(\delta&#39;&#39;)\)</span></p>
+<p>1)和2)单独都对，但是1)$$2)，对应所需的 <span class="math inline">\(\gamma\)</span>，有时难以找到对应的 <span class="math inline">\(\gamma&#39;\)</span>。因为他要求1)中的形式。</p>
+<ul>
+<li><h4 id="section-4.3">Section 4.3</h4>
+<span class="math inline">\(CNOT=I\oplus X\quad controlled{-}U=I\oplus U\)</span></li>
+</ul>
+<p>门的数量：根据Fig 4.6，Fig 4.8，</p>
+<p><span class="math inline">\(controlled{-}U\)</span>：<span class="math inline">\(2\ CNOT + 4\ single\ qubit\)</span></p>
+<p><span class="math inline">\(Toffoli\)</span>：<span class="math inline">\(8\ CNOT + 12\ single\ qubit\)</span> (可化简，减少门的数量)</p>
+<p><span class="math inline">\(C^{n}(U)\)</span>：<span class="math inline">\(2(n-1)\ Toffoli + 1\ controlled{-}U\)</span> (虽然很多但是好歹是线性的，复杂度为 <span class="math inline">\(O(n)\)</span>)</p>
+<p>Fig 4.10 的目的</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+|c_1...c_n\rangle|0...0\rangle|t\rangle&amp;\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|0...0\rangle|t\rangle\\
+&amp;\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|c_1 c_2 c_3\rangle|0...0\rangle|t\rangle\\
+&amp;\rightarrow...\\
+&amp;\rightarrow |c_1...c_n\rangle|0...0\rangle U^{c_1...c_n}|t\rangle
+\end{split}
+\end{equation}\]</span></p>
+<p>抵消 <span class="math inline">\(|0...0\rangle\)</span> 即得 <span class="math inline">\(C^n(U)\)</span>。</p>
+<p>见Fig 4.10，后半部分是undo操作，目的是为了将附加位归还，因为附加位可能还与其他系统有纠缠。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/10/QCQI-Lesson-DAY6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-QCQI-Lesson-Day3-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -951,10 +1149,188 @@ Bell State</li>
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
-<h2 id="section">
-        
-          <a class="article-more-a" href="/2018/07/17/QCQI-Lesson-DAY1/#more">more >></a>
-        
+<ul>
+<li><h4 id="section">2.9</h4>
+Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</li>
+</ul>
+<p>对于外积<span class="math inline">\(|0\rangle\langle0|\)</span>，它代表的是矩阵 <span class="math display">\[
+  \left[
+  \begin{matrix}
+   a_{00} &amp; a_{01} \\
+   a_{10} &amp; a_{11}
+  \end{matrix}
+  \right]
+\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span></p>
+<ul>
+<li><h4 id="section-1">2.11</h4>
+求特征值(eigenvalue)和特征向量(eigenvector)的方法有：</li>
+</ul>
+<ol type="1">
+<li>解特征方程。</li>
+<li>在量子计算中，通过观察我们可以发现， <span class="math display">\[ X=|0\rangle\langle1|+|1\rangle\langle0| 。\]</span> 而且 <span class="math display">\[ X|0\rangle=|0\rangle\langle1|0\rangle+|1\rangle\langle0|0\rangle=|1\rangle \]</span> 类似地，<span class="math inline">\(X|1\rangle=|0\rangle\)</span> 所以有， <span class="math display">\[ X(|0\rangle+|1\rangle)=|0\rangle+|1\rangle \]</span> <span class="math display">\[ X(|0\rangle-|1\rangle)=-(|0\rangle-|1\rangle) \]</span> 再对<span class="math inline">\((|0\rangle+|1\rangle)\)</span>与<span class="math inline">\((|0\rangle-|1\rangle)\)</span>做归一化，即乘以<span class="math inline">\(\frac{1}{\sqrt2}\)</span>。 那么得到 <span class="math inline">\(X\)</span> 其实是 <span class="math display">\[ | + \rangle \longrightarrow | + \rangle \]</span> <span class="math display">\[ | - \rangle \longrightarrow -| - \rangle \]</span> 那么参照之前对<span class="math inline">\(|0\rangle\)</span>与<span class="math inline">\(|1\rangle\)</span>的运算 <span class="math display">\[ X=|+\rangle\langle+|-|-\rangle\langle-| \]</span> 而对于 <span class="math inline">\(Y\)</span> 类似可得 <span class="math display">\[ Y(|0\rangle+i|1\rangle)=|0\rangle+i|1\rangle \]</span> <span class="math display">\[ Y(|0\rangle-i|1\rangle)=-(|0\rangle-i|1\rangle) \]</span></li>
+</ol>
+<p><span class="math inline">\(X,Y,Z\)</span> 的特征值都为 <span class="math inline">\(\pm1\)</span>。 因为对于 <span class="math inline">\(A\in\{X,Y,Z\}\)</span> <span class="math display">\[ tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1 \]</span></p>
+<p>(对 <span class="math inline">\(A\)</span> 可以做特征分解 $ A=UU^+ $)</p>
+<p>又因为 <span class="math inline">\(\lambda_1+\lambda_2 = 0 \Rightarrow |\lambda_1|=|\lambda_2|=1\)</span></p>
+<p>另外，注意 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in\{X,Y,Z\}}n_i\sigma_i\)</span></p>
+<p>(注：<span class="math inline">\(X,Y,Z\)</span> 是反可交换的(anti-commutative)即 <span class="math inline">\(XY=-YX\)</span> 等)</p>
+<p>其中， <span class="math inline">\(n_x^2+n_y^2+n_z^2=1\)</span></p>
+<p>所以，可以得到</p>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+(\widehat{n}\cdot\widehat{\sigma})^2&amp;=(n_xX+n_yY+n_zZ)(n_xX+n_yY+n_zZ)\\
+&amp;=(n_x^2+n_y^2+n_z^2)I\\
+&amp;=I
+\end{split}
+\end{equation}
+\]</span></p>
+<p>所以对于 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span></p>
+<blockquote>
+<p>额外插入：一组标准正交基 <span class="math inline">\(|i\rangle\)</span> 的重要性质</p>
+<p>If {<span class="math inline">\(|i\rangle||i\rangle\in\{1,...,n\}\)</span>} is orthonormal basis</p>
+<p>then <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I.\)</span></p>
+<p>Proof:</p>
+<p><span class="math inline">\(\forall |x\rangle, |x\rangle=\sum\limits_{i=1}^nx_i|i\rangle=\sum\limits_{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle\)</span></p>
+<p>所以 <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I\)</span>。</p>
+</blockquote>
+<p><span class="math inline">\(I=|\lambda_+\rangle\langle\lambda_+|+|\lambda_-\rangle\langle\lambda_-|\)</span></p>
+<p><span class="math inline">\(|\lambda_+ \rangle \langle \lambda_+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda_-\rangle\langle\lambda_-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2}\)</span></p>
+<ul>
+<li><h4 id="section-2">2.13</h4>
+记号的作用：如 <span class="math inline">\(|w\underline{\rangle|}v\rangle\langle v|\)</span> (1 对应 <span class="math inline">\(n\)</span> 不能运算)</li>
+</ul>
+<p>应为<span class="math inline">\(|w\rangle \langle v|\)</span> (注意：<span class="math inline">\(|w\rangle， \ |v\rangle\)</span>维度可以不同)</p>
+<p>Proof</p>
+<p><span class="math inline">\(\forall A,\ \exists A^+,\ \forall |x\rangle,|y\rangle,\ (A^dagger|x\rangle,|y\rangle)=(|x\rangle,A|y\rangle)\)</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+((|w\rangle\langle v|)^\dagger|x\rangle,|y\rangle)&amp;=(|v\rangle\underline{\langle w||x\rangle},|y\rangle)\\
+&amp;=\langle w|x\rangle^*\langle v|y\rangle\\
+&amp;=\langle x|w\rangle\langle v|y\rangle
+\end{split}
+\end{equation}\]</span></p>
+<p>注意：内积可取出，但要共轭。</p>
+<ul>
+<li><h4 id="section-3">2.15</h4>
+<p>应用2.14的结果可得。</p></li>
+<li><h4 id="section-4">2.18 &amp; 2.22</h4>
+<p>对于表示一个向量x，在量子计算中尽量改为使用 <span class="math inline">\(|v\rangle\)</span>。</p></li>
+<li><h4 id="section-5">2.20</h4>
+<p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p></li>
+</ul>
+<blockquote>
+<p>预备知识：对同一个空间中的两组标准正交基</p>
+<p><span class="math inline">\(\{|v_i\rangle:i=1,...n\}\)</span> 和 <span class="math inline">\(\{|w_j\rangle:j=1,...n\}\)</span></p>
+<p><span class="math inline">\(|v_i\rangle\)</span> 与 <span class="math inline">\(|w_j\rangle\)</span>通过一个 <span class="math inline">\(U=\sum\limits_{i=1}^n|i\rangle\langle i|\)</span> 关联。</p>
+<p>即 <span class="math inline">\(U|v_R\rangle=|w_R\rangle\)</span></p>
+<p>注：<span class="math inline">\(U^\dagger U=I\)</span></p>
+</blockquote>
+<p>注意： <span class="math inline">\(\sum\limits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\limits_{i,j}IA_{ij}I=A\)</span></p>
+<p>所以：</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+A&#39;_{ij}&amp;=\langle v_i|A|v_j\rangle\\
+A&amp;=\sum\limits_{i,j}|v_i\rangle A&#39;_{ij}\langle v_j|\\
+&amp;=\sum\limits_{i,j}A&#39;_{ij}|v_i\rangle\langle v_j|\\
+A&#39;&#39;_{ij}&amp;=\langle w_i|A|w_j\rangle\\
+&amp;=\langle w_i|\sum\limits_{k,l}|v_k\rangle A&#39;_{kl}\langle v_l||w_j\rangle\\
+&amp;=\sum\limits_{k,l}A&#39;_{kl}\langle w_i|v_k\rangle\langle v_l|w_j\rangle\\/,Mfr
+&amp;=\sum\limits_{k,l}A&#39;_{kl}U^*_{ik}U_{jl}\\
+&amp;=\sum\limits_{k,l}U^*_{ik}A&#39;_{kl}U^\top_{lj}\\
+&amp;=(U^*A&#39;U^\top)_{ij}
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\Rightarrow A&#39;&#39;=U^*A&#39;U^\top\)</span></p>
+<p>令 <span class="math inline">\(V = U^*\)</span></p>
+<p>则 <span class="math inline">\(A&#39;&#39;=VA&#39;V^\dagger\)</span></p>
+<p>还可以对结果进行验证，两个矩阵可表示为</p>
+<p><span class="math inline">\(A&#39;&#39;=\sum\limits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A&#39;=\sum\limits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|\)</span></p>
+<ul>
+<li><h4 id="section-6">2.26</h4>
+<span class="math inline">\(H^{\oplus n}\)</span> 的一个用途：</li>
+</ul>
+<p><span class="math inline">\(|+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle\)</span> 这个态的制备很简单，只要 1 个 <span class="math inline">\(H^{\otimes n}\)</span></p>
+<p><span class="math inline">\(|0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n}\)</span></p>
+<p>这将所有基态关联在了一起。 因为它涉及了所有可能的输入，很多实验的输入第一步都会做这个。</p>
+<ul>
+<li><h4 id="section-7">2.33</h4>
+使用数学归纳法(Mathematical Induction, MI)：</li>
+</ul>
+<p>Suppose</p>
+<p><span class="math display">\[ H^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x,y}(-1)^{xy}|x\rangle\langle y| \]</span></p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+H^{\otimes n+1}&amp;=\displaystyle\frac{1}{\sqrt{2}}&amp;((-1)^{x_0y_0}|x_0\rangle\langle y_0|\\
+&amp;&amp;+(-1)^{x_0y_1}|x_0\rangle\langle y_1|\\
+&amp;&amp;+(-1)^{x_1y_0}|x_1\rangle\langle y_0|\\
+&amp;&amp;+(-1)^{x_1y_1}|x_1\rangle\langle y_1|)\ H^{\otimes n}
+\end{split}
+\end{equation}\]</span></p>
+<p>易见 <span class="math inline">\(x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1\)</span></p>
+<p>令 <span class="math inline">\(x&#39;,y&#39;\)</span></p>
+<p>则有 <span class="math inline">\(H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x&#39;,y&#39;}(-1)^{x&#39;y&#39;}|x&#39;\rangle\langle y&#39;|\)</span></p>
+<ul>
+<li><h4 id="section-8">2.34</h4>
+不用解特征方程，通过观察 <span class="math display">\[\begin{equation}
+\begin{split}
+M=
+ \left[
+ \begin{matrix}
+  4 &amp; 3 \\
+  3 &amp; 4
+ \end{matrix}
+ \right]
+ &amp;=4I+3X\\
+ &amp;=4(|+\rangle\langle+|+|-\rangle\langle-|)+3(|+\rangle\langle+|-|-\rangle\langle-|)\\
+ &amp;=7|+\rangle\langle+|+|-\rangle\langle-|
+\end{split}
+\end{equation}\]</span></li>
+</ul>
+<p><span class="math inline">\(\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|\)</span></p>
+<p><span class="math inline">\(\log{M}=\log{7}|+\rangle\langle+|\)</span></p>
+<ul>
+<li><h4 id="section-9">2.35</h4>
+通过特征值为 <span class="math inline">\(\pm 1\)</span> 得到 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span> 则</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+|\mu\rangle&amp;=e^{i\theta}|\lambda_+\rangle\langle\lambda_+|+e^{-i\theta}|\lambda_-\rangle\langle\lambda_-|\\
+&amp;=\cos{\theta}I+i\sin{\theta}\widehat{n}\cdot\widehat{\sigma}
+\end{split}
+\end{equation}\]</span></p>
+<ul>
+<li><h4 id="section-10">2.37</h4>
+注意：AB不能直接交换，所以添加一个辅助的 <span class="math inline">\(|j\rangle\langle j|\)</span>。</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+tr(AB)&amp;=\sum\limits_{i}\langle i|AB|i\rangle\\
+&amp;=\sum\limits_{i,j}\langle i|A\underline{|j\rangle\langle j|}B|i\rangle\\
+&amp;=\sum\limits_{i,j}\langle j|B|i\rangle\langle j|A|j\rangle\\
+&amp;=\sum\limits_{j}\langle j|BA|j\rangle
+\end{split}
+\end{equation}\]</span></p>
+<ul>
+<li><h4 id="section-11">2.40</h4>
+<span class="math inline">\(X,Y,Z\)</span> 一些有趣的性质。</li>
+</ul>
+<p><span class="math inline">\(XY=iZ\quad YZ=iX\quad ZX=iY\)</span></p>
+<p><span class="math inline">\(ZYZ=-Y\quad XZX=-Z\quad YXY=ZXZ=-X\)</span></p>
+<p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
+<ul>
+<li><h4 id="section-12">2.49</h4>
+目标是拆出一个半正定矩阵(Positive semi-definite matrix)。</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|\cdot|i\rangle\langle i|\\
+&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|i\rangle\langle i|\cdot\sum\limits_{j}|\lambda_j|\cdot|j\rangle\langle j|
+\end{split}
+\end{equation}\]</span></p>
+<p>因为 <span class="math inline">\(|\lambda_j|\ge0\)</span>，所以得到的是一个酉矩阵乘一个半正定矩阵。</p>
+<p>Recall that: Exercise 2.18 <span class="math inline">\(|\lambda_i|=1\)</span>.</p>
+
       
 
       
@@ -1027,8 +1403,7 @@ Bell State</li>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<!-- #### 在macOS上编写java调用Matlab的函数时的一个报错 -->
+        <!-- #### 在macOS上编写java调用Matlab的函数时的一个报错 -->
 <p>IDE：Eclipse</p>
 <p>Matlab版本：R2017a</p>
 <p>报错信息：</p>
