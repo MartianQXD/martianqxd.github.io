@@ -544,6 +544,171 @@ R_{\widehat{n}}(\theta)&amp;=exp(\displaystyle\frac{-i\theta}{2}\widehat{n}\cdot
 
 
   
+    <article id="post-QCQI-Lesson-DAY7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/QCQI-Lesson-DAY7/">QCQI Lesson DAY7</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/22/QCQI-Lesson-DAY7/" class="archive-article-date">
+  	<time datetime="2018-07-22T05:38:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="chapter-4">Chapter 4</h3>
+<ul>
+<li><h4 id="universal-quantum-gates">4.5 Universal quantum gates</h4>
+这节要证明，只通过CNOT门，Hadamard门和T门(<span class="math inline">\(\pi/8\)</span>门)，就可以构成(近似)任何U门。</li>
+</ul>
+<h4 id="two-level-unitary-gates-are-universal">4.5.1 Two-level unitary gates are universal</h4>
+<p>two-level unitary gate形如： <span class="math display">\[
+  \left[
+  \begin{matrix}
+   a &amp; b &amp; \\
+   c &amp; d &amp; \\
+     &amp;   &amp; 1
+  \end{matrix}
+  \right]
+\]</span> 或 <span class="math display">\[
+  \left[
+  \begin{matrix}
+   1 &amp;   &amp;  \\
+     &amp; a &amp; b\\
+     &amp; c &amp; d
+  \end{matrix}
+  \right]
+\]</span> 或 <span class="math display">\[
+  \left[
+  \begin{matrix}
+   a &amp;  &amp; b\\
+     &amp; 1 &amp; \\
+   c &amp;  &amp; d
+  \end{matrix}
+  \right]
+\]</span></p>
+<p>对于一个<span class="math inline">\(3\times 3\)</span>的U门(书式(4.41))，目标是找三个two-level U门，构成 <span class="math display">\[U_3U_2U_1U=I\]</span> 的形式(书式(4.42))，然后U门即为 <span class="math display">\[U=U_1^\dagger U_2^\dagger U_3^\dagger\]</span> 首先第一个目标，求<span class="math inline">\(U_1\)</span>，使得U门<span class="math inline">\(b\)</span>位置变换为0。 原本为0的时候，<span class="math inline">\(U_1\)</span>是一个单位矩阵就行了。</p>
+<p>不然，则先第二行取<span class="math inline">\((b\ \ -a \ \ 0)\)</span>。</p>
+<p>然后，因为<span class="math inline">\(U_1\)</span>是unitary gate。第一行取<span class="math inline">\((a^*\ \ b^* \ \ 0)\)</span>，所以得式(4.45)。</p>
+<p><span class="math display">\[
+ U_1U=\left[
+  \begin{matrix}
+   a&#39; &amp; d&#39; &amp; g&#39;\\
+   0 &amp; e&#39; &amp; h&#39;\\
+   c&#39; &amp; f&#39; &amp; j&#39;
+  \end{matrix}
+  \right]
+\]</span></p>
+<p>其中，<span class="math inline">\(a&#39;=\sqrt{|a|^2+|b|^2}\)</span>。</p>
+<p>同样的方式，可以求 <span class="math inline">\(U_2\)</span> (式(4.48))。</p>
+<p>经过 <span class="math inline">\(U_1,\ U_2\)</span> 发现， <span class="math display">\[
+ U_2U_1U=\left[
+  \begin{matrix}
+   1 &amp; 0 &amp; 0\\
+   0 &amp; e&#39;&#39; &amp; h&#39;&#39;\\
+   0 &amp; f&#39;&#39; &amp; j&#39;&#39;
+  \end{matrix}
+  \right]
+\]</span> 因为 <span class="math inline">\(U,\ U_1,\ U_2\)</span> 都是unitary gate，所以 <span class="math inline">\(U_2U_1U\)</span> 也是unitary gate。所以可以令 <span class="math inline">\(U_3^\dagger=U_2U_1U\)</span>。</p>
+<p>则 <span class="math inline">\(U=U_1^\dagger U_2^\dagger U_3^\dagger\)</span>。</p>
+<p>总结：n-qubit的 <span class="math inline">\(U\)</span>，<span class="math inline">\(U=U_1U_2...U_k\)</span>。最多需要 <span class="math display">\[2^n-1+2^2-2+...+1=\displaystyle\frac{2^n(2^n-1)}{2}=2^{n-1}(2^n-1)=O(4^n)\]</span> 个 two-level U 门。这对任何 U 门都有用，但是低效。</p>
+<ul>
+<li><h4 id="single-qubit-and-cnot-gates-are-universal">4.5.2 Single qubit and CNOT gates are universal</h4></li>
+</ul>
+<p>接下来是用single qubit和CNOT gates实现任意two-level gates。</p>
+<p>想法是，two-level门是作用在一组qubit中的一个qubit上。即 <span class="math inline">\(U=\widetilde{U}\oplus I_{n-1}\)</span>。那么就有了single qubit门，<span class="math inline">\(\widetilde{U}\)</span>。</p>
+<p>这个不能直接就做个 <span class="math inline">\(\widetilde{U}\)</span> 就可以，需要控制门。先做到离目标状态差一位(<span class="math inline">\(\widetilde{U}\)</span> 作用的一位)，再做控制 <span class="math inline">\(\widetilde{U}\)</span>，最后还原其他位。这样若是翻转的情况，便不还原其他位，完成 <span class="math inline">\(U\)</span> 的变换。若是不翻转，便还原所有位，仍为初始状态。</p>
+<p>根据Fig 4.16，共用 2(n-1) 个Toffoli(带辅助位)，则 <span class="math inline">\(C^{(n-1)}(U)\Rightarrow 总共 O(n^2)\)</span>。</p>
+<p>所以，n-qubit的 <span class="math inline">\(U\)</span>。最多需要 <span class="math display">\[O(n^24^n)\]</span> 个single qubit和CNOT门。</p>
+<p>问题：single qubit门是可随便选择的，但是实际应用中，我们只能准备有限的，离散的。</p>
+<p>另外注意：一个离散的门的集合不能精确表现连续的门的集合。因为很明显，用有限的门组成的门是可数的。</p>
+<ul>
+<li><h4 id="a-discrete-set-of-universal-operations">4.5.3 A discrete set of universal operations</h4>
+<h5 id="approximating-unitary-operators">Approximating unitary operators</h5>
+所以，为了表现所有的门，可取近似。</li>
+</ul>
+<p>定义错误率Error： <span class="math display">\[E(U,V)\equiv\operatorname*{max}\limits_{|\psi\rangle}||(U-V)|\psi\rangle||\]</span></p>
+<p>Lemma: <span class="math display">\[\forall |\psi\rangle,0\le M\le I,|P_U-P_V|\le2E(U,V)\]</span> <span class="math inline">\(where\ P_V=\langle\psi|U^{\dagger}MU|\psi\rangle\, P_U=\langle\psi|V^{\dagger}MV|\psi\rangle\)</span></p>
+<p>Proof see Box 4.1.</p>
+<p>The case of a sequence of gates.</p>
+<p><span class="math inline">\(E(U_mU_{m-1}...U_1,V_mV_{m-1}...V_1)\le \sum\limits_{j=1}^mE(U_j,V_j)\)</span></p>
+<p>即使每个近似的门都有损失一些精度，但是能保证总和损失的精度足够小的话也可以满足需求了。</p>
+<p>比如想要： <span class="math inline">\(E(U_mU_{m-1}...U_1,V_mV_{m-1}...V_1)\le \epsilon\)</span></p>
+<p>就要求 <span class="math inline">\(E(U_j,V_j)\le \epsilon/m\)</span>。</p>
+<h5 id="universality-of-hadamard-phase-cnot-pi8-gates">Universality of Hadamard + phase + CNOT + <span class="math inline">\(\pi/8\)</span> gates</h5>
+<p>Lemma:</p>
+<p>For any 1-gate U, any error bound <span class="math inline">\(\epsilon&gt;0\)</span>,<span class="math inline">\(\exists f\, s.t.\, E(U,f(H,T))&lt;\epsilon\)</span>。</p>
+<p>即 <span class="math inline">\(f\)</span> 组成的电路与 <span class="math inline">\(U\)</span> 的距离小于 <span class="math inline">\(\epsilon\)</span>。</p>
+<p>Proof:</p>
+<p>由式（4.74）和式（4.75）的推导。</p>
+<p><span class="math inline">\(\Rightarrow T\cdot HTH=e^{i\alpha}R_{\widehat{n}}(\theta)\)</span></p>
+<p>*注意：这里的 <span class="math inline">\(\theta\)</span>，有 <span class="math inline">\(\displaystyle\frac{\theta}{2\pi}\)</span> 是一个无理数。它的好处是，当做 <span class="math display">\[(T\cdot HTH)^k=e^{ik\alpha}R_{\widehat{n}}(k\theta)\]</span> 时，因为 <span class="math inline">\(k=1,2...,n\)</span>，所以每一次转完一周，都会转过一点，不会和起始位置重叠，所以转了多周之后，可以稠密覆盖整个面。</p>
+<p>然后再令 <span class="math display">\[R_{\widehat{m}}(\alpha)=HR_{\widehat{n}}(\alpha)H\]</span> 就可得到 <span class="math inline">\(R_{\widehat{m}}(\alpha)\)</span>。</p>
+<p>根据Exercise 4.11的结论，就可以得到 <span class="math display">\[U=e^{i\alpha}R_{\widehat{n}}(\beta_0)R_{\widehat{m}}(\gamma_1)R_{\widehat{n}}(\beta_1)...\]</span></p>
+<p>根据 <span class="math inline">\(Solovay{-}Kitaev\ theorem\)</span>，所用的门的数量为 <span class="math inline">\(O(log^c(1/\epsilon))\)</span>。</p>
+<p>所以，总的复杂度为 <span class="math inline">\(O(n^24^n\cdot log^c(n^24^n/\epsilon))\)</span>。</p>
+<p>注意，误差不是 <span class="math inline">\(\epsilon\)</span>，因为有 <span class="math inline">\(O(n^24^n)\)</span> 个门，所以误差要求是 <span class="math inline">\(\epsilon/n^24^n\)</span>。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/22/QCQI-Lesson-DAY7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-QCQI-Lesson-DAY5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1570,11 +1735,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
             
             <div class="clearfix"></div>

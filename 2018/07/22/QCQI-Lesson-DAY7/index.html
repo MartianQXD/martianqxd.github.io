@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>QCQI Lesson DAY1 | Hi, I&#39;m MartianQXD. Hello, World!</title>
+  <title>QCQI Lesson DAY7 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
-<meta name="keywords" content="quantum computation, quantum information">
+  <meta name="description" content="Chapter 4  4.5 Universal quantum gates 这节要证明，只通过CNOT门，Hadamard门和T门(\(\pi/8\)门)，就可以构成(近似)任何U门。  4.5.1 Two-level unitary gates are universal two-level unitary gate形如： \[   \left[   \begin{matrix}    a &amp;">
+<meta name="keywords" content="quantum computation，quantum information">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QCQI Lesson DAY1">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/QCQI-Lesson-DAY1/index.html">
+<meta property="og:title" content="QCQI Lesson DAY7">
+<meta property="og:url" content="http://yoursite.com/2018/07/22/QCQI-Lesson-DAY7/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
-<meta property="og:updated_time" content="2018-08-19T17:29:51.373Z">
+<meta property="og:description" content="Chapter 4  4.5 Universal quantum gates 这节要证明，只通过CNOT门，Hadamard门和T门(\(\pi/8\)门)，就可以构成(近似)任何U门。  4.5.1 Two-level unitary gates are universal two-level unitary gate形如： \[   \left[   \begin{matrix}    a &amp;">
+<meta property="og:updated_time" content="2018-08-25T14:12:33.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QCQI Lesson DAY1">
-<meta name="twitter:description" content="Chapter 2 Exercise  2.9 Ket符号的好处：可以这么看，符号 \(|\) 代表 n 维，符号 \(\rangle\) 代表 1 维 \[| \quad \rangle\] 所以外积 \[| \quad \rangle\langle \quad |\] 的结果是 n \(\times\) n 的矩阵， 而内积 \[\langle\quad | \quad \rangle\] 的">
+<meta name="twitter:title" content="QCQI Lesson DAY7">
+<meta name="twitter:description" content="Chapter 4  4.5 Universal quantum gates 这节要证明，只通过CNOT门，Hadamard门和T门(\(\pi/8\)门)，就可以构成(近似)任何U门。  4.5.1 Two-level unitary gates are universal two-level unitary gate形如： \[   \left[   \begin{matrix}    a &amp;">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -154,208 +154,118 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-QCQI-Lesson-DAY1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-QCQI-Lesson-DAY7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      QCQI Lesson DAY1
+      QCQI Lesson DAY7
     </h1>
   
 
         
-        <a href="/2018/07/17/QCQI-Lesson-DAY1/" class="archive-article-date">
-  	<time datetime="2018-07-17T03:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
+        <a href="/2018/07/22/QCQI-Lesson-DAY7/" class="archive-article-date">
+  	<time datetime="2018-07-22T05:38:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
+        <h3 id="chapter-4">Chapter 4</h3>
 <ul>
-<li><h4 id="section">2.9</h4>
-Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</li>
+<li><h4 id="universal-quantum-gates">4.5 Universal quantum gates</h4>
+这节要证明，只通过CNOT门，Hadamard门和T门(<span class="math inline">\(\pi/8\)</span>门)，就可以构成(近似)任何U门。</li>
 </ul>
-<p>对于外积<span class="math inline">\(|0\rangle\langle0|\)</span>，它代表的是矩阵 <span class="math display">\[
+<h4 id="two-level-unitary-gates-are-universal">4.5.1 Two-level unitary gates are universal</h4>
+<p>two-level unitary gate形如： <span class="math display">\[
   \left[
   \begin{matrix}
-   a_{00} &amp; a_{01} \\
-   a_{10} &amp; a_{11}
+   a &amp; b &amp; \\
+   c &amp; d &amp; \\
+     &amp;   &amp; 1
   \end{matrix}
   \right]
-\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span></p>
-<ul>
-<li><h4 id="section-1">2.11</h4>
-求特征值(eigenvalue)和特征向量(eigenvector)的方法有：</li>
-</ul>
-<ol type="1">
-<li>解特征方程。</li>
-<li>在量子计算中，通过观察我们可以发现， <span class="math display">\[ X=|0\rangle\langle1|+|1\rangle\langle0| 。\]</span> 而且 <span class="math display">\[ X|0\rangle=|0\rangle\langle1|0\rangle+|1\rangle\langle0|0\rangle=|1\rangle \]</span> 类似地，<span class="math inline">\(X|1\rangle=|0\rangle\)</span> 所以有， <span class="math display">\[ X(|0\rangle+|1\rangle)=|0\rangle+|1\rangle \]</span> <span class="math display">\[ X(|0\rangle-|1\rangle)=-(|0\rangle-|1\rangle) \]</span> 再对<span class="math inline">\((|0\rangle+|1\rangle)\)</span>与<span class="math inline">\((|0\rangle-|1\rangle)\)</span>做归一化，即乘以<span class="math inline">\(\frac{1}{\sqrt2}\)</span>。 那么得到 <span class="math inline">\(X\)</span> 其实是 <span class="math display">\[ | + \rangle \longrightarrow | + \rangle \]</span> <span class="math display">\[ | - \rangle \longrightarrow -| - \rangle \]</span> 那么参照之前对<span class="math inline">\(|0\rangle\)</span>与<span class="math inline">\(|1\rangle\)</span>的运算 <span class="math display">\[ X=|+\rangle\langle+|-|-\rangle\langle-| \]</span> 而对于 <span class="math inline">\(Y\)</span> 类似可得 <span class="math display">\[ Y(|0\rangle+i|1\rangle)=|0\rangle+i|1\rangle \]</span> <span class="math display">\[ Y(|0\rangle-i|1\rangle)=-(|0\rangle-i|1\rangle) \]</span></li>
-</ol>
-<p><span class="math inline">\(X,Y,Z\)</span> 的特征值都为 <span class="math inline">\(\pm1\)</span>。 因为对于 <span class="math inline">\(A\in\{X,Y,Z\}\)</span> <span class="math display">\[ tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1 \]</span></p>
-<p>(对 <span class="math inline">\(A\)</span> 可以做特征分解 $ A=UU^+ $)</p>
-<p>又因为 <span class="math inline">\(\lambda_1+\lambda_2 = 0 \Rightarrow |\lambda_1|=|\lambda_2|=1\)</span></p>
-<p>另外，注意 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in\{X,Y,Z\}}n_i\sigma_i\)</span></p>
-<p>(注：<span class="math inline">\(X,Y,Z\)</span> 是反可交换的(anti-commutative)即 <span class="math inline">\(XY=-YX\)</span> 等)</p>
-<p>其中， <span class="math inline">\(n_x^2+n_y^2+n_z^2=1\)</span></p>
-<p>所以，可以得到</p>
-<p><span class="math display">\[
-\begin{equation}
-\begin{split}
-(\widehat{n}\cdot\widehat{\sigma})^2&amp;=(n_xX+n_yY+n_zZ)(n_xX+n_yY+n_zZ)\\
-&amp;=(n_x^2+n_y^2+n_z^2)I\\
-&amp;=I
-\end{split}
-\end{equation}
+\]</span> 或 <span class="math display">\[
+  \left[
+  \begin{matrix}
+   1 &amp;   &amp;  \\
+     &amp; a &amp; b\\
+     &amp; c &amp; d
+  \end{matrix}
+  \right]
+\]</span> 或 <span class="math display">\[
+  \left[
+  \begin{matrix}
+   a &amp;  &amp; b\\
+     &amp; 1 &amp; \\
+   c &amp;  &amp; d
+  \end{matrix}
+  \right]
 \]</span></p>
-<p>所以对于 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span></p>
-<blockquote>
-<p>额外插入：一组标准正交基 <span class="math inline">\(|i\rangle\)</span> 的重要性质</p>
-<p>If {<span class="math inline">\(|i\rangle||i\rangle\in\{1,...,n\}\)</span>} is orthonormal basis</p>
-<p>then <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I.\)</span></p>
+<p>对于一个<span class="math inline">\(3\times 3\)</span>的U门(书式(4.41))，目标是找三个two-level U门，构成 <span class="math display">\[U_3U_2U_1U=I\]</span> 的形式(书式(4.42))，然后U门即为 <span class="math display">\[U=U_1^\dagger U_2^\dagger U_3^\dagger\]</span> 首先第一个目标，求<span class="math inline">\(U_1\)</span>，使得U门<span class="math inline">\(b\)</span>位置变换为0。 原本为0的时候，<span class="math inline">\(U_1\)</span>是一个单位矩阵就行了。</p>
+<p>不然，则先第二行取<span class="math inline">\((b\ \ -a \ \ 0)\)</span>。</p>
+<p>然后，因为<span class="math inline">\(U_1\)</span>是unitary gate。第一行取<span class="math inline">\((a^*\ \ b^* \ \ 0)\)</span>，所以得式(4.45)。</p>
+<p><span class="math display">\[
+ U_1U=\left[
+  \begin{matrix}
+   a&#39; &amp; d&#39; &amp; g&#39;\\
+   0 &amp; e&#39; &amp; h&#39;\\
+   c&#39; &amp; f&#39; &amp; j&#39;
+  \end{matrix}
+  \right]
+\]</span></p>
+<p>其中，<span class="math inline">\(a&#39;=\sqrt{|a|^2+|b|^2}\)</span>。</p>
+<p>同样的方式，可以求 <span class="math inline">\(U_2\)</span> (式(4.48))。</p>
+<p>经过 <span class="math inline">\(U_1,\ U_2\)</span> 发现， <span class="math display">\[
+ U_2U_1U=\left[
+  \begin{matrix}
+   1 &amp; 0 &amp; 0\\
+   0 &amp; e&#39;&#39; &amp; h&#39;&#39;\\
+   0 &amp; f&#39;&#39; &amp; j&#39;&#39;
+  \end{matrix}
+  \right]
+\]</span> 因为 <span class="math inline">\(U,\ U_1,\ U_2\)</span> 都是unitary gate，所以 <span class="math inline">\(U_2U_1U\)</span> 也是unitary gate。所以可以令 <span class="math inline">\(U_3^\dagger=U_2U_1U\)</span>。</p>
+<p>则 <span class="math inline">\(U=U_1^\dagger U_2^\dagger U_3^\dagger\)</span>。</p>
+<p>总结：n-qubit的 <span class="math inline">\(U\)</span>，<span class="math inline">\(U=U_1U_2...U_k\)</span>。最多需要 <span class="math display">\[2^n-1+2^2-2+...+1=\displaystyle\frac{2^n(2^n-1)}{2}=2^{n-1}(2^n-1)=O(4^n)\]</span> 个 two-level U 门。这对任何 U 门都有用，但是低效。</p>
+<ul>
+<li><h4 id="single-qubit-and-cnot-gates-are-universal">4.5.2 Single qubit and CNOT gates are universal</h4></li>
+</ul>
+<p>接下来是用single qubit和CNOT gates实现任意two-level gates。</p>
+<p>想法是，two-level门是作用在一组qubit中的一个qubit上。即 <span class="math inline">\(U=\widetilde{U}\oplus I_{n-1}\)</span>。那么就有了single qubit门，<span class="math inline">\(\widetilde{U}\)</span>。</p>
+<p>这个不能直接就做个 <span class="math inline">\(\widetilde{U}\)</span> 就可以，需要控制门。先做到离目标状态差一位(<span class="math inline">\(\widetilde{U}\)</span> 作用的一位)，再做控制 <span class="math inline">\(\widetilde{U}\)</span>，最后还原其他位。这样若是翻转的情况，便不还原其他位，完成 <span class="math inline">\(U\)</span> 的变换。若是不翻转，便还原所有位，仍为初始状态。</p>
+<p>根据Fig 4.16，共用 2(n-1) 个Toffoli(带辅助位)，则 <span class="math inline">\(C^{(n-1)}(U)\Rightarrow 总共 O(n^2)\)</span>。</p>
+<p>所以，n-qubit的 <span class="math inline">\(U\)</span>。最多需要 <span class="math display">\[O(n^24^n)\]</span> 个single qubit和CNOT门。</p>
+<p>问题：single qubit门是可随便选择的，但是实际应用中，我们只能准备有限的，离散的。</p>
+<p>另外注意：一个离散的门的集合不能精确表现连续的门的集合。因为很明显，用有限的门组成的门是可数的。</p>
+<ul>
+<li><h4 id="a-discrete-set-of-universal-operations">4.5.3 A discrete set of universal operations</h4>
+<h5 id="approximating-unitary-operators">Approximating unitary operators</h5>
+所以，为了表现所有的门，可取近似。</li>
+</ul>
+<p>定义错误率Error： <span class="math display">\[E(U,V)\equiv\operatorname*{max}\limits_{|\psi\rangle}||(U-V)|\psi\rangle||\]</span></p>
+<p>Lemma: <span class="math display">\[\forall |\psi\rangle,0\le M\le I,|P_U-P_V|\le2E(U,V)\]</span> <span class="math inline">\(where\ P_V=\langle\psi|U^{\dagger}MU|\psi\rangle\, P_U=\langle\psi|V^{\dagger}MV|\psi\rangle\)</span></p>
+<p>Proof see Box 4.1.</p>
+<p>The case of a sequence of gates.</p>
+<p><span class="math inline">\(E(U_mU_{m-1}...U_1,V_mV_{m-1}...V_1)\le \sum\limits_{j=1}^mE(U_j,V_j)\)</span></p>
+<p>即使每个近似的门都有损失一些精度，但是能保证总和损失的精度足够小的话也可以满足需求了。</p>
+<p>比如想要： <span class="math inline">\(E(U_mU_{m-1}...U_1,V_mV_{m-1}...V_1)\le \epsilon\)</span></p>
+<p>就要求 <span class="math inline">\(E(U_j,V_j)\le \epsilon/m\)</span>。</p>
+<h5 id="universality-of-hadamard-phase-cnot-pi8-gates">Universality of Hadamard + phase + CNOT + <span class="math inline">\(\pi/8\)</span> gates</h5>
+<p>Lemma:</p>
+<p>For any 1-gate U, any error bound <span class="math inline">\(\epsilon&gt;0\)</span>,<span class="math inline">\(\exists f\, s.t.\, E(U,f(H,T))&lt;\epsilon\)</span>。</p>
+<p>即 <span class="math inline">\(f\)</span> 组成的电路与 <span class="math inline">\(U\)</span> 的距离小于 <span class="math inline">\(\epsilon\)</span>。</p>
 <p>Proof:</p>
-<p><span class="math inline">\(\forall |x\rangle, |x\rangle=\sum\limits_{i=1}^nx_i|i\rangle=\sum\limits_{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle\)</span></p>
-<p>所以 <span class="math inline">\(\sum\limits_{i=1}^n|i\rangle\langle i|=I\)</span>。</p>
-</blockquote>
-<p><span class="math inline">\(I=|\lambda_+\rangle\langle\lambda_+|+|\lambda_-\rangle\langle\lambda_-|\)</span></p>
-<p><span class="math inline">\(|\lambda_+ \rangle \langle \lambda_+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda_-\rangle\langle\lambda_-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2}\)</span></p>
-<ul>
-<li><h4 id="section-2">2.13</h4>
-记号的作用：如 <span class="math inline">\(|w\underline{\rangle|}v\rangle\langle v|\)</span> (1 对应 <span class="math inline">\(n\)</span> 不能运算)</li>
-</ul>
-<p>应为<span class="math inline">\(|w\rangle \langle v|\)</span> (注意：<span class="math inline">\(|w\rangle， \ |v\rangle\)</span>维度可以不同)</p>
-<p>Proof</p>
-<p><span class="math inline">\(\forall A,\ \exists A^+,\ \forall |x\rangle,|y\rangle,\ (A^dagger|x\rangle,|y\rangle)=(|x\rangle,A|y\rangle)\)</span></p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-((|w\rangle\langle v|)^\dagger|x\rangle,|y\rangle)&amp;=(|v\rangle\underline{\langle w||x\rangle},|y\rangle)\\
-&amp;=\langle w|x\rangle^*\langle v|y\rangle\\
-&amp;=\langle x|w\rangle\langle v|y\rangle
-\end{split}
-\end{equation}\]</span></p>
-<p>注意：内积可取出，但要共轭。</p>
-<ul>
-<li><h4 id="section-3">2.15</h4>
-<p>应用2.14的结果可得。</p></li>
-<li><h4 id="section-4">2.18 &amp; 2.22</h4>
-<p>对于表示一个向量x，在量子计算中尽量改为使用 <span class="math inline">\(|v\rangle\)</span>。</p></li>
-<li><h4 id="section-5">2.20</h4>
-<p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p></li>
-</ul>
-<blockquote>
-<p>预备知识：对同一个空间中的两组标准正交基</p>
-<p><span class="math inline">\(\{|v_i\rangle:i=1,...n\}\)</span> 和 <span class="math inline">\(\{|w_j\rangle:j=1,...n\}\)</span></p>
-<p><span class="math inline">\(|v_i\rangle\)</span> 与 <span class="math inline">\(|w_j\rangle\)</span>通过一个 <span class="math inline">\(U=\sum\limits_{i=1}^n|i\rangle\langle i|\)</span> 关联。</p>
-<p>即 <span class="math inline">\(U|v_R\rangle=|w_R\rangle\)</span></p>
-<p>注：<span class="math inline">\(U^\dagger U=I\)</span></p>
-</blockquote>
-<p>注意： <span class="math inline">\(\sum\limits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\limits_{i,j}IA_{ij}I=A\)</span></p>
-<p>所以：</p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-A&#39;_{ij}&amp;=\langle v_i|A|v_j\rangle\\
-A&amp;=\sum\limits_{i,j}|v_i\rangle A&#39;_{ij}\langle v_j|\\
-&amp;=\sum\limits_{i,j}A&#39;_{ij}|v_i\rangle\langle v_j|\\
-A&#39;&#39;_{ij}&amp;=\langle w_i|A|w_j\rangle\\
-&amp;=\langle w_i|\sum\limits_{k,l}|v_k\rangle A&#39;_{kl}\langle v_l||w_j\rangle\\
-&amp;=\sum\limits_{k,l}A&#39;_{kl}\langle w_i|v_k\rangle\langle v_l|w_j\rangle\\/,Mfr
-&amp;=\sum\limits_{k,l}A&#39;_{kl}U^*_{ik}U_{jl}\\
-&amp;=\sum\limits_{k,l}U^*_{ik}A&#39;_{kl}U^\top_{lj}\\
-&amp;=(U^*A&#39;U^\top)_{ij}
-\end{split}
-\end{equation}\]</span></p>
-<p><span class="math inline">\(\Rightarrow A&#39;&#39;=U^*A&#39;U^\top\)</span></p>
-<p>令 <span class="math inline">\(V = U^*\)</span></p>
-<p>则 <span class="math inline">\(A&#39;&#39;=VA&#39;V^\dagger\)</span></p>
-<p>还可以对结果进行验证，两个矩阵可表示为</p>
-<p><span class="math inline">\(A&#39;&#39;=\sum\limits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A&#39;=\sum\limits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|\)</span></p>
-<ul>
-<li><h4 id="section-6">2.26</h4>
-<span class="math inline">\(H^{\oplus n}\)</span> 的一个用途：</li>
-</ul>
-<p><span class="math inline">\(|+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle\)</span> 这个态的制备很简单，只要 1 个 <span class="math inline">\(H^{\otimes n}\)</span></p>
-<p><span class="math inline">\(|0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n}\)</span></p>
-<p>这将所有基态关联在了一起。 因为它涉及了所有可能的输入，很多实验的输入第一步都会做这个。</p>
-<ul>
-<li><h4 id="section-7">2.33</h4>
-使用数学归纳法(Mathematical Induction, MI)：</li>
-</ul>
-<p>Suppose</p>
-<p><span class="math display">\[ H^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x,y}(-1)^{xy}|x\rangle\langle y| \]</span></p>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-H^{\otimes n+1}&amp;=\displaystyle\frac{1}{\sqrt{2}}&amp;((-1)^{x_0y_0}|x_0\rangle\langle y_0|\\
-&amp;&amp;+(-1)^{x_0y_1}|x_0\rangle\langle y_1|\\
-&amp;&amp;+(-1)^{x_1y_0}|x_1\rangle\langle y_0|\\
-&amp;&amp;+(-1)^{x_1y_1}|x_1\rangle\langle y_1|)\ H^{\otimes n}
-\end{split}
-\end{equation}\]</span></p>
-<p>易见 <span class="math inline">\(x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1\)</span></p>
-<p>令 <span class="math inline">\(x&#39;,y&#39;\)</span></p>
-<p>则有 <span class="math inline">\(H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x&#39;,y&#39;}(-1)^{x&#39;y&#39;}|x&#39;\rangle\langle y&#39;|\)</span></p>
-<ul>
-<li><h4 id="section-8">2.34</h4>
-不用解特征方程，通过观察 <span class="math display">\[\begin{equation}
-\begin{split}
-M=
- \left[
- \begin{matrix}
-  4 &amp; 3 \\
-  3 &amp; 4
- \end{matrix}
- \right]
- &amp;=4I+3X\\
- &amp;=4(|+\rangle\langle+|+|-\rangle\langle-|)+3(|+\rangle\langle+|-|-\rangle\langle-|)\\
- &amp;=7|+\rangle\langle+|+|-\rangle\langle-|
-\end{split}
-\end{equation}\]</span></li>
-</ul>
-<p><span class="math inline">\(\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|\)</span></p>
-<p><span class="math inline">\(\log{M}=\log{7}|+\rangle\langle+|\)</span></p>
-<ul>
-<li><h4 id="section-9">2.35</h4>
-通过特征值为 <span class="math inline">\(\pm 1\)</span> 得到 <span class="math inline">\(\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|\)</span> 则</li>
-</ul>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-|\mu\rangle&amp;=e^{i\theta}|\lambda_+\rangle\langle\lambda_+|+e^{-i\theta}|\lambda_-\rangle\langle\lambda_-|\\
-&amp;=\cos{\theta}I+i\sin{\theta}\widehat{n}\cdot\widehat{\sigma}
-\end{split}
-\end{equation}\]</span></p>
-<ul>
-<li><h4 id="section-10">2.37</h4>
-注意：AB不能直接交换，所以添加一个辅助的 <span class="math inline">\(|j\rangle\langle j|\)</span>。</li>
-</ul>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-tr(AB)&amp;=\sum\limits_{i}\langle i|AB|i\rangle\\
-&amp;=\sum\limits_{i,j}\langle i|A\underline{|j\rangle\langle j|}B|i\rangle\\
-&amp;=\sum\limits_{i,j}\langle j|B|i\rangle\langle j|A|j\rangle\\
-&amp;=\sum\limits_{j}\langle j|BA|j\rangle
-\end{split}
-\end{equation}\]</span></p>
-<ul>
-<li><h4 id="section-11">2.40</h4>
-<span class="math inline">\(X,Y,Z\)</span> 一些有趣的性质。</li>
-</ul>
-<p><span class="math inline">\(XY=iZ\quad YZ=iX\quad ZX=iY\)</span></p>
-<p><span class="math inline">\(ZYZ=-Y\quad XZX=-Z\quad YXY=ZXZ=-X\)</span></p>
-<p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
-<ul>
-<li><h4 id="section-12">2.49</h4>
-目标是拆出一个半正定矩阵(Positive semi-definite matrix)。</li>
-</ul>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|\cdot|i\rangle\langle i|\\
-&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|i\rangle\langle i|\cdot\sum\limits_{j}|\lambda_j|\cdot|j\rangle\langle j|
-\end{split}
-\end{equation}\]</span></p>
-<p>因为 <span class="math inline">\(|\lambda_j|\ge0\)</span>，所以得到的是一个酉矩阵乘一个半正定矩阵。</p>
-<p>Recall that: Exercise 2.18 <span class="math inline">\(|\lambda_i|=1\)</span>.</p>
+<p>由式（4.74）和式（4.75）的推导。</p>
+<p><span class="math inline">\(\Rightarrow T\cdot HTH=e^{i\alpha}R_{\widehat{n}}(\theta)\)</span></p>
+<p>*注意：这里的 <span class="math inline">\(\theta\)</span>，有 <span class="math inline">\(\displaystyle\frac{\theta}{2\pi}\)</span> 是一个无理数。它的好处是，当做 <span class="math display">\[(T\cdot HTH)^k=e^{ik\alpha}R_{\widehat{n}}(k\theta)\]</span> 时，因为 <span class="math inline">\(k=1,2...,n\)</span>，所以每一次转完一周，都会转过一点，不会和起始位置重叠，所以转了多周之后，可以稠密覆盖整个面。</p>
+<p>然后再令 <span class="math display">\[R_{\widehat{m}}(\alpha)=HR_{\widehat{n}}(\alpha)H\]</span> 就可得到 <span class="math inline">\(R_{\widehat{m}}(\alpha)\)</span>。</p>
+<p>根据Exercise 4.11的结论，就可以得到 <span class="math display">\[U=e^{i\alpha}R_{\widehat{n}}(\beta_0)R_{\widehat{m}}(\gamma_1)R_{\widehat{n}}(\beta_1)...\]</span></p>
+<p>根据 <span class="math inline">\(Solovay{-}Kitaev\ theorem\)</span>，所用的门的数量为 <span class="math inline">\(O(log^c(1/\epsilon))\)</span>。</p>
+<p>所以，总的复杂度为 <span class="math inline">\(O(n^24^n\cdot log^c(n^24^n/\epsilon))\)</span>。</p>
+<p>注意，误差不是 <span class="math inline">\(\epsilon\)</span>，因为有 <span class="math inline">\(O(n^24^n)\)</span> 个门，所以误差要求是 <span class="math inline">\(\epsilon/n^24^n\)</span>。</p>
 
       
 
@@ -390,7 +300,7 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
         		</li>
       		
 		</ul>
@@ -446,7 +356,7 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/07/17/QCQI-Lesson-DAY1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/07/22/QCQI-Lesson-DAY7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -460,18 +370,18 @@ A&amp;=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|
   
 <nav id="article-nav">
   
-    <a href="/2018/07/20/QCQI-Lesson-DAY2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/08/05/QCQI-Lesson-Day3-4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          QCQI Lesson DAY2
+          QCQI Lesson DAY3,4
         
       </div>
     </a>
   
   
-    <a href="/2018/07/01/First-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在macOS上编写java调用Matlab的函数时的一个报错</div>
+    <a href="/2018/07/20/QCQI-Lesson-DAY5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">QCQI Lesson DAY5</div>
       <i class="icon-circle-right"></i>
     </a>
   
