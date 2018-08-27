@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hi, I&#39;m MartianQXD. Hello, World!</title>
+  <title>QCQI Lesson Day8 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Chapter 5  Quantum Fourier Transformation 经典的傅立叶变换(FT)是： \[(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}\] \(\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\li">
+<meta name="keywords" content="quantum computation，quantum information">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QCQI Lesson Day8">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/QCQI-Lesson-Day8/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta property="og:description" content="Chapter 5  Quantum Fourier Transformation 经典的傅立叶变换(FT)是： \[(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}\] \(\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\li">
+<meta property="og:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
+<meta property="og:updated_time" content="2018-08-27T12:49:01.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta name="twitter:title" content="QCQI Lesson Day8">
+<meta name="twitter:description" content="Chapter 5  Quantum Fourier Transformation 经典的傅立叶变换(FT)是： \[(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}\] \(\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\li">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -145,103 +152,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-QCQI-Lesson-Day9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-QCQI-Lesson-Day8" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/25/QCQI-Lesson-Day9/">QCQI Lesson Day9</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/25/QCQI-Lesson-Day9/" class="archive-article-date">
-  	<time datetime="2018-08-25T09:51:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-5">Chapter 5</h3>
-<ul>
-<li><h4 id="quantum-fourier-transformation">Quantum Fourier Transformation</h4></li>
-<li><h4 id="phase-estimation-performace">Phase estimation performace</h4>
-回顾上一天的内容，见Fig 5.3，<span class="math inline">\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)</span>。</li>
-</ul>
-<p>与controlled-U不同，<span class="math inline">\(U_1...U_n\)</span> 都可以做，所以是U的x次方。</p>
-<p>然后再下一步，<span class="math inline">\(|x\rangle\)</span> 做QFT得式（5.23）。</p>
-<p>1）<span class="math inline">\(|\phi\rangle=0.\phi_1\phi_2...\phi_t\phi_{t+1}...\)</span></p>
-<p>2）<span class="math inline">\(b=\phi_1...\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}\)</span></p>
-<p>3）<span class="math inline">\(m\in\{0,1\}^t\)</span></p>
-<p>计算 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(\phi\)</span> 的距离，类似于 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(b\)</span> 的距离。所以我们计算 <span class="math inline">\(e\)</span>。<span class="math inline">\(\forall e,\ p(|m-b|&gt;e)\)</span></p>
-<p>回顾结束。</p>
-<p>继续求 <span class="math inline">\(\alpha_l\)</span>。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/25/QCQI-Lesson-Day9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-Day8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/20/QCQI-Lesson-Day8/">QCQI Lesson Day8</a>
+    <h1 class="article-title" itemprop="name">
+      QCQI Lesson Day8
     </h1>
   
 
@@ -261,485 +179,126 @@
 </ul>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
 <p>相比FT有 <span class="math inline">\(k\times2^{N}\)</span> 种可能，QFT是指数级的加速，但是 <span class="math inline">\(x_k\)</span> 是振幅，测量后是无法得到的。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/20/QCQI-Lesson-Day8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/10/QCQI-Lesson-DAY6/">QCQI Lesson DAY 6</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/10/QCQI-Lesson-DAY6/" class="archive-article-date">
-  	<time datetime="2018-08-10T01:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-4-its-exercise">Chapter 4 &amp; its Exercise</h3>
+<a id="more"></a>
+<p><span class="math inline">\(H_n:\ \{|0\rangle,...,|N-1\rangle\}\)</span> <span class="math display">\[|x\rangle=\sum\limits_{k=0}^{N-1}x_k|k\rangle\xrightarrow{QFT}|y\rangle=\sum\limits_{j=0}^{N-1}y_j|j\rangle=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle\]</span> 这里<span class="math inline">\(\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle=\sum\limits_{k=0}^{N-1}x_kQFT|k\rangle\)</span>。</p>
+<p><span class="math inline">\(iff\quad\forall k,\,QFT|k\rangle=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j=0}^{N-1}e^{2\pi ijk/N}|j\rangle\)</span></p>
+<p><span class="math inline">\(即\ QFT:\\)</span> <span class="math display">\[\forall k,|k\rangle\rightarrow\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j=0}^{N-1}e^{2\pi ijk/N}|j\rangle\]</span> FT和QFT其实不是一个问题，但他们之间存在此种关系。</p>
+<p>那么现在的目标是：Find an efficient algorithm to implement QFT.</p>
+<p>首先，观察到QFT有一个非常好的性质。</p>
+<p><span class="math inline">\(j=j_0...j_{n-1}\)</span></p>
+<p><span class="math inline">\(j=j_0\cdot2^{n-1}+j_1\cdot2^{n-2}+...+j_{n-1}\cdot2^{0}\)</span></p>
+<p>所以 <span class="math inline">\(j/2^n\)</span> 是一个小数 <span class="math inline">\(0.j_0...j_{n-1}\)</span></p>
+<p><span class="math inline">\(j/2^n=j_0\cdot2^{-1}+j_1\cdot2^{-2}+...+j_{n-1}\cdot2^{-n}\)</span></p>
+<p>利用张量积的性质展开得到式（5.5）- 式（5.10）的推导。注意（5.8）<span class="math inline">\(\rightarrow\)</span>（5.9）是因为整数部分其实可以扔掉，所以只看小数部分。</p>
 <ul>
-<li><h4 id="section">4.8</h4>
-补充： <span class="math display">\[R_{\widehat{n}}(\theta)
-=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\]</span> 的来源。是根据 <span class="math inline">\(U\)</span> 的谱分解 <span class="math display">\[\begin{equation}
+<li><h4 id="circuitfig-5.1">Circuit（Fig 5.1）</h4>
+因为式（5.10）中不看phase部分，每一项都是 <span class="math inline">\(\displaystyle\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)\)</span>，所以每一项需要一个 <span class="math inline">\(H\)</span>。</li>
+</ul>
+<p>再看phase部分，因为phase还要由其他位控制，所以类似Fig 4.5，是controlled phase shift gates。</p>
+<p>所以Fig 5.1中的第一个H门开始到第二个H门前的部分，相当于式（5.10）的最后一项。</p>
+<p><span class="math inline">\(|j_k\rangle\xrightarrow{H}|0\rangle+e^{2\pi i0.j_k}|1\rangle\)</span></p>
+<p><span class="math inline">\(R_k=\left[  \begin{matrix}  1 &amp; \\  &amp; e^{2\pi i\frac{1}{2^k}}  \end{matrix}  \right]\)</span></p>
+<p>还有个小问题，<span class="math inline">\(|j_k\rangle\)</span> 的顺序是反的，可以加一组swap门(<span class="math inline">\(\lfloor\displaystyle\frac{n}{2}\rfloor\)</span>个)。</p>
+<!-- <img src="https://i.loli.net/2018/08/26/5b827bef82dc6.jpg" alt="QCQI Lesson Day8(1).jpg" title="QCQI Lesson Day8(1).jpg" /> -->
+<p><img src="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg" alt="QCQI Lesson Day8(1).jpg" title="QCQI Lesson Day8(1).jpg"></p>
+<p>可以推导证明： <span class="math display">\[\begin{equation}
 \begin{split}
-U
-&amp;=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
-&amp;=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
+|\alpha\rangle|\beta\rangle&amp;\rightarrow|\alpha\rangle\ |\alpha\rangle\oplus|\beta\rangle\\
+&amp;\rightarrow|\alpha\rangle\oplus|\alpha\rangle\oplus|\beta\rangle\ |\alpha\rangle\oplus|\beta\rangle\\
+&amp;\rightarrow|\beta\rangle\ |\alpha\rangle\oplus|\beta\rangle\\
+&amp;\rightarrow|\beta\rangle\ |\alpha\rangle\oplus|\beta\rangle\oplus|\beta\rangle\\
+&amp;\rightarrow|\beta\rangle\ |\alpha\rangle
 \end{split}
-\end{equation}\]</span></li>
-</ul>
-<p>这里全局相位可以省略。希望 <span class="math inline">\(U\)</span> 等于 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span>。</p>
-<p>取 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span></p>
-<p>则有</p>
-<p><span class="math inline">\(\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p><span class="math inline">\(U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p>所以 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span> 满足我们想要的，代回 <span class="math inline">\(U\)</span> 中，得 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span> 的形式。</p>
-<h2 id="section-1">
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/10/QCQI-Lesson-DAY6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-Day3-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/05/QCQI-Lesson-Day3-4/">QCQI Lesson DAY3,4</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/05/QCQI-Lesson-Day3-4/" class="archive-article-date">
-  	<time datetime="2018-08-04T18:06:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-2-bloch-sphere">Chapter 2 &amp; Bloch sphere</h3>
+\end{equation}\]</span></p>
+<p>回过头看QFT，复杂度为 <span class="math inline">\(n+n-1+...+1=\displaystyle\frac{n(n-1)}{2}=O(n^2)\)</span></p>
 <ul>
-<li><h4 id="exercise-2.64">Exercise 2.64</h4>
-<h5 id="state-discrimination">State discrimination</h5>
-量子以下两个性质：</li>
+<li><h4 id="phase-estimation">Phase estimation</h4>
+Input: <span class="math inline">\(U,\ |u\rangle\ s.t.\ e^{2\pi i\phi},\ \Delta,\ \epsilon,\ Controlled\text{-}U^{2^j}\ j\ge 0\)</span></li>
 </ul>
-<ol type="1">
-<li>有叠加态</li>
-<li>被观测之后塌缩</li>
-</ol>
-<p>这两个性质让量子有不可克隆性等性质。</p>
-<p>理解问题：</p>
-<p><span class="math inline">\(\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0\)</span> 正交时，可以得到一组投影测量 <span class="math inline">\(P_i=|\psi_i\rangle\langle\psi_i|\)</span>。</p>
-<p>因为 <span class="math inline">\(P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle\)</span><span class="math inline">\((即P(i)=0)\)</span>，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
-<p>这被称为完美分辨(perfect discrimination)。</p>
-<p>那么，现在的问题是，这些状态 <span class="math inline">\(\{|\psi_i:\ i=1...n\}\)</span> 是线性无关的。 &gt;注意线性无关不能推出正交，但正交可以推出线性无关。</p>
-<p>该如何构造POVM。</p>
-<p>可以定义一个映射 <span class="math inline">\(f:\{1,...,m\}\rightarrow \{1,...,n\},\ \\\forall i,\ \langle\psi_{f(i)}|E_i|\psi_{f(i)}\rangle=1.\)</span></p>
-<p>令 <span class="math inline">\(f(i)=i\)</span>，若其成立，则这就是完美分辨。</p>
-<p>但 <span class="math inline">\(f(i)=i\)</span> 并不一定成立。</p>
-<p>为了构造POVM，可以放松对分辨的要求，有2种选择：</p>
-<ol type="1">
-<li>近似分辨(approximate discrimination)， 比如：<span class="math inline">\(\forall i,\ \langle \psi_{f(i)}|E_i|\psi_{f(i)}\rangle\ge 0.75\)</span>。</li>
-<li><a href="https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination" title="unambiguous discrimination的维基链接" target="_blank" rel="external">模糊分辨(unambiguous discrimination)</a>，允许分辨的时候，说“不知道”(don’t know)。即 <span class="math inline">\(\forall i,\ 1\le i\neq j\le n,\ \langle \psi_i|E_j|\psi_i\rangle=0\)</span>。 注意，完美分辨可蕴含模糊分辨，但反之不行。并且要排除 <span class="math inline">\(trivial\)</span> 的情况，即一直说“不知道”。</li>
-</ol>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/05/QCQI-Lesson-Day3-4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/22/QCQI-Lesson-DAY7/">QCQI Lesson DAY7</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/22/QCQI-Lesson-DAY7/" class="archive-article-date">
-  	<time datetime="2018-07-22T05:38:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-4">Chapter 4</h3>
-<ul>
-<li><h4 id="universal-quantum-gates">4.5 Universal quantum gates</h4>
-这节要证明，只通过CNOT门，Hadamard门和T门(<span class="math inline">\(\pi/8\)</span>门)，就可以构成(近似)任何U门。</li>
-</ul>
-<h4 id="two-level-unitary-gates-are-universal">4.5.1 Two-level unitary gates are universal</h4>
-<p>two-level unitary gate形如： <span class="math display">\[
-  \left[
-  \begin{matrix}
-   a &amp; b &amp; \\
-   c &amp; d &amp; \\
-     &amp;   &amp; 1
-  \end{matrix}
-  \right]
-\]</span> 或 <span class="math display">\[
-  \left[
-  \begin{matrix}
-   1 &amp;   &amp;  \\
-     &amp; a &amp; b\\
-     &amp; c &amp; d
-  \end{matrix}
-  \right]
-\]</span> 或 <span class="math display">\[
-  \left[
-  \begin{matrix}
-   a &amp;  &amp; b\\
-     &amp; 1 &amp; \\
-   c &amp;  &amp; d
-  \end{matrix}
-  \right]
-\]</span>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/22/QCQI-Lesson-DAY7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY5/">QCQI Lesson DAY5</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY5/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:03:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-2-4-exercise">Chapter 2, 4 Exercise</h3>
-<ul>
-<li><h4 id="section">2.73</h4>
-预备条件：</li>
-</ul>
-<p><span class="math inline">\(对于 \rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|,其中\{|\phi_i\rangle\}是一组单位正交基\Rightarrow线性无关。\\(注意：线性无关\nRightarrow正交)\\\)</span></p>
-<p><span class="math inline">\(Recall\ that\)</span></p>
+<p>Output: <span class="math inline">\(\widetilde{\phi}\ s.t.\ |\widetilde{\phi}-\phi|&lt;\Delta\ with\ prob\ge1-\epsilon\)</span></p>
+<p><span class="math inline">\(\widetilde{\phi}\)</span> 是 <span class="math inline">\(\phi\)</span> 的近似值，<span class="math inline">\(\phi=0.\phi_1\phi_2\phi_3...\)</span></p>
+<blockquote>
+<p>题外话</p>
+<p>目前有一个工作在《Nature Communication》上</p>
+<p>电路 <span class="math inline">\(f(?,?,?)\)</span> 有三个参数，物理上就是电路有三个缺口。</p>
+<p>填入 <span class="math inline">\(U\)</span> 后，<span class="math inline">\(f(U,U,U)=Controlled\text{-}U\)</span></p>
+<p>(通过 <span class="math inline">\(U\)</span> 得到 <span class="math inline">\(Controlled\text{-}U\)</span>)</p>
+<p>可以通过证明，得到结论，该电路无法实现。</p>
+<p>但是物理上能够实现，可能的原因是电路无法表现实现该电路的实验。</p>
+<p>该问题的重要性：</p>
+<p>以前的量子程序都是经典控制 <span class="math inline">\(if\ q_1\ then\ U[q_2]\)</span></p>
+<p>但若是量子控制 <span class="math inline">\(qif\ q_1\ then\ U[q_2]\)</span>，即</p>
+<p><span class="math inline">\(|0\rangle|\psi\rangle\mapsto|0\rangle|\psi\rangle\quad|1\rangle|\psi\rangle\mapsto|1\rangle U|\psi\rangle\)</span></p>
+<p>希望能够模块化，即编译器的模块化，则 <span class="math inline">\(f\)</span> 的缺口就是then后面的statement。</p>
+<p>更进一步，若不是U门而是另一个电路<span class="math inline">\(\epsilon\)</span>，即<span class="math inline">\(qif\ q_1\ then\ \epsilon[q_2]\)</span></p>
+</blockquote>
+<p>言归正传，相位估计的算法。</p>
+<h4 id="algorithm">Algorithm</h4>
+<h5 id="step-1-fig-5.2">Step 1 （Fig 5.2）</h5>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
-  &amp;span\{|\widetilde{k}\rangle:k=1,...,k\}\\
-= &amp;span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
-= &amp;span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
+|0\rangle^{\otimes t}|u\rangle
+&amp;\rightarrow\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j_0...j_k=1}^0|j_0...j_k\rangle|u\rangle\\
+&amp;\rightarrow\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j_0...j_k}|j_0...j_k\rangle U^{2^1\cdot j_{t-1}+2^0\cdot j_t}|u\rangle\\
+&amp;\rightarrow...\\
+&amp;\rightarrow\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j_0...j_k}|j_0...j_k\rangle U^{\sum\limits_{k=0}^{t-1}2^{k}_{t-k}}|u\rangle\\
+&amp;\rightarrow\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j=0}^{2^t-1}|j\rangle U^j|u\rangle\\
+&amp;=\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j=0}^{2^t-1}e^{2\pi i\phi j}|j\rangle|u\rangle
 \end{split}
-\end{equation}\]</span> <span class="math display">\[ \sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|\]</span></p>
-<p>其中，<span class="math inline">\(span\{|\widetilde{k}\rangle\}\)</span>是最小的。若再在其中增加<span class="math inline">\(|\psi\rangle\)</span>，则<span class="math inline">\(|\psi\rangle\)</span>是<span class="math inline">\(\{|\widetilde{k}\rangle\}\)</span>的线性组合。(增加了冗余)</p>
-<p>理解问题：</p>
-<ol type="1">
-<li><p><span class="math inline">\(\forall |\psi\rangle\in supp(\rho),\\ \exists\ minimal\ essemble\ \{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\ s.t.\)</span></p></li>
-<li><p><span class="math inline">\(\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}\)</span></p></li>
-</ol>
-<p>思路：使用定理2.6的两个方向证明
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY2/">QCQI Lesson DAY2</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY2/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:00:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
+\end{equation}\]</span> 到这里，<span class="math inline">\(|u\rangle\)</span> 的任务，即提取出phase，已经完成。 ##### Step 2 <span class="math inline">\(\quad QFT^\dagger\)</span> <span class="math display">\[\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j=0}^{2^t-1}e^{2\pi i\phi j}|j\rangle\xrightarrow{QFT^{\dagger}}|\widetilde{\phi}\rangle\]</span> 将phase从指数部分拿了下来，这实际是 <span class="math inline">\(\phi\)</span> 的一个很好的近似。</p>
+<h5 id="step-3-用0rangle1rangle基去测得到widetildephiranglein01t">Step 3 用<span class="math inline">\(|0\rangle,|1\rangle\)</span>基去测，得到<span class="math inline">\(|\widetilde{\phi}\rangle\in\{0,1\}^{t}\)</span></h5>
+<h4 id="performance">Performance</h4>
+<p>QFT: <span class="math display">\[\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j,k=0}^{2^t-1}e^{2\pi ijk/2^t}|k\rangle\langle j|\]</span> <span class="math inline">\(\Rightarrow\)</span></p>
+<p>QFT<span class="math inline">\(^{\dagger}\)</span>: <span class="math display">\[\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j,k=0}^{2^t-1}e^{-2\pi ijk/2^t}|j\rangle\langle k|\]</span></p>
+<p><span class="math inline">\((5.20)\xrightarrow{QFT^\dagger}\displaystyle\frac{1}{2^t}\sum\limits_{j}(\sum\limits_{k}e^{2\pi ik(\phi-j/2^t)})|j\rangle\)</span></p>
+<p>取 <span class="math inline">\(\beta_j\equiv\sum\limits_{k}e^{2\pi ik(\phi-j/2^t)}\)</span>。</p>
+<p>令 <span class="math inline">\(b=\phi_1...\phi_t,\ \delta\equiv\phi-b/2^t,0&lt;\delta&lt;2^{-t}\)</span>。</p>
+<p>假设最终测量的结果为 <span class="math inline">\(m\)</span>。</p>
+<p>定义一个容错 <span class="math inline">\(e\)</span>。 <span class="math display">\[\begin{equation}
+\begin{split}
+\forall e,p(|m-b|&gt;e)
+&amp;=p(m&gt;b+e)+p(m&lt;b-e)\\
+&amp;=\sum\limits_{m=b+e+1}^{2^t-1}|\beta_m|^2+\sum\limits_{m=0}^{b-e-1}|\beta_m|^2
+\end{split}
+\end{equation}\]</span></p>
+<p>平移取值范围，取 <span class="math inline">\(\alpha_j\overset{\Delta}{=}\beta_{j+b}\ mod\ 2^t,\ -2^{t-1}&lt;j\le2^{t-1}\)</span></p>
+<p>对应书上将 <span class="math inline">\(j\rightarrow l\)</span>，得式（5.27） <span class="math display">\[\begin{equation}
+\begin{split}
+p(|m-b|&gt;e)=
+\sum\limits_{m=e+1}^{2^{t-1}}|\alpha_l|^2+\sum\limits_{m=-2^{t-1}}^{-e-1}|\alpha_l|^2
+\end{split}
+\end{equation}\]</span></p>
+<p>接下来，求 <span class="math inline">\(|\alpha|^2\)</span>，</p>
+<p><span class="math inline">\(a_l=\displaystyle\frac{1}{2^t}\sum\limits_{k}e^{2\pi ik(\phi-(b+l)/2^t)}\)</span> (<span class="math inline">\(mod\ 2^t\)</span> 被消掉了) <span class="math inline">\(\Rightarrow\)</span> 式（5.24）</p>
+<p>接下来看式（5.28）</p>
+<p>引理：<span class="math inline">\(|1-exp(i\theta)|\ge\displaystyle\frac{2|\theta|}{\pi}\ if\ -\pi\le\theta\le\pi\)</span>，这个画个图即证。</p>
 <ul>
-<li><h4 id="section">2.39</h4></li>
+<li><h5 id="这里先暂停之后再继续证明">这里先暂停，之后再继续证明。</h5></li>
 </ul>
-<ol type="1">
-<li>证明三个性质，即第2.1.4节中的：</li>
-</ol>
-<blockquote>
-<ol type="1">
-<li><p>Linear in the second argument.</p></li>
-<li><p><span class="math inline">\((|v \rangle,|w\rangle )=(|w\rangle,|v\rangle)^*\)</span>.</p></li>
-<li><p><span class="math inline">\((|v\rangle,|v\rangle)\ge 0\)</span> with equality iff <span class="math inline">\(|v\rangle =0\)</span>. 分别证明，</p></li>
-</ol>
-</blockquote>
-<p>对于 (1) ，根据式（2.63）和（2.64）</p>
-        
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -759,16 +318,84 @@ U
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/08/20/QCQI-Lesson-Day8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/08/25/QCQI-Lesson-Day9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          QCQI Lesson Day9
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/10/QCQI-Lesson-DAY6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">QCQI Lesson DAY 6</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -788,162 +415,12 @@ U
 
 
 
-
   
-    <article id="post-QCQI-Lesson-DAY1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/QCQI-Lesson-DAY1/">QCQI Lesson DAY1</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/17/QCQI-Lesson-DAY1/" class="archive-article-date">
-  	<time datetime="2018-07-17T03:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
-<ul>
-<li><h4 id="section">2.9</h4>
-Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</li>
-</ul>
-<p>对于外积<span class="math inline">\(|0\rangle\langle0|\)</span>，它代表的是矩阵 <span class="math display">\[
-  \left[
-  \begin{matrix}
-   a_{00} &amp; a_{01} \\
-   a_{10} &amp; a_{11}
-  \end{matrix}
-  \right]
-\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span></p>
-<h2 id="section-1">
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/QCQI-Lesson-DAY1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-First-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/01/First-Post/">在macOS上编写java调用Matlab的函数时的一个报错</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/01/First-Post/" class="archive-article-date">
-  	<time datetime="2018-07-01T14:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- #### 在macOS上编写java调用Matlab的函数时的一个报错 -->
-<p>IDE：Eclipse</p>
-<p>Matlab版本：R2017a</p>
-<p>报错信息：</p>
-<p>Exception in thread “main” java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or the current path configuration, or a mismatch with the architecture of the Java interpreter on the path. MATLAB Runtime version this component is attempting to use: 9.2. Java interpreter architecture: maci64.
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/01/First-Post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -966,8 +443,8 @@ Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</s
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
