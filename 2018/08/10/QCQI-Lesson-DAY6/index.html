@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>QCQI Lesson DAY 6 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chapter 4 &amp;amp; its Exercise  4.8 补充： \[R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\] 的来源。是根据 \(U\) 的谱分解 \">
+  <meta name="description" content="Chapter 4 &amp;amp; its Exercise- 4.8补充： R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|的来源。是根据 $U$ 的谱分解 \begin{eq">
 <meta name="keywords" content="quantum computation, quantum information">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QCQI Lesson DAY 6">
 <meta property="og:url" content="http://yoursite.com/2018/08/10/QCQI-Lesson-DAY6/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="Chapter 4 &amp;amp; its Exercise  4.8 补充： \[R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\] 的来源。是根据 \(U\) 的谱分解 \">
+<meta property="og:description" content="Chapter 4 &amp;amp; its Exercise- 4.8补充： R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|的来源。是根据 $U$ 的谱分解 \begin{eq">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-08-25T14:24:13.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY 6">
-<meta name="twitter:description" content="Chapter 4 &amp;amp; its Exercise  4.8 补充： \[R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\] 的来源。是根据 \(U\) 的谱分解 \">
+<meta name="twitter:description" content="Chapter 4 &amp;amp; its Exercise- 4.8补充： R_{\widehat{n}}(\theta) =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|的来源。是根据 $U$ 的谱分解 \begin{eq">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -37,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -170,129 +171,107 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-4-its-exercise">Chapter 4 &amp; its Exercise</h3>
-<ul>
-<li><h4 id="section">4.8</h4>
-补充： <span class="math display">\[R_{\widehat{n}}(\theta)
-=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\]</span> 的来源。是根据 <span class="math inline">\(U\)</span> 的谱分解 <span class="math display">\[\begin{equation}
+        <h3 id="Chapter-4-amp-its-Exercise"><a href="#Chapter-4-amp-its-Exercise" class="headerlink" title="Chapter 4 &amp; its Exercise"></a>Chapter 4 &amp; its Exercise</h3><p>-</p>
+<h4 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h4><p>补充：</p>
+<script type="math/tex; mode=display">R_{\widehat{n}}(\theta)
+=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|</script><p>的来源。是根据 $U$ 的谱分解</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 U
-&amp;=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
-&amp;=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
+&=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
+&=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
 \end{split}
-\end{equation}\]</span></li>
-</ul>
-<p>这里全局相位可以省略。希望 <span class="math inline">\(U\)</span> 等于 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span>。</p>
-<p>取 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span></p>
+\end{equation}</script><p>这里全局相位可以省略。希望 $U$ 等于 $R_{\widehat{n}}(\theta)$。</p>
+<p>取 $\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$</p>
 <p>则有</p>
-<p><span class="math inline">\(\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p><span class="math inline">\(U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p>所以 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span> 满足我们想要的，代回 <span class="math inline">\(U\)</span> 中，得 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span> 的形式。</p>
-<h2 id="section-1"><a id="more"></a></h2>
-<h4 id="extra">4.4 Extra</h4>
-<p>用 <span class="math inline">\(R_{x}(\theta)\)</span> 和 <span class="math inline">\(R_{y}(\theta)\)</span> 和全局相位表示 <span class="math inline">\(H\)</span>。 <span class="math display">\[\begin{equation}
+<p>$\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
+<p>$U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
+<p>所以 $\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R_{\widehat{n}}(\theta)$ 的形式。</p>
+<a id="more"></a>
+<p>-</p>
+<h4 id="4-4-Extra"><a href="#4-4-Extra" class="headerlink" title="4.4 Extra"></a>4.4 Extra</h4><p>用 $R_{x}(\theta)$ 和 $R_{y}(\theta)$ 和全局相位表示 $H$。</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
-H&amp;=\displaystyle\frac{X+Z}{\sqrt{2}}=\displaystyle\frac{X(I-iY)}{\sqrt{2}}\\
-&amp;=X(cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y)
+H&=\displaystyle\frac{X+Z}{\sqrt{2}}=\displaystyle\frac{X(I-iY)}{\sqrt{2}}\\
+&=X(cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y)
 \end{split}
-\end{equation}\]</span></p>
-<p>可以取</p>
-<p><span class="math inline">\(X=e^{i\frac{\pi}{4}}R_{x}(\pi)\)</span></p>
-<p><span class="math inline">\(cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y=R_{y}(\displaystyle\frac{\pi}{4})\)</span></p>
-<ul>
-<li><h4 id="section-2">4.15</h4></li>
-</ul>
-<ol type="1">
-<li>根据式(4.8)</li>
-</ol>
-<p><span class="math inline">\(R_{\widehat{n}_i}(\beta_i)\equiv c_iI-s_ii\widehat{n}_i\cdot\widehat{\sigma}\)</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}</script><p>可以取</p>
+<p>$X=e^{i\frac{\pi}{4}}R_{x}(\pi)$</p>
+<p>$cos\displaystyle\frac{\pi}{4}I-isin\displaystyle\frac{\pi}{4}Y=R_{y}(\displaystyle\frac{\pi}{4})$</p>
+<p>-</p>
+<h4 id="4-15"><a href="#4-15" class="headerlink" title="4.15"></a>4.15</h4><p>(1)<br>根据式(4.8)</p>
+<p>$R_{\widehat{n}_i}(\beta_i)\equiv c_iI-s_ii\widehat{n}_i\cdot\widehat{\sigma}$</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
-s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}&amp;=s_1s_2\widehat{n}_1\widehat{n}_2I+((n_{1x}n_{2y}-n_{2y}n_{1x})iZ+...)\\
-&amp;=s_1s_2\widehat{n}_1\widehat{n}_2I+i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}
+s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}&=s_1s_2\widehat{n}_1\widehat{n}_2I+((n_{1x}n_{2y}-n_{2y}n_{1x})iZ+...)\\
+&=s_1s_2\widehat{n}_1\widehat{n}_2I+i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}
 \end{split}
-\end{equation}\]</span></p>
-<p><span class="math inline">\(c_1c_2I-s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}=c_1c_2I-s_1s_2\widehat{n}_1\widehat{n}_2I-i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}\)</span></p>
-<p><span class="math inline">\(-c_1s_2i\widehat{n}_2\cdot\widehat{\sigma}-c_2s_1i\widehat{n}_1\cdot\widehat{\sigma}=-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}\)</span></p>
-<p><span class="math display">\[\begin{equation}
+\end{equation}</script><p>$c_1c_2I-s_1s_2\widehat{n}_1\cdot\widehat{\sigma}\widehat{n}_2\cdot\widehat{\sigma}=c_1c_2I-s_1s_2\widehat{n}_1\widehat{n}_2I-i(\widehat{n}_1\times\widehat{n}_2)\widehat{\sigma}$</p>
+<p>$-c_1s_2i\widehat{n}_2\cdot\widehat{\sigma}-c_2s_1i\widehat{n}_1\cdot\widehat{\sigma}=-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}$</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
-R_{\widehat{n}_{12}}(\beta_{12})&amp;=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\beta_2)\\
-&amp;=(c_1c_2-s_1s_2\widehat{n}_1\widehat{n}_2)I-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}
+R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\beta_2)\\
+&=(c_1c_2-s_1s_2\widehat{n}_1\widehat{n}_2)I-i(c_1s_2\widehat{n}_2+c_2s_1\widehat{n}_1)\cdot\widehat{\sigma}
 \end{split}
-\end{equation}\]</span></p>
-<ol start="2" type="1">
-<li>代入 <span class="math inline">\(c,s,\widehat{z}\)</span> 即得结果</li>
-</ol>
+\end{equation}</script><p>(2) 代入 $c,s,\widehat{z}$ 即得结果</p>
 <p>Furthermore,</p>
-<p>如果 <span class="math inline">\(\widehat{n}_1\bot\widehat{n}_2\)</span> 且 <span class="math inline">\(\beta_1=\beta_2=\pi\)</span></p>
-<p>求 <span class="math inline">\(R_{\widehat{n}_1}(\pi)R_{\widehat{n}_2}(\pi)\)</span>。 因为 <span class="math inline">\(\widehat{n}_1\)</span> 和 <span class="math inline">\(\widehat{n}_2\)</span> 是Bloch球上的一条直径的两端，所以它构成一个轴。而绕它转两个 <span class="math inline">\(\pi\)</span> 回到了原位，即 <span class="math inline">\(R_{\widehat{n}_1\times\widehat{n}_2}(0)\)</span>。</p>
+<p>如果 $\widehat{n}_1\bot\widehat{n}_2$ 且 $\beta_1=\beta_2=\pi$</p>
+<p>求 $R_{\widehat{n}_1}(\pi)R_{\widehat{n}_2}(\pi)$。<br>因为 $\widehat{n}_1$ 和 $\widehat{n}_2$ 是Bloch球上的一条直径的两端，所以它构成一个轴。而绕它转两个 $\pi$ 回到了原位，即 $R_{\widehat{n}_1\times\widehat{n}_2}(0)$。</p>
 <p>增加难度，</p>
-<p>现在只有 <span class="math inline">\(\beta_1=\beta_2=\pi\)</span>。</p>
-<p><span class="math inline">\(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{r}}(\theta)\)</span></p>
+<p>现在只有 $\beta_1=\beta_2=\pi$。</p>
+<p>$R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{r}}(\theta)$</p>
 <p>代入之前的结果(4.19)和(4.20)。</p>
-<p><span class="math inline">\(s_{12}\widehat{r}=\widehat{m}\times\widehat{n}\quad cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}\)</span></p>
+<p>$s_{12}\widehat{r}=\widehat{m}\times\widehat{n}\quad cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}$</p>
 <p>这现在我们有</p>
-<ol type="1">
-<li><p><span class="math inline">\((\widehat{n}\cdot\widehat{\sigma})(\widehat{m}\cdot\widehat{\sigma})=\widehat{n}\cdot\widehat{m}I+i\widehat{m}\times\widehat{n}\cdot\widehat{\sigma}\)</span></p></li>
-<li><p><span class="math inline">\(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{m}\times\widehat{n}}(\theta)\ s.t.\ cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}\)</span></p></li>
-</ol>
-<p><span class="math inline">\(Lemma:\)</span></p>
-<p>Let <span class="math inline">\(\widehat{n}\bot\widehat{m}\)</span>. For any <span class="math inline">\(U\)</span> there are <span class="math inline">\(\alpha,\beta,\gamma,\delta\)</span> s.t. <span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}}(\gamma)R_{\widehat{n}}(\delta)\)</span></p>
-<p>如果能找到一个 <span class="math inline">\(V\)</span>，使得</p>
-<p><span class="math display">\[\widehat{n}\leftrightarrow\widehat{z}\quad\widehat{m}\leftrightarrow\widehat{y}\]</span></p>
-<p>即要求</p>
-<p><span class="math display">\[|\lambda_{n}\rangle\leftrightarrow|0\rangle\quad|\lambda_{n^\bot}\rangle\leftrightarrow|1\rangle\]</span> <span class="math display">\[|\lambda_{m}\rangle\leftrightarrow|+_i\rangle\quad|\lambda_{m^\bot}\rangle\leftrightarrow|-_i\rangle\]</span></p>
-<p>那么就有</p>
-<p><span class="math inline">\(VUV^{\dagger}=e^{i\alpha}(VR_{\widehat{n}}(\beta)V^\dagger)(VR_{\widehat{m}}(\gamma)V^\dagger)(VR_{\widehat{n}}(\delta)V^\dagger)\)</span></p>
-<ul>
-<li><h4 id="section-3">4.11</h4>
-由于没有 <span class="math inline">\(\widehat{n}\bot\widehat{m}\)</span> 了，所以情况变得复杂。</li>
-</ul>
+<p>1) $(\widehat{n}\cdot\widehat{\sigma})(\widehat{m}\cdot\widehat{\sigma})=\widehat{n}\cdot\widehat{m}I+i\widehat{m}\times\widehat{n}\cdot\widehat{\sigma}$</p>
+<p>2) $R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{m}\times\widehat{n}}(\theta)\ s.t.\ cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}$</p>
+<p>$Lemma:$</p>
+<p>Let $\widehat{n}\bot\widehat{m}$. For any $U$ there are $\alpha,\beta,\gamma,\delta$ s.t. $U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}}(\gamma)R_{\widehat{n}}(\delta)$</p>
+<p>如果能找到一个 $V$，使得</p>
+<script type="math/tex; mode=display">\widehat{n}\leftrightarrow\widehat{z}\quad\widehat{m}\leftrightarrow\widehat{y}</script><p>即要求</p>
+<script type="math/tex; mode=display">|\lambda_{n}\rangle\leftrightarrow|0\rangle\quad|\lambda_{n^\bot}\rangle\leftrightarrow|1\rangle</script><script type="math/tex; mode=display">|\lambda_{m}\rangle\leftrightarrow|+_i\rangle\quad|\lambda_{m^\bot}\rangle\leftrightarrow|-_i\rangle</script><p>那么就有</p>
+<p>$VUV^{\dagger}=e^{i\alpha}(VR_{\widehat{n}}(\beta)V^\dagger)(VR_{\widehat{m}}(\gamma)V^\dagger)(VR_{\widehat{n}}(\delta)V^\dagger)$</p>
+<p>-</p>
+<h4 id="4-11"><a href="#4-11" class="headerlink" title="4.11"></a>4.11</h4><p>由于没有 $\widehat{n}\bot\widehat{m}$ 了，所以情况变得复杂。</p>
 <p>考虑在Bloch球中的位置变换，</p>
-<p>Th 4.1 给我们提示，能改变纬度的只有 <span class="math inline">\(R_{y}(\gamma)\)</span>。</p>
-<p>那 4.11 中，能改变纬度的也只有 <span class="math inline">\(R_{\widehat{m}}(\gamma)\)</span>。</p>
-<p>那么若是 <span class="math inline">\(\widehat{n}\)</span> 和 <span class="math inline">\(\widehat{m}\)</span> 的夹角很小，则仅一次旋转不可能从南极转到北极。（所以旧版的式子存在问题，新版已修正）</p>
-<p>需要重复 <span class="math inline">\(k\)</span> 次 <span class="math inline">\(R_{\widehat{m}}(\gamma_i)R_{\widehat{n}}(\beta_i)\)</span>，即绕 <span class="math inline">\(\widehat{m}\rightarrow\widehat{n}\rightarrow\widehat{m}\rightarrow\widehat{n}\rightarrow...\)</span></p>
-<p>而转过的角度为 <span class="math inline">\(\theta\rightarrow2\theta\rightarrow...\)</span></p>
-<p>所以有 <span class="math display">\[k\ge\lceil \displaystyle\frac{\pi}{2\theta}\rceil\]</span> 当 <span class="math inline">\(\theta=\displaystyle\frac{\pi}{2}\)</span> 时，<span class="math inline">\(k=1\)</span>，即可以一次旋转完成。</p>
-<p>现在得到了一个下界，但是期望找到一个上界，或者找到 <span class="math inline">\(\gamma\)</span>。</p>
+<p>Th 4.1 给我们提示，能改变纬度的只有 $R_{y}(\gamma)$。</p>
+<p>那 4.11 中，能改变纬度的也只有 $R_{\widehat{m}}(\gamma)$。</p>
+<p>那么若是 $\widehat{n}$ 和 $\widehat{m}$ 的夹角很小，则仅一次旋转不可能从南极转到北极。（所以旧版的式子存在问题，新版已修正）</p>
+<p>需要重复 $k$ 次 $R_{\widehat{m}}(\gamma_i)R_{\widehat{n}}(\beta_i)$，即绕 $\widehat{m}\rightarrow\widehat{n}\rightarrow\widehat{m}\rightarrow\widehat{n}\rightarrow…$ </p>
+<p>而转过的角度为 $\theta\rightarrow2\theta\rightarrow…$</p>
+<p>所以有</p>
+<script type="math/tex; mode=display">k\ge\lceil \displaystyle\frac{\pi}{2\theta}\rceil</script><p>当 $\theta=\displaystyle\frac{\pi}{2}$ 时，$k=1$，即可以一次旋转完成。</p>
+<p>现在得到了一个下界，但是期望找到一个上界，或者找到 $\gamma$。</p>
 <p>思路1:</p>
 <p>代入Exercise 4.15扩展的结果1）和结果2）。</p>
-<p><span class="math inline">\((R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}=R_{\widehat{m}\times\widehat{n}}(k\theta)\)</span></p>
-<p>则 <span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\)</span>。</p>
-<p>这里若 <span class="math inline">\(r=k\theta\)</span>，便直接成功了，但实际不一定成立。</p>
-<p>可以取 <span class="math inline">\(|r-k\theta|&lt;\theta\)</span>，即差一次(小于<span class="math inline">\(\theta\)</span>的)旋转到 <span class="math inline">\(r\)</span>。</p>
+<p>$(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}=R_{\widehat{m}\times\widehat{n}}(k\theta)$</p>
+<p>则 $U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)$。</p>
+<p>这里若 $r=k\theta$，便直接成功了，但实际不一定成立。</p>
+<p>可以取 $|r-k\theta|&lt;\theta$，即差一次(小于$\theta$的)旋转到 $r$。</p>
 <p>但这样又要补一步，</p>
-<p><span class="math inline">\(U=e^{i\alpha}R_{\widehat{n}}(\beta)(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}R_{\widehat{n}}(\delta)R_{\widehat{m}}(\delta‘)\)</span></p>
+<p>$U=e^{i\alpha}R_{\widehat{n}}(\beta)(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}R_{\widehat{n}}(\delta)R_{\widehat{m}}(\delta‘)$</p>
 <p>其实也不好取。</p>
 <p>思路2:</p>
-<ol type="1">
-<li>可以推出</li>
-</ol>
-<p><span class="math inline">\(R_{\widehat{m}}(\theta)=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\Rightarrow R_{\widehat{m}\times\widehat{n}}(\gamma)=e^{-i\alpha}R_{\widehat{n}}(-\beta)R_{\widehat{m}}(\theta)R_{\widehat{n}}(-\delta)\)</span></p>
-<ol start="2" type="1">
-<li>将1）代入的话，有</li>
-</ol>
-<p><span class="math inline">\(U=e^{i\alpha&#39;}R_{\widehat{n}}(\beta&#39;)R_{\widehat{m}\times\widehat{n}}(\gamma&#39;)R_{\widehat{n}}(\delta&#39;)=e^{i\alpha&#39;&#39;}R_{\widehat{n}}(\beta&#39;&#39;)R_{\widehat{m}}(\theta)R_{\widehat{n}}(\delta&#39;&#39;)\)</span></p>
-<p>1)和2)单独都对，但是1)$$2)，对应所需的 <span class="math inline">\(\gamma\)</span>，有时难以找到对应的 <span class="math inline">\(\gamma&#39;\)</span>。因为他要求1)中的形式。</p>
-<ul>
-<li><h4 id="section-4.3">Section 4.3</h4>
-<span class="math inline">\(CNOT=I\oplus X\quad controlled{-}U=I\oplus U\)</span></li>
-</ul>
+<p>1) 可以推出</p>
+<p>$R_{\widehat{m}}(\theta)=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\Rightarrow R_{\widehat{m}\times\widehat{n}}(\gamma)=e^{-i\alpha}R_{\widehat{n}}(-\beta)R_{\widehat{m}}(\theta)R_{\widehat{n}}(-\delta)$</p>
+<p>2) 将1）代入的话，有</p>
+<p>$U=e^{i\alpha’}R_{\widehat{n}}(\beta’)R_{\widehat{m}\times\widehat{n}}(\gamma’)R_{\widehat{n}}(\delta’)=e^{i\alpha’’}R_{\widehat{n}}(\beta’’)R_{\widehat{m}}(\theta)R_{\widehat{n}}(\delta’’)$</p>
+<p>1)和2)单独都对，但是1)$\nRightarrow$2)，对应所需的 $\gamma$，有时难以找到对应的 $\gamma’$。因为他要求1)中的形式。</p>
+<p>-</p>
+<h4 id="Section-4-3"><a href="#Section-4-3" class="headerlink" title="Section 4.3"></a>Section 4.3</h4><p>$CNOT=I\oplus X\quad controlled{-}U=I\oplus U$</p>
 <p>门的数量：根据Fig 4.6，Fig 4.8，</p>
-<p><span class="math inline">\(controlled{-}U\)</span>：<span class="math inline">\(2\ CNOT + 4\ single\ qubit\)</span></p>
-<p><span class="math inline">\(Toffoli\)</span>：<span class="math inline">\(8\ CNOT + 12\ single\ qubit\)</span> (可化简，减少门的数量)</p>
-<p><span class="math inline">\(C^{n}(U)\)</span>：<span class="math inline">\(2(n-1)\ Toffoli + 1\ controlled{-}U\)</span> (虽然很多但是好歹是线性的，复杂度为 <span class="math inline">\(O(n)\)</span>)</p>
+<p>$controlled{-}U$：$2\ CNOT + 4\ single\ qubit$</p>
+<p>$Toffoli$：$8\ CNOT + 12\ single\ qubit$ (可化简，减少门的数量)</p>
+<p>$C^{n}(U)$：$2(n-1)\ Toffoli + 1\ controlled{-}U$ (虽然很多但是好歹是线性的，复杂度为 $O(n)$)</p>
 <p>Fig 4.10 的目的</p>
-<p><span class="math display">\[\begin{equation}
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
-|c_1...c_n\rangle|0...0\rangle|t\rangle&amp;\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|0...0\rangle|t\rangle\\
-&amp;\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|c_1 c_2 c_3\rangle|0...0\rangle|t\rangle\\
-&amp;\rightarrow...\\
-&amp;\rightarrow |c_1...c_n\rangle|0...0\rangle U^{c_1...c_n}|t\rangle
+|c_1...c_n\rangle|0...0\rangle|t\rangle&\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|0...0\rangle|t\rangle\\
+&\rightarrow |c_1...c_n\rangle|c_1 c_2\rangle|c_1 c_2 c_3\rangle|0...0\rangle|t\rangle\\
+&\rightarrow...\\
+&\rightarrow |c_1...c_n\rangle|0...0\rangle U^{c_1...c_n}|t\rangle
 \end{split}
-\end{equation}\]</span></p>
-<p>抵消 <span class="math inline">\(|0...0\rangle\)</span> 即得 <span class="math inline">\(C^n(U)\)</span>。</p>
+\end{equation}</script><p>抵消 $|0…0\rangle$ 即得 $C^n(U)$。</p>
 <p>见Fig 4.10，后半部分是undo操作，目的是为了将附加位归还，因为附加位可能还与其他系统有纠缠。</p>
 
       
@@ -570,7 +549,7 @@ MathJax.Hub.Queue(function() {
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -719,5 +698,20 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

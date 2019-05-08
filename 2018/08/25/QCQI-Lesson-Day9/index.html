@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>QCQI Lesson Day9 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chapter 5  Quantum Fourier Transformation Phase estimation performace 回顾上一天的内容，见Fig 5.3，\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)。  与controlled-U不同，\(U_1...U_n\) 都可以做，所以是U的x次方。 然后再下一步，">
+  <meta name="description" content="Chapter 5- Quantum Fourier Transformation- Phase estimation performace回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。 与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。 然后再下一步，$|x\ran">
 <meta name="keywords" content="quantum computation，quantum information">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QCQI Lesson Day9">
 <meta property="og:url" content="http://yoursite.com/2018/08/25/QCQI-Lesson-Day9/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="Chapter 5  Quantum Fourier Transformation Phase estimation performace 回顾上一天的内容，见Fig 5.3，\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)。  与controlled-U不同，\(U_1...U_n\) 都可以做，所以是U的x次方。 然后再下一步，">
+<meta property="og:description" content="Chapter 5- Quantum Fourier Transformation- Phase estimation performace回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。 与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。 然后再下一步，$|x\ran">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-08-27T16:20:08.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson Day9">
-<meta name="twitter:description" content="Chapter 5  Quantum Fourier Transformation Phase estimation performace 回顾上一天的内容，见Fig 5.3，\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)。  与controlled-U不同，\(U_1...U_n\) 都可以做，所以是U的x次方。 然后再下一步，">
+<meta name="twitter:description" content="Chapter 5- Quantum Fourier Transformation- Phase estimation performace回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。 与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。 然后再下一步，$|x\ran">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -37,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -170,78 +171,68 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-5">Chapter 5</h3>
-<ul>
-<li><h4 id="quantum-fourier-transformation">Quantum Fourier Transformation</h4></li>
-<li><h4 id="phase-estimation-performace">Phase estimation performace</h4>
-回顾上一天的内容，见Fig 5.3，<span class="math inline">\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)</span>。</li>
-</ul>
-<p>与controlled-U不同，<span class="math inline">\(U_1...U_n\)</span> 都可以做，所以是U的x次方。</p>
-<p>然后再下一步，<span class="math inline">\(|x\rangle\)</span> 做QFT得式（5.23）。</p>
-<p>1）<span class="math inline">\(|\phi\rangle=0.\phi_1\phi_2...\phi_t\phi_{t+1}...\)</span></p>
-<p>2）<span class="math inline">\(b=\phi_1...\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}\)</span></p>
-<p>3）<span class="math inline">\(m\in\{0,1\}^t\)</span></p>
-<p>计算 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(\phi\)</span> 的距离，类似于 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(b\)</span> 的距离。所以我们计算 <span class="math inline">\(e\)</span>。<span class="math inline">\(\forall e,\ p(|m-b|&gt;e)\)</span></p>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
+<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>-</p>
+<h4 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h4><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
+<p>与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。</p>
+<p>然后再下一步，$|x\rangle$ 做QFT得式（5.23）。</p>
+<p>1）$|\phi\rangle=0.\phi_1\phi_2…\phi_t\phi_{t+1}…$</p>
+<p>2）$b=\phi_1…\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}$</p>
+<p>3）$m\in\{0,1\}^t$</p>
+<p>计算 $m$ 与 $\phi$ 的距离，类似于 $m$ 与 $b$ 的距离。所以我们计算 $e$。$\forall e,\ p(|m-b|&gt;e)$</p>
 <p>回顾结束。</p>
-<p>继续求 <span class="math inline">\(\alpha_l\)</span>。</p>
+<p>继续求 $\alpha_l$。</p>
 <a id="more"></a>
-<p>因为 <span class="math inline">\(-2^{t-1}&lt;l\le2^{t-1}\)</span>，有 <span class="math display">\[-\pi\le2\pi(\delta-\displaystyle\frac{1}{2})\le2\pi(\delta-\displaystyle\frac{l}{2^t})\le2\pi(\delta-\displaystyle\frac{-2^{t-1}+1}{2^t})=2\pi(\delta+\displaystyle\frac{1}{2}-\displaystyle\frac{1}{2^t})&lt;\pi\]</span> 结合上一天最后证明的引理，得到式（5.29）<span class="math inline">\(\alpha_l\le\displaystyle\frac{1}{2^t}\left( \displaystyle\frac{2}{1-e^{2\pi i(\delta-l/2^t)}}\right)\)</span></p>
-<p>知道了 <span class="math inline">\(\alpha_l\)</span> 的范围后代回，得到式（5.30）</p>
-<p>对两项分别放大和缩小得到式（5.31）<span class="math inline">\(\Rightarrow\)</span>式（5.32）</p>
-<p>表示为积分形式 <span class="math inline">\(\Rightarrow\)</span>式（5.33）（注意：下限从e-1开始）</p>
-<p>最终得到，<span class="math inline">\(p(|m-b|&gt;e)\le\displaystyle\frac{1}{2(e-1)}\)</span></p>
-<p>因为测量结果 <span class="math inline">\(m\)</span> 和 <span class="math inline">\(b\)</span> 差在 <span class="math inline">\(n\)</span> 位后，</p>
-<p>Take <span class="math inline">\(e=2^{t-n}-1\)</span> require <span class="math inline">\(\displaystyle\frac{1}{2(e-1)}&lt;\epsilon\Rightarrow(5.35)\)</span></p>
-<p><span class="math display">\[t=n+\lceil log(2+\displaystyle\frac{1}{2\epsilon})\rceil\]</span></p>
-<p>对于电路来说，<span class="math inline">\(|\psi\rangle=\sum C_u|u\rangle\rightarrow\sum C_u|\widetilde{\phi}\rangle|u\rangle\)</span>，成功率至少 <span class="math inline">\(|C_u|^2(1-\epsilon)\)</span>。</p>
-<ul>
-<li><h4 id="order-finding-problem">Order-finding problem</h4>
-问题：</li>
-</ul>
-<p><span class="math inline">\(Suppose\ x&lt;N\ co\text{-}prime.\ Decide\ r.\ Define\ the\ order\ of\ x\ module\ N\ as\ min\{r:x^r\equiv1\}\)</span></p>
+<p>因为 $-2^{t-1}&lt;l\le2^{t-1}$，有</p>
+<script type="math/tex; mode=display">-\pi\le2\pi(\delta-\displaystyle\frac{1}{2})\le2\pi(\delta-\displaystyle\frac{l}{2^t})\le2\pi(\delta-\displaystyle\frac{-2^{t-1}+1}{2^t})=2\pi(\delta+\displaystyle\frac{1}{2}-\displaystyle\frac{1}{2^t})<\pi</script><p>结合上一天最后证明的引理，得到式（5.29）$\alpha_l\le\displaystyle\frac{1}{2^t}\left( \displaystyle\frac{2}{1-e^{2\pi i(\delta-l/2^t)}}\right)$</p>
+<p>知道了 $\alpha_l$ 的范围后代回，得到式（5.30）</p>
+<p>对两项分别放大和缩小得到式（5.31）$\Rightarrow$式（5.32）</p>
+<p>表示为积分形式 $\Rightarrow$式（5.33）（注意：下限从e-1开始）</p>
+<p>最终得到，$p(|m-b|&gt;e)\le\displaystyle\frac{1}{2(e-1)}$</p>
+<p>因为测量结果 $m$ 和 $b$ 差在 $n$ 位后，</p>
+<p>Take $e=2^{t-n}-1$ require $\displaystyle\frac{1}{2(e-1)}&lt;\epsilon\Rightarrow(5.35)$</p>
+<script type="math/tex; mode=display">t=n+\lceil log(2+\displaystyle\frac{1}{2\epsilon})\rceil</script><p>对于电路来说，$|\psi\rangle=\sum C_u|u\rangle\rightarrow\sum C_u|\widetilde{\phi}\rangle|u\rangle$，成功率至少 $|C_u|^2(1-\epsilon)$。</p>
+<p>-</p>
+<h4 id="Order-finding-problem"><a href="#Order-finding-problem" class="headerlink" title="Order-finding problem"></a>Order-finding problem</h4><p>问题：</p>
+<p>$Suppose\ x&lt;N\ co\text{-}prime.\ Decide\ r.\ Define\ the\ order\ of\ x\ module\ N\ as\ min\{r:x^r\equiv1\}$</p>
 <p>*鸽笼原理</p>
-<p><span class="math inline">\(r=|\{x^n\ mod\ N:\ n\ge1\}|\)</span></p>
+<p>$r=|\{x^n\ mod\ N:\ n\ge1\}|$</p>
 <p>Define U:</p>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
  \begin{equation}    
  |y\rangle \rightarrow
  \begin{cases}
-    |xy\text{ mod }N\rangle &amp; \text{if $y&lt;N$,} \\
-    |y\rangle &amp; \text{if $y\ge N$.}
+    |xy\text{ mod }N\rangle & \text{if $y<N$,} \\
+    |y\rangle & \text{if $y\ge N$.}
  \end{cases}
- \end{equation}
-\]</span></p>
-<p>这里 <span class="math inline">\(y\ge N\)</span> 的情况是为了计算可逆，U是unitary。</p>
+ \end{equation}</script><p>这里 $y\ge N$ 的情况是为了计算可逆，U是unitary。</p>
 <p>对于U，取它的特征向量（eigenvector），</p>
-<p><span class="math inline">\(|u_s\rangle=\displaystyle\frac{1}{\sqrt{r}}\sum\limits_{j=0}^{r-1}e^{2\pi ijs}|x^j\text{ mod } N\rangle\)</span></p>
-<p>想要得到的相位 <span class="math inline">\(\phi=\displaystyle\frac{s}{r}\)</span>。</p>
-<p>注意证明 <span class="math inline">\(|u_s\rangle\)</span> 合法。</p>
-<p>首先因为 <span class="math inline">\(|x^j\text{ mod } N\rangle\)</span> 遍历了集合，所以是一组正交基。又因为 <span class="math inline">\(e^{2\pi ijs}\)</span> 模长为1。所以 <span class="math inline">\(|u_s\rangle\)</span> 是一组标准正交基的线性组合。</p>
-<p><span class="math inline">\(\Rightarrow |u_s\rangle\)</span> 合法。</p>
-<p>对于 <span class="math inline">\(U|u_s\rangle\)</span>，因为 <span class="math inline">\(x^r\equiv1\)</span>，所以 <span class="math inline">\(j=0,...,r-1\)</span> 可以替换成 <span class="math inline">\(j=1,...,r\)</span>。由此得到式（5.38）和式（5.39）。</p>
-<p>我们想知道的是 <span class="math inline">\(r\)</span>。而 <span class="math inline">\(r\)</span> 很难准备。</p>
-<p>对 <span class="math inline">\(s,0\le s\le r\)</span>。</p>
-<p><span class="math display">\[\begin{equation}
+<p>$|u_s\rangle=\displaystyle\frac{1}{\sqrt{r}}\sum\limits_{j=0}^{r-1}e^{2\pi ijs}|x^j\text{ mod } N\rangle$</p>
+<p>想要得到的相位 $\phi=\displaystyle\frac{s}{r}$。</p>
+<p>注意证明 $|u_s\rangle$ 合法。</p>
+<p>首先因为 $|x^j\text{ mod } N\rangle$ 遍历了集合，所以是一组正交基。又因为 $e^{2\pi ijs}$ 模长为1。所以 $|u_s\rangle$ 是一组标准正交基的线性组合。</p>
+<p>$\Rightarrow |u_s\rangle$ 合法。</p>
+<p>对于 $U|u_s\rangle$，因为 $x^r\equiv1$，所以 $j=0,…,r-1$ 可以替换成 $j=1,…,r$。由此得到式（5.38）和式（5.39）。</p>
+<p>我们想知道的是 $r$。而 $r$ 很难准备。</p>
+<p>对 $s,0\le s\le r$。</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 \displaystyle\frac{1}{\sqrt{r}}\sum\limits_{s=0}^{r-1}|u_s\rangle
-&amp;=\displaystyle\frac{1}{r}\sum\limits_{j=0}^{r-1}(\sum\limits_{s}(e^{2\pi ijr})^s)|x^j\text{ mod } N\rangle\\
-&amp;=|1\rangle
+&=\displaystyle\frac{1}{r}\sum\limits_{j=0}^{r-1}(\sum\limits_{s}(e^{2\pi ijr})^s)|x^j\text{ mod } N\rangle\\
+&=|1\rangle
 \end{split}
-\end{equation}\]</span></p>
-<p>我们希望找一个门</p>
-<p><span class="math display">\[|z\rangle|y\rangle\rightarrow|z\rangle U^z|y\rangle=|z\rangle|x^zy\text{ mod }N\rangle\]</span></p>
-<p>见Box 5.2，复杂度为 <span class="math inline">\(O(L^3)\)</span>。另外，因为保留了 <span class="math inline">\(|z\rangle\)</span> ，所以计算是可逆的，量子中的unitary门。</p>
-<h5 id="continued-fractions-box-5.3">Continued fractions (Box 5.3)</h5>
-<p>Theorem 1: <span class="math inline">\(x\)</span> is rational iff <span class="math inline">\(x=[a_0,...,a_m]\)</span></p>
+\end{equation}</script><p>我们希望找一个门</p>
+<script type="math/tex; mode=display">|z\rangle|y\rangle\rightarrow|z\rangle U^z|y\rangle=|z\rangle|x^zy\text{ mod }N\rangle</script><p>见Box 5.2，复杂度为 $O(L^3)$。另外，因为保留了 $|z\rangle$ ，所以计算是可逆的，量子中的unitary门。</p>
+<h5 id="Continued-fractions-Box-5-3"><a href="#Continued-fractions-Box-5-3" class="headerlink" title="Continued fractions (Box 5.3)"></a>Continued fractions (Box 5.3)</h5><p>Theorem 1: $x$ is rational iff $x=[a_0,…,a_m]$</p>
 <p>连分数是有限的，因为分母是递减的。</p>
-<p>Theorem 2: if <span class="math inline">\(|\displaystyle\frac{s}{r}-\phi|\le \displaystyle\frac{1}{2r^2},\ s,r\in N\)</span>, then <span class="math inline">\(\displaystyle\frac{s}{r}\)</span> is a convergent of the continued fractions of <span class="math inline">\(\phi\)</span> and this can be computed in <span class="math inline">\(O(L^3)\)</span>.</p>
-<p>已知 <span class="math inline">\(r\le N\le 2^L\)</span></p>
-<p>要求 <span class="math inline">\(n=2L+1\)</span></p>
-<p>得到 <span class="math inline">\(|\displaystyle\frac{s}{r}-\phi|\le 2^{-n}=2^{-(2L+1)}\)</span></p>
-<p>对于相位 <span class="math inline">\(\displaystyle\frac{s}{r}\)</span>，通过check <span class="math inline">\(x^r\equiv1\)</span> 来确定convergent <span class="math inline">\(\displaystyle\frac{s}{r}\)</span> 是否是对的 <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(r\)</span> 是否是对的。</p>
-<p>尝试 <span class="math inline">\(\displaystyle\frac{s}{r}\)</span> 满足 <span class="math inline">\(x^r\equiv1\)</span> 的成功率为 <span class="math inline">\(\displaystyle\frac{1}{2L}\)</span>，那么做 <span class="math inline">\(L\)</span> 次，就接近1。</p>
-<p>若是失败，就从头重复，以制得互素的 <span class="math inline">\(s\)</span> 和 <span class="math inline">\(r\)</span>（上一节结论，每一次都是 <span class="math inline">\(O(L^3)\)</span>）。</p>
-<p>总复杂度：<span class="math inline">\(O(t)\cdot O(L^3)=O(L^4)\)</span></p>
+<p>Theorem 2: if $|\displaystyle\frac{s}{r}-\phi|\le \displaystyle\frac{1}{2r^2},\ s,r\in N$, then $\displaystyle\frac{s}{r}$ is a convergent of the continued fractions of $\phi$ and this can be computed in $O(L^3)$.</p>
+<p>已知 $r\le N\le 2^L$</p>
+<p>要求 $n=2L+1$</p>
+<p>得到 $|\displaystyle\frac{s}{r}-\phi|\le 2^{-n}=2^{-(2L+1)}$</p>
+<p>对于相位 $\displaystyle\frac{s}{r}$，通过check $x^r\equiv1$ 来确定convergent $\displaystyle\frac{s}{r}$ 是否是对的 $\Rightarrow$ $r$ 是否是对的。</p>
+<p>尝试 $\displaystyle\frac{s}{r}$ 满足 $x^r\equiv1$ 的成功率为 $\displaystyle\frac{1}{2L}$，那么做 $L$ 次，就接近1。</p>
+<p>若是失败，就从头重复，以制得互素的 $s$ 和 $r$（上一节结论，每一次都是 $O(L^3)$）。</p>
+<p>总复杂度：$O(t)\cdot O(L^3)=O(L^4)$</p>
 
       
 
@@ -518,7 +509,7 @@ MathJax.Hub.Queue(function() {
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -667,5 +658,20 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
