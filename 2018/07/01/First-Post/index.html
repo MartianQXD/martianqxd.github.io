@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>在macOS上编写java调用Matlab的函数时的一个报错 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread “main”java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.This library is typically">
+  <meta name="description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread &amp;quot;main&amp;quot; java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在macOS上编写java调用Matlab的函数时的一个报错">
 <meta property="og:url" content="http://yoursite.com/2018/07/01/First-Post/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread “main”java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.This library is typically">
+<meta property="og:description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread &amp;quot;main&amp;quot; java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library i">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-25T14:40:48.873Z">
+<meta property="og:updated_time" content="2019-05-13T01:24:19.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在macOS上编写java调用Matlab的函数时的一个报错">
-<meta name="twitter:description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread “main”java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.This library is typically">
+<meta name="twitter:description" content="IDE：Eclipse Matlab版本：R2017a 报错信息： Exception in thread &amp;quot;main&amp;quot; java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library i">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -174,36 +174,15 @@
 <p>IDE：Eclipse</p>
 <p>Matlab版本：R2017a</p>
 <p>报错信息：</p>
-<p>Exception in thread “main”<br>java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.<br>This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or<br>the current path configuration, or a mismatch with the architecture of the Java interpreter on the path.<br>MATLAB Runtime version this component is attempting to use: 9.2.<br>Java interpreter architecture: maci64.<br><a id="more"></a><br>解决方法：</p>
-<p>查询过其他系统/环境下的类似问题后，发现MATLAB Runtime其实就是其他问题中提到的MCR（Matlab Compiler Runtime）。<br>所以处理方法应该类似。在/Applications/MATLAB_R2017a.app/toolbox/compiler/deploy中找到maci64（不同的OS这个文件夹是不同的）。解压MCRInstaller.zip并安装。</p>
+<p>Exception in thread &quot;main&quot; java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or the current path configuration, or a mismatch with the architecture of the Java interpreter on the path. MATLAB Runtime version this component is attempting to use: 9.2. Java interpreter architecture: maci64. <a id="more"></a> 解决方法：</p>
+<p>查询过其他系统/环境下的类似问题后，发现MATLAB Runtime其实就是其他问题中提到的MCR（Matlab Compiler Runtime）。 所以处理方法应该类似。在/Applications/MATLAB_R2017a.app/toolbox/compiler/deploy中找到maci64（不同的OS这个文件夹是不同的）。解压MCRInstaller.zip并安装。</p>
 <p><strong>结果：仍然报错。</strong></p>
 <p>解决方法2:</p>
-<p>添加环境变量指明MCR的位置。<br>打开Terminal，输入open ～/.bash_profile（没有的话可以先touch ～/.bash_profile）。<br>添加语句 export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64 。<br>当然，也可以直接在终端中输入export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64。<br>输入echo $LD_LIBRARY_PATH，确认环境变量设置完成。</p>
+<p>添加环境变量指明MCR的位置。 打开Terminal，输入open ～/.bash_profile（没有的话可以先touch ～/.bash_profile）。 添加语句 export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64 。 当然，也可以直接在终端中输入export LD_LIBRARY_PATH = /Applications/MATLAB_R2017a.app/runtime/maci64。 输入echo $LD_LIBRARY_PATH，确认环境变量设置完成。</p>
 <p><strong>结果：仍然报错，路径改为DYLD_LIBRARY_PATH仍然报错。</strong></p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
