@@ -182,19 +182,19 @@
 <p>这两个性质让量子有不可克隆性等性质。</p>
 <p>理解问题：</p>
 <p>$\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0$ 正交时，可以得到一组投影测量 $P_i=|\psi_i\rangle\langle\psi_i|$。</p>
-<p>因为 $P<em>i|\psi_j\rangle=\delta</em>{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
+<p>因为 $P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
 <p>这被称为完美分辨(perfect discrimination)。</p>
-<p>那么，现在的问题是，这些状态 ${|\psi_i:\ i=1…n}$ 是线性无关的。</p>
+<p>那么，现在的问题是，这些状态 $\{|\psi_i:\ i=1…n\}$ 是线性无关的。</p>
 <blockquote>
 <p>注意线性无关不能推出正交，但正交可以推出线性无关。</p>
 </blockquote>
 <p>该如何构造POVM。</p>
-<p>可以定义一个映射 $f:{1,…,m}\rightarrow {1,…,n},\ \\forall i,\ \langle\psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle=1.$</p>
+<p>可以定义一个映射 $f:\{1,…,m\}\rightarrow \{1,…,n\},\ \\\forall i,\ \langle\psi_{f(i)}|E_i|\psi_{f(i)}\rangle=1.$</p>
 <p>令 $f(i)=i$，若其成立，则这就是完美分辨。</p>
 <p>但 $f(i)=i$ 并不一定成立。</p>
 <p>为了构造POVM，可以放松对分辨的要求，有2种选择：</p>
 <ol>
-<li>近似分辨(approximate discrimination)，<br>比如：$\forall i,\ \langle \psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle\ge 0.75$。</li>
+<li>近似分辨(approximate discrimination)，<br>比如：$\forall i,\ \langle \psi_{f(i)}|E_i|\psi_{f(i)}\rangle\ge 0.75$。</li>
 <li><a href="https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination" title="unambiguous discrimination的维基链接" target="_blank" rel="noopener">模糊分辨(unambiguous discrimination)</a>，允许分辨的时候，说“不知道”(don’t know)。即 $\forall i,\ 1\le i\neq j\le n,\ \langle \psi_i|E_j|\psi_i\rangle=0$。<br>注意，完美分辨可蕴含模糊分辨，但反之不行。并且要排除 $trivial$ 的情况，即一直说“不知道”。</li>
 </ol>
 <a id="more"></a>
@@ -202,18 +202,18 @@
 <p>做法其实就是在映射 $f$ 中多加了 $f(m+1)=”don’t\ know”$。</p>
 <p>现在我们构造POVM，</p>
 <p>因为 $|\psi_i\rangle$ 之间是线性无关的，</p>
-<p>$Let\quad H_i=span{|\psi_j\rangle:\ j\neq i},\ H_i\subsetneq H$</p>
+<p>$Let\quad H_i=span\{|\psi_j\rangle:\ j\neq i\},\ H_i\subsetneq H$</p>
 <p>$So\ we\ can\ find\ |\phi_i\rangle\in H\quad s.t.\quad |\phi_i\rangle\ \bot\ H_i$</p>
 <p>$Let\ E_i=p_i|\phi_i\rangle\langle\phi_i|,\ p_i&gt;0$</p>
-<p>$Claim\ \exists p<em>i,\ \sum\limits</em>{i=1}^mE_i\le I$</p>
-<p>$Let\ E<em>{m+1}=I-\sum\limits</em>{i=1}^mE<em>i,\ so\ E</em>{m+1}\ is\ positive\ semidefinite.$</p>
+<p>$Claim\ \exists p_i,\ \sum\limits_{i=1}^mE_i\le I$</p>
+<p>$Let\ E_{m+1}=I-\sum\limits_{i=1}^mE_i,\ so\ E_{m+1}\ is\ positive\ semidefinite.$</p>
 <p>$For\ each\ i,\ \langle\psi_i|E_i|\psi_i\rangle&gt;0.$</p>
 <p>-</p>
 <h4 id="Bloch-sphere"><a href="#Bloch-sphere" class="headerlink" title="Bloch sphere"></a>Bloch sphere</h4><p>首先，我们回想一下一个纯态（pure qubit state）的形式：</p>
 <script type="math/tex; mode=display">|\psi\rangle=\alpha|0\rangle+\beta|1\rangle,\ with\ |\alpha|^2+|\beta|^2=1</script><p>为了一些技术上的原因，我们取 $\displaystyle\frac{\theta}{2}$。这样的好处在之后的内容中会看到。</p>
 <p>则有</p>
 <script type="math/tex; mode=display">\alpha=cos\displaystyle\frac{\theta}{2}e^{i\phi_{\alpha}}\quad \beta=sin\displaystyle\frac{\theta}{2}e^{i\phi_{\beta}}</script><p>$\Rightarrow$</p>
-<script type="math/tex; mode=display">|\psi\rangle=e^{i\phi_{\alpha}}(cos\displaystyle\frac{\theta}{2}|0\rangle+sin\displaystyle\frac{\theta}{2}e^{i(\phi_{\alpha}-\phi_{\beta})}|1\rangle)</script><p>我们忽略 global phase，并用 $\phi$ 代替 $\phi<em>{\alpha}-\phi</em>{\beta}$ 则可以得到，</p>
+<script type="math/tex; mode=display">|\psi\rangle=e^{i\phi_{\alpha}}(cos\displaystyle\frac{\theta}{2}|0\rangle+sin\displaystyle\frac{\theta}{2}e^{i(\phi_{\alpha}-\phi_{\beta})}|1\rangle)</script><p>我们忽略 global phase，并用 $\phi$ 代替 $\phi_{\alpha}-\phi_{\beta}$ 则可以得到，</p>
 <script type="math/tex; mode=display">|\psi\rangle=cos\displaystyle\frac{\theta}{2}|0\rangle+e^{i\phi}sin\displaystyle\frac{\theta}{2}|1\rangle</script><p>这里 $0\le \theta\le\pi,\ 0\le \phi&lt; 2\pi$（这里用严格小于，不需要取到 $\le$，$2\pi$ 是因为已经转了一周回到原位了，即用 $0$ 代替 $2\pi$）</p>
 <p>重要：有以下关联</p>
 <p>$|\psi\rangle=cos\displaystyle\frac{\theta}{2}|0\rangle+e^{i\phi}sin\displaystyle\frac{\theta}{2}|1\rangle\Leftrightarrow(1,\theta,\phi)\ on\ spherical\ system$</p>

@@ -189,10 +189,10 @@
 <li>解特征方程。</li>
 <li>在量子计算中，通过观察我们可以发现，<script type="math/tex; mode=display">X=|0\rangle\langle1|+|1\rangle\langle0| 。</script>而且<script type="math/tex; mode=display">X|0\rangle=|0\rangle\langle1|0\rangle+|1\rangle\langle0|0\rangle=|1\rangle</script>类似地，$X|1\rangle=|0\rangle$<br>所以有，<script type="math/tex; mode=display">X(|0\rangle+|1\rangle)=|0\rangle+|1\rangle</script><script type="math/tex; mode=display">X(|0\rangle-|1\rangle)=-(|0\rangle-|1\rangle)</script>再对$(|0\rangle+|1\rangle)$与$(|0\rangle-|1\rangle)$做归一化，即乘以$\frac{1}{\sqrt2}$。<br>那么得到 $X$ 其实是<script type="math/tex; mode=display">| + \rangle \longrightarrow | + \rangle</script><script type="math/tex; mode=display">| - \rangle \longrightarrow -| - \rangle</script>那么参照之前对$|0\rangle$与$|1\rangle$的运算<script type="math/tex; mode=display">X=|+\rangle\langle+|-|-\rangle\langle-|</script>而对于 $Y$ 类似可得<script type="math/tex; mode=display">Y(|0\rangle+i|1\rangle)=|0\rangle+i|1\rangle</script><script type="math/tex; mode=display">Y(|0\rangle-i|1\rangle)=-(|0\rangle-i|1\rangle)</script></li>
 </ol>
-<p>$X,Y,Z$ 的特征值都为 $\pm1$。<br>因为对于 $A\in{X,Y,Z}$</p>
+<p>$X,Y,Z$ 的特征值都为 $\pm1$。<br>因为对于 $A\in\{X,Y,Z\}$</p>
 <script type="math/tex; mode=display">tr(A)=0\wedge\ A^2 = I \Leftrightarrow spec(A)=\pm1</script><p>(对 $A$ 可以做特征分解 $ A=U\Sigma U^+ $)</p>
 <p>又因为 $\lambda_1+\lambda_2 = 0 \Rightarrow |\lambda_1|=|\lambda_2|=1$</p>
-<p>另外，注意 $\widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in{X,Y,Z}}n_i\sigma_i$ </p>
+<p>另外，注意 $\widehat{n}\cdot\widehat{\sigma}=\sum\limits_{i\in\{X,Y,Z\}}n_i\sigma_i$ </p>
 <p>(注：$X,Y,Z$ 是反可交换的(anti-commutative)即 $XY=-YX$ 等)</p>
 <p>其中， $n_x^2+n_y^2+n_z^2=1$</p>
 <p>所以，可以得到</p>
@@ -202,17 +202,17 @@
    & = & (n_xX+n_yY+n_zZ)\\
    & = & (n_x^2+n_y^2+n_z^2)I\\
    & = & I
-\end{array}</script><p>所以对于<br>$\widehat{n}\cdot\widehat{\sigma}=|\lambda<em>+\rangle\langle\lambda</em>+|-|\lambda<em>-\rangle\langle\lambda</em>-|$</p>
+\end{array}</script><p>所以对于<br>$\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|$</p>
 <blockquote>
 <p>额外插入：一组标准正交基 $|i\rangle$ 的重要性质</p>
-<p>If {$|i\rangle||i\rangle\in{1,…,n}$} is orthonormal basis</p>
+<p>If {$|i\rangle||i\rangle\in\{1,…,n\}$} is orthonormal basis</p>
 <p>then $\sum\limits_{i=1}^n|i\rangle\langle i|=I.$</p>
 <p>Proof:</p>
-<p>$\forall |x\rangle, |x\rangle=\sum\limits<em>{i=1}^nx_i|i\rangle=\sum\limits</em>{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle$</p>
+<p>$\forall |x\rangle, |x\rangle=\sum\limits_{i=1}^nx_i|i\rangle=\sum\limits_{i=1}^n\langle i|x\rangle |i\rangle=\sum\limits_{i=1}^n|i\rangle\langle i|x\rangle$</p>
 <p>所以 $\sum\limits_{i=1}^n|i\rangle\langle i|=I$。</p>
 </blockquote>
-<p>$I=|\lambda<em>+\rangle\langle\lambda</em>+|+|\lambda<em>-\rangle\langle\lambda</em>-|$</p>
-<p>$|\lambda<em>+ \rangle \langle \lambda</em>+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda<em>-\rangle\langle\lambda</em>-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2}$</p>
+<p>$I=|\lambda_+\rangle\langle\lambda_+|+|\lambda_-\rangle\langle\lambda_-|$</p>
+<p>$|\lambda_+ \rangle \langle \lambda_+|=\displaystyle\frac{I+\widehat{n}\cdot\widehat{\sigma}}{2} \quad |\lambda_-\rangle\langle\lambda_-|=\displaystyle\frac{I-\widehat{n}\cdot\widehat{\sigma}}{2}$</p>
 <h4 id="2-13"><a href="#2-13" class="headerlink" title="2.13"></a>2.13</h4><p>记号的作用：如 $|w\underline{\rangle|}v\rangle\langle v|$ (1 对应 $n$ 不能运算)</p>
 <p>应为$|w\rangle \langle v|$ (注意：$|w\rangle，<br>\ |v\rangle$维度可以不同)</p>
 <p>Proof</p>
@@ -227,12 +227,12 @@
 <h4 id="2-20"><a href="#2-20" class="headerlink" title="2.20"></a>2.20</h4><p>题意：一个抽象的线性算子，它有两组标准正交基，在不同组基下，它的矩阵表示之间的关系。</p>
 <blockquote>
 <p>预备知识：对同一个空间中的两组标准正交基 </p>
-<p>${|v_i\rangle:i=1,…n}$ 和 ${|w_j\rangle:j=1,…n}$</p>
-<p>$|v<em>i\rangle$ 与 $|w_j\rangle$通过一个 $U=\sum\limits</em>{i=1}^n|i\rangle\langle i|$ 关联。</p>
+<p>$\{|v_i\rangle:i=1,…n\}$ 和 $\{|w_j\rangle:j=1,…n\}$</p>
+<p>$|v_i\rangle$ 与 $|w_j\rangle$通过一个 $U=\sum\limits_{i=1}^n|i\rangle\langle i|$ 关联。</p>
 <p>即 $U|v_R\rangle=|w_R\rangle$</p>
 <p>注：$U^\dagger U=I$</p>
 </blockquote>
-<p>注意： $\sum\limits<em>{i,j}|i\rangle\langle i|A</em>{ij}|j\rangle\langle j|=\sum\limits<em>{i,j}IA</em>{ij}I=A$</p>
+<p>注意： $\sum\limits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\limits_{i,j}IA_{ij}I=A$</p>
 <p>所以：</p>
 <script type="math/tex; mode=display">\begin{array}{rcl}
 A'_{ij} & = & \langle v_i|A|v_j\rangle
@@ -250,7 +250,7 @@ A''_{ij} & = & \langle w_i|A|w_j\rangle\\
 <p>令 $V = U^*$</p>
 <p>则 $A’’=VA’V^\dagger$</p>
 <p>还可以对结果进行验证，两个矩阵可表示为</p>
-<p>$A’’=\sum\limits<em>{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A’=\sum\limits</em>{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|$</p>
+<p>$A’’=\sum\limits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A’=\sum\limits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|$</p>
 <h4 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h4><p>$H^{\oplus n}$ 的一个用途：</p>
 <p>$|+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle$<br>这个态的制备很简单，只要 1 个 $H^{\otimes n}$</p>
 <p>$|0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n}$</p>
@@ -281,7 +281,7 @@ M=
 \end{array}</script><p>$\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|$</p>
 <p>$\log{M}=\log{7}|+\rangle\langle+|$</p>
 <p>-</p>
-<h4 id="2-35"><a href="#2-35" class="headerlink" title="2.35"></a>2.35</h4><p>通过特征值为 $\pm 1$ 得到<br>$\widehat{n}\cdot\widehat{\sigma}=|\lambda<em>+\rangle\langle\lambda</em>+|-|\lambda<em>-\rangle\langle\lambda</em>-|$<br>则</p>
+<h4 id="2-35"><a href="#2-35" class="headerlink" title="2.35"></a>2.35</h4><p>通过特征值为 $\pm 1$ 得到<br>$\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|$<br>则</p>
 <script type="math/tex; mode=display">\begin{array}{rcl}
 |\mu\rangle&=e^{i\theta}|\lambda_+\rangle\langle\lambda_+|+e^{-i\theta}|\lambda_-\rangle\langle\lambda_-|\\
 &=\cos{\theta}I+i\sin{\theta}\widehat{n}\cdot\widehat{\sigma}

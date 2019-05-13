@@ -191,9 +191,9 @@
 \end{equation}</script><p>对于 (2) ，因为 $tr(A^\dagger B)=tr(B^\dagger A)^<em>$，直接可得 $(A, B)=(B, A)^</em>$.</p>
 <p>对于 (3) ，也很容易由 $tr(A^\dagger A)$ 是 $A$ 对角线元素的模平方和得到 $(A, A)\ge 0$.</p>
 <p>2) 证明可以构造一组标准正交基，并且总共 $d^2$ 个。</p>
-<p>Let ${|i\rangle\langle j|:i,j=1…d}$, $d^2$ in total.</p>
+<p>Let $\{|i\rangle\langle j|:i,j=1…d\}$, $d^2$ in total.</p>
 <p>Then</p>
-<p>(1) $\forall A\in L<em>v,\ A=\sum a</em>{ij}|i\rangle\langle j|$.</p>
+<p>(1) $\forall A\in L_v,\ A=\sum a_{ij}|i\rangle\langle j|$.</p>
 <p>(2) $\forall i,j,k,l,$</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
@@ -216,8 +216,8 @@
 =&tr(\displaystyle\frac{|k\rangle\langle j|+|j\rangle\langle k|}{\sqrt{2}}\displaystyle\frac{|k'\rangle\langle j'|+|j‘\rangle\langle k’|}{\sqrt{2}})\\=&tr(\displaystyle\frac{|k\rangle\langle j|k'\rangle\langle j'|+|k\rangle\langle j|j'\rangle\langle k'|+|j\rangle\langle k|k'\rangle\langle j'|+|j\rangle\langle k|j'\rangle\langle k'|}{2})\\
 =&\delta_{kk'}\delta_{kk'}+\delta_{kj'}\delta_{jk'}
 \end{split}
-\end{equation}</script><p>首先，由 $k&lt;j’,k’&lt;j$ 可以确定 $\delta<em>{kj’}\delta</em>{jk’}=0$。</p>
-<p>其次，若要 $\delta<em>{kk’}\delta</em>{jj’}\neq0$ 则必须要 $k=k’,j=j’$，即基与自身的内积。</p>
+\end{equation}</script><p>首先，由 $k&lt;j’,k’&lt;j$ 可以确定 $\delta_{kj’}\delta_{jk’}=0$。</p>
+<p>其次，若要 $\delta_{kk’}\delta_{jj’}\neq0$ 则必须要 $k=k’,j=j’$，即基与自身的内积。</p>
 <p>-</p>
 <h4 id="2-56"><a href="#2-56" class="headerlink" title="2.56"></a>2.56</h4><p>因为 $U$ 是Unitary。所以可以写成，</p>
 <script type="math/tex; mode=display">U=\sum\limits_{j}e^{i\theta_j}|j\rangle\langle j|</script><p>代入可得，</p>
@@ -226,7 +226,7 @@
 <p>-</p>
 <h4 id="2-57"><a href="#2-57" class="headerlink" title="2.57"></a>2.57</h4><p>需要证明两点，</p>
 <p>(1) $p_1(m,l)=p_2(m,l)$，概率要相等。</p>
-<p>(2) $|\varkappa^1<em>{ml}\rangle=|\varkappa^2</em>{ml}\rangle$，状态要相等。</p>
+<p>(2) $|\varkappa^1_{ml}\rangle=|\varkappa^2_{ml}\rangle$，状态要相等。</p>
 <p>$p_1(l)=||L_l|\psi\rangle||^2\Rightarrow |\phi’_l\rangle=\displaystyle\frac{L_l|\psi\rangle}{\sqrt{p_1(l)}}$</p>
 <p>$p_1(m|l)=||M_m|\phi’_l\rangle||^2\Rightarrow |\varkappa_ml\rangle=\displaystyle\frac{M_mL_l|\psi\rangle}{\sqrt{p_1(m|l)}}=\displaystyle\frac{M_mL_l|\psi\rangle}{||M_mL_l|\psi\rangle||}$</p>
 <p>$p_1(m,l)=p_1(l)\cdot p_1(m|l)=||M_m|\phi’_l\rangle||^2\cdot||L_l|\psi\rangle||^2$</p>
@@ -259,17 +259,17 @@ tr(I)&=tr(\sum\limits_x\langle x|I|x\rangle)\\
 &=tr(\sum\limits_x\langle x|\sum\limits_mE_m^2+\sum\limits_{m,m'}E_mE_{m'}|x\rangle)\\
 &=tr(\sum\limits_x\langle x|x\rangle+\sum\limits_x\langle x|\sum\limits_{m,m'}E_mE_{m'}|x\rangle)
 \end{split}
-\end{equation}</script><p>所以有 $tr(E<em>mE</em>{m’})=0\Rightarrow \langle E<em>m,\ E</em>{m’}\rangle=0\Rightarrow$ 相互正交</p>
+\end{equation}</script><p>所以有 $tr(E_mE_{m’})=0\Rightarrow \langle E_m,\ E_{m’}\rangle=0\Rightarrow$ 相互正交</p>
 <p>-</p>
 <h4 id="2-66"><a href="#2-66" class="headerlink" title="2.66"></a>2.66</h4><p>Bell State</p>
 <p>特征：</p>
 <ol>
 <li>观测到每个结果的概率是均匀的，就像是 $|0\rangle$ 和 $|1\rangle$ 经过一个 $H$ 一样。</li>
 <li>4个都是最大纠缠态，但是它们的和 $\displaystyle\frac{I}{2}\otimes\displaystyle\frac{I}{2}=\displaystyle\frac{1}{2}\sum\limits_i|\beta_i\rangle\langle\beta_i|$ 不纠缠。所以在不知道其中一个态的形式时，其实无法知道他们是否是纠缠态。</li>
-<li>$|\beta<em>{ij}\rangle=I\otimes X^iZ^j|\beta</em>{00}\rangle$</li>
+<li>$|\beta_{ij}\rangle=I\otimes X^iZ^j|\beta_{00}\rangle$</li>
 </ol>
 <p>-</p>
-<h4 id="2-70"><a href="#2-70" class="headerlink" title="2.70"></a>2.70</h4><p>利用 $|\beta<em>{ij}\rangle=I\otimes X^iZ^j|\beta</em>{00}\rangle$ 。</p>
+<h4 id="2-70"><a href="#2-70" class="headerlink" title="2.70"></a>2.70</h4><p>利用 $|\beta_{ij}\rangle=I\otimes X^iZ^j|\beta_{00}\rangle$ 。</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 \langle\beta_{ij}|E\otimes I|\beta_{ij}\rangle&=\langle \beta_{00}|(I\otimes X^iZ^j)(E\otimes I)(I\otimes X^iZ^j)|\beta_{00}\rangle\\
@@ -285,7 +285,7 @@ tr(I)&=tr(\sum\limits_x\langle x|I|x\rangle)\\
 <p>便可知 Alice 发来的2个bit的数据 $ij$ 是多少。</p>
 <p><img src="https://i.loli.net/2018/08/12/5b704d95ed3a5.jpg" width="300"></p>
 <p>同时，若是有不怀好意的人，这里称为 Eve，截获到了 Alice 发送的qubit，但因为没有 Bob 手中qubit的信息，所以测量的结果只能是</p>
-<p>$\langle\beta<em>{ij}|M\otimes I|\beta</em>{ij}\rangle=\displaystyle\frac{tr(M)}{2}$</p>
+<p>$\langle\beta_{ij}|M\otimes I|\beta_{ij}\rangle=\displaystyle\frac{tr(M)}{2}$</p>
 <p>所以 Eve 没有办法知道信息是什么。</p>
 
       

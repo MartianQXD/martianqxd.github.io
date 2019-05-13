@@ -267,9 +267,9 @@
 <h4 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h4><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
 <p>与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。</p>
 <p>然后再下一步，$|x\rangle$ 做QFT得式（5.23）。</p>
-<p>1）$|\phi\rangle=0.\phi<em>1\phi_2…\phi_t\phi</em>{t+1}…$</p>
+<p>1）$|\phi\rangle=0.\phi_1\phi_2…\phi_t\phi_{t+1}…$</p>
 <p>2）$b=\phi_1…\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}$</p>
-<p>3）$m\in{0,1}^t$</p>
+<p>3）$m\in\{0,1\}^t$</p>
 <p>计算 $m$ 与 $\phi$ 的距离，类似于 $m$ 与 $b$ 的距离。所以我们计算 $e$。$\forall e,\ p(|m-b|&gt;e)$</p>
 <p>回顾结束。</p>
 <p>继续求 $\alpha_l$。</p>
@@ -348,7 +348,7 @@
       
         <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
 <h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
-<script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y<em>j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits</em>{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
+<script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
 <p>相比FT有 $k\times2^{N}$ 种可能，QFT是指数级的加速，但是 $x_k$ 是振幅，测量后是无法得到的。</p>
         
@@ -439,7 +439,7 @@ U
 <p>则有</p>
 <p>$\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
 <p>$U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
-<p>所以 $\lambda<em>1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R</em>{\widehat{n}}(\theta)$ 的形式。</p>
+<p>所以 $\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R_{\widehat{n}}(\theta)$ 的形式。</p>
         
       
 
@@ -522,19 +522,19 @@ U
 <p>这两个性质让量子有不可克隆性等性质。</p>
 <p>理解问题：</p>
 <p>$\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0$ 正交时，可以得到一组投影测量 $P_i=|\psi_i\rangle\langle\psi_i|$。</p>
-<p>因为 $P<em>i|\psi_j\rangle=\delta</em>{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
+<p>因为 $P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
 <p>这被称为完美分辨(perfect discrimination)。</p>
-<p>那么，现在的问题是，这些状态 ${|\psi_i:\ i=1…n}$ 是线性无关的。</p>
+<p>那么，现在的问题是，这些状态 $\{|\psi_i:\ i=1…n\}$ 是线性无关的。</p>
 <blockquote>
 <p>注意线性无关不能推出正交，但正交可以推出线性无关。</p>
 </blockquote>
 <p>该如何构造POVM。</p>
-<p>可以定义一个映射 $f:{1,…,m}\rightarrow {1,…,n},\ \\forall i,\ \langle\psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle=1.$</p>
+<p>可以定义一个映射 $f:\{1,…,m\}\rightarrow \{1,…,n\},\ \\\forall i,\ \langle\psi_{f(i)}|E_i|\psi_{f(i)}\rangle=1.$</p>
 <p>令 $f(i)=i$，若其成立，则这就是完美分辨。</p>
 <p>但 $f(i)=i$ 并不一定成立。</p>
 <p>为了构造POVM，可以放松对分辨的要求，有2种选择：</p>
 <ol>
-<li>近似分辨(approximate discrimination)，<br>比如：$\forall i,\ \langle \psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle\ge 0.75$。</li>
+<li>近似分辨(approximate discrimination)，<br>比如：$\forall i,\ \langle \psi_{f(i)}|E_i|\psi_{f(i)}\rangle\ge 0.75$。</li>
 <li><a href="https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination" title="unambiguous discrimination的维基链接" target="_blank" rel="noopener">模糊分辨(unambiguous discrimination)</a>，允许分辨的时候，说“不知道”(don’t know)。即 $\forall i,\ 1\le i\neq j\le n,\ \langle \psi_i|E_j|\psi_i\rangle=0$。<br>注意，完美分辨可蕴含模糊分辨，但反之不行。并且要排除 $trivial$ 的情况，即一直说“不知道”。</li>
 </ol>
         
@@ -712,7 +712,7 @@ U
       
         <h3 id="Chapter-2-4-Exercise"><a href="#Chapter-2-4-Exercise" class="headerlink" title="Chapter 2, 4 Exercise"></a>Chapter 2, 4 Exercise</h3><p>-</p>
 <h4 id="2-73"><a href="#2-73" class="headerlink" title="2.73"></a>2.73</h4><p>预备条件：</p>
-<p>对于$\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|$,其中${|\phi_i\rangle}$是一组单位正交基$\Rightarrow$线性无关。(注意：线性无关$\not\Rightarrow$正交)</p>
+<p>对于$\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|$,其中$\{|\phi_i\rangle\}$是一组单位正交基$\Rightarrow$线性无关。(注意：线性无关$\not\Rightarrow$正交)</p>
 <p>Recall that</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
@@ -720,9 +720,9 @@ U
 = &span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
 = &span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
 \end{split}
-\end{equation}</script><script type="math/tex; mode=display">\sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|</script><p>其中，$span{|\widetilde{k}\rangle}$是最小的。若再在其中增加$|\psi\rangle$，则$|\psi\rangle$是${|\widetilde{k}\rangle}$的线性组合。(增加了冗余)</p>
+\end{equation}</script><script type="math/tex; mode=display">\sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|</script><p>其中，$span\{|\widetilde{k}\rangle\}$是最小的。若再在其中增加$|\psi\rangle$，则$|\psi\rangle$是$\{|\widetilde{k}\rangle\}$的线性组合。(增加了冗余)</p>
 <p>理解问题：</p>
-<p>1) $\forall |\psi\rangle\in supp(\rho),\ \exists\ minimal\ essemble\ {p_i,\ |\psi_i\rangle},\ |\psi\rangle\in{|\psi_i\rangle}\<br>s.t.$</p>
+<p>1) $\forall |\psi\rangle\in supp(\rho),\\ \exists\ minimal\ essemble\ \{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\<br>s.t.$</p>
 <p>2) $\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}$</p>
 <p>思路：使用定理2.6的两个方向证明<br>
         

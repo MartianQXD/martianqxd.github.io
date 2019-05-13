@@ -186,10 +186,10 @@ U
 <p>则有</p>
 <p>$\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
 <p>$U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
-<p>所以 $\lambda<em>1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R</em>{\widehat{n}}(\theta)$ 的形式。</p>
+<p>所以 $\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R_{\widehat{n}}(\theta)$ 的形式。</p>
 <a id="more"></a>
 <p>-</p>
-<h4 id="4-4-Extra"><a href="#4-4-Extra" class="headerlink" title="4.4 Extra"></a>4.4 Extra</h4><p>用 $R<em>{x}(\theta)$ 和 $R</em>{y}(\theta)$ 和全局相位表示 $H$。</p>
+<h4 id="4-4-Extra"><a href="#4-4-Extra" class="headerlink" title="4.4 Extra"></a>4.4 Extra</h4><p>用 $R_{x}(\theta)$ 和 $R_{y}(\theta)$ 和全局相位表示 $H$。</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 H&=\displaystyle\frac{X+Z}{\sqrt{2}}=\displaystyle\frac{X(I-iY)}{\sqrt{2}}\\
@@ -216,46 +216,46 @@ R_{\widehat{n}_{12}}(\beta_{12})&=R_{\widehat{n}_1}(\beta_1)R_{\widehat{n}_2}(\b
 \end{equation}</script><p>(2) 代入 $c,s,\widehat{z}$ 即得结果</p>
 <p>Furthermore,</p>
 <p>如果 $\widehat{n}_1\bot\widehat{n}_2$ 且 $\beta_1=\beta_2=\pi$</p>
-<p>求 $R<em>{\widehat{n}_1}(\pi)R</em>{\widehat{n}<em>2}(\pi)$。<br>因为 $\widehat{n}_1$ 和 $\widehat{n}_2$ 是Bloch球上的一条直径的两端，所以它构成一个轴。而绕它转两个 $\pi$ 回到了原位，即 $R</em>{\widehat{n}_1\times\widehat{n}_2}(0)$。</p>
+<p>求 $R_{\widehat{n}_1}(\pi)R_{\widehat{n}_2}(\pi)$。<br>因为 $\widehat{n}_1$ 和 $\widehat{n}_2$ 是Bloch球上的一条直径的两端，所以它构成一个轴。而绕它转两个 $\pi$ 回到了原位，即 $R_{\widehat{n}_1\times\widehat{n}_2}(0)$。</p>
 <p>增加难度，</p>
 <p>现在只有 $\beta_1=\beta_2=\pi$。</p>
-<p>$R<em>{\widehat{m}}(\pi)R</em>{\widehat{n}}(\pi)=R_{\widehat{r}}(\theta)$</p>
+<p>$R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{r}}(\theta)$</p>
 <p>代入之前的结果(4.19)和(4.20)。</p>
 <p>$s_{12}\widehat{r}=\widehat{m}\times\widehat{n}\quad cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}$</p>
 <p>这现在我们有</p>
 <p>1) $(\widehat{n}\cdot\widehat{\sigma})(\widehat{m}\cdot\widehat{\sigma})=\widehat{n}\cdot\widehat{m}I+i\widehat{m}\times\widehat{n}\cdot\widehat{\sigma}$</p>
-<p>2) $R<em>{\widehat{m}}(\pi)R</em>{\widehat{n}}(\pi)=R_{\widehat{m}\times\widehat{n}}(\theta)\ s.t.\ cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}$</p>
+<p>2) $R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi)=R_{\widehat{m}\times\widehat{n}}(\theta)\ s.t.\ cos\displaystyle\frac{\theta}{2}=-\widehat{m}\widehat{n}$</p>
 <p>$Lemma:$</p>
-<p>Let $\widehat{n}\bot\widehat{m}$. For any $U$ there are $\alpha,\beta,\gamma,\delta$ s.t. $U=e^{i\alpha}R<em>{\widehat{n}}(\beta)R</em>{\widehat{m}}(\gamma)R_{\widehat{n}}(\delta)$</p>
+<p>Let $\widehat{n}\bot\widehat{m}$. For any $U$ there are $\alpha,\beta,\gamma,\delta$ s.t. $U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}}(\gamma)R_{\widehat{n}}(\delta)$</p>
 <p>如果能找到一个 $V$，使得</p>
 <script type="math/tex; mode=display">\widehat{n}\leftrightarrow\widehat{z}\quad\widehat{m}\leftrightarrow\widehat{y}</script><p>即要求</p>
 <script type="math/tex; mode=display">|\lambda_{n}\rangle\leftrightarrow|0\rangle\quad|\lambda_{n^\bot}\rangle\leftrightarrow|1\rangle</script><script type="math/tex; mode=display">|\lambda_{m}\rangle\leftrightarrow|+_i\rangle\quad|\lambda_{m^\bot}\rangle\leftrightarrow|-_i\rangle</script><p>那么就有</p>
-<p>$VUV^{\dagger}=e^{i\alpha}(VR<em>{\widehat{n}}(\beta)V^\dagger)(VR</em>{\widehat{m}}(\gamma)V^\dagger)(VR_{\widehat{n}}(\delta)V^\dagger)$</p>
+<p>$VUV^{\dagger}=e^{i\alpha}(VR_{\widehat{n}}(\beta)V^\dagger)(VR_{\widehat{m}}(\gamma)V^\dagger)(VR_{\widehat{n}}(\delta)V^\dagger)$</p>
 <p>-</p>
 <h4 id="4-11"><a href="#4-11" class="headerlink" title="4.11"></a>4.11</h4><p>由于没有 $\widehat{n}\bot\widehat{m}$ 了，所以情况变得复杂。</p>
 <p>考虑在Bloch球中的位置变换，</p>
 <p>Th 4.1 给我们提示，能改变纬度的只有 $R_{y}(\gamma)$。</p>
 <p>那 4.11 中，能改变纬度的也只有 $R_{\widehat{m}}(\gamma)$。</p>
 <p>那么若是 $\widehat{n}$ 和 $\widehat{m}$ 的夹角很小，则仅一次旋转不可能从南极转到北极。（所以旧版的式子存在问题，新版已修正）</p>
-<p>需要重复 $k$ 次 $R<em>{\widehat{m}}(\gamma_i)R</em>{\widehat{n}}(\beta_i)$，即绕 $\widehat{m}\rightarrow\widehat{n}\rightarrow\widehat{m}\rightarrow\widehat{n}\rightarrow…$ </p>
+<p>需要重复 $k$ 次 $R_{\widehat{m}}(\gamma_i)R_{\widehat{n}}(\beta_i)$，即绕 $\widehat{m}\rightarrow\widehat{n}\rightarrow\widehat{m}\rightarrow\widehat{n}\rightarrow…$ </p>
 <p>而转过的角度为 $\theta\rightarrow2\theta\rightarrow…$</p>
 <p>所以有</p>
 <script type="math/tex; mode=display">k\ge\lceil \displaystyle\frac{\pi}{2\theta}\rceil</script><p>当 $\theta=\displaystyle\frac{\pi}{2}$ 时，$k=1$，即可以一次旋转完成。</p>
 <p>现在得到了一个下界，但是期望找到一个上界，或者找到 $\gamma$。</p>
 <p>思路1:</p>
 <p>代入Exercise 4.15扩展的结果1）和结果2）。</p>
-<p>$(R<em>{\widehat{m}}(\pi)R</em>{\widehat{n}}(\pi))^{k}=R_{\widehat{m}\times\widehat{n}}(k\theta)$</p>
-<p>则 $U=e^{i\alpha}R<em>{\widehat{n}}(\beta)R</em>{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)$。</p>
+<p>$(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}=R_{\widehat{m}\times\widehat{n}}(k\theta)$</p>
+<p>则 $U=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)$。</p>
 <p>这里若 $r=k\theta$，便直接成功了，但实际不一定成立。</p>
 <p>可以取 $|r-k\theta|&lt;\theta$，即差一次(小于$\theta$的)旋转到 $r$。</p>
 <p>但这样又要补一步，</p>
-<p>$U=e^{i\alpha}R<em>{\widehat{n}}(\beta)(R</em>{\widehat{m}}(\pi)R<em>{\widehat{n}}(\pi))^{k}R</em>{\widehat{n}}(\delta)R_{\widehat{m}}(\delta‘)$</p>
+<p>$U=e^{i\alpha}R_{\widehat{n}}(\beta)(R_{\widehat{m}}(\pi)R_{\widehat{n}}(\pi))^{k}R_{\widehat{n}}(\delta)R_{\widehat{m}}(\delta‘)$</p>
 <p>其实也不好取。</p>
 <p>思路2:</p>
 <p>1) 可以推出</p>
-<p>$R<em>{\widehat{m}}(\theta)=e^{i\alpha}R</em>{\widehat{n}}(\beta)R<em>{\widehat{m}\times\widehat{n}}(\gamma)R</em>{\widehat{n}}(\delta)\Rightarrow R<em>{\widehat{m}\times\widehat{n}}(\gamma)=e^{-i\alpha}R</em>{\widehat{n}}(-\beta)R<em>{\widehat{m}}(\theta)R</em>{\widehat{n}}(-\delta)$</p>
+<p>$R_{\widehat{m}}(\theta)=e^{i\alpha}R_{\widehat{n}}(\beta)R_{\widehat{m}\times\widehat{n}}(\gamma)R_{\widehat{n}}(\delta)\Rightarrow R_{\widehat{m}\times\widehat{n}}(\gamma)=e^{-i\alpha}R_{\widehat{n}}(-\beta)R_{\widehat{m}}(\theta)R_{\widehat{n}}(-\delta)$</p>
 <p>2) 将1）代入的话，有</p>
-<p>$U=e^{i\alpha’}R<em>{\widehat{n}}(\beta’)R</em>{\widehat{m}\times\widehat{n}}(\gamma’)R<em>{\widehat{n}}(\delta’)=e^{i\alpha’’}R</em>{\widehat{n}}(\beta’’)R<em>{\widehat{m}}(\theta)R</em>{\widehat{n}}(\delta’’)$</p>
+<p>$U=e^{i\alpha’}R_{\widehat{n}}(\beta’)R_{\widehat{m}\times\widehat{n}}(\gamma’)R_{\widehat{n}}(\delta’)=e^{i\alpha’’}R_{\widehat{n}}(\beta’’)R_{\widehat{m}}(\theta)R_{\widehat{n}}(\delta’’)$</p>
 <p>1)和2)单独都对，但是1)$\nRightarrow$2)，对应所需的 $\gamma$，有时难以找到对应的 $\gamma’$。因为他要求1)中的形式。</p>
 <p>-</p>
 <h4 id="Section-4-3"><a href="#Section-4-3" class="headerlink" title="Section 4.3"></a>Section 4.3</h4><p>$CNOT=I\oplus X\quad controlled{-}U=I\oplus U$</p>

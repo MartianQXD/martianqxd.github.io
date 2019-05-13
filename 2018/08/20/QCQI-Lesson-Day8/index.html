@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>QCQI Lesson Day8 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,yj=\displaystyle\frac{1}{\sqrt{N}}\sum\limits{k=0">
+  <meta name="description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
 <meta name="keywords" content="quantum computation，quantum information">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QCQI Lesson Day8">
 <meta property="og:url" content="http://yoursite.com/2018/08/20/QCQI-Lesson-Day8/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,yj=\displaystyle\frac{1}{\sqrt{N}}\sum\limits{k=0">
+<meta property="og:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
 <meta property="og:updated_time" content="2019-05-13T01:24:19.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson Day8">
-<meta name="twitter:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,yj=\displaystyle\frac{1}{\sqrt{N}}\sum\limits{k=0">
+<meta name="twitter:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
 <meta name="twitter:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
@@ -175,28 +175,28 @@
       
         <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
 <h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
-<script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y<em>j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits</em>{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
+<script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
 <p>相比FT有 $k\times2^{N}$ 种可能，QFT是指数级的加速，但是 $x_k$ 是振幅，测量后是无法得到的。</p>
 <a id="more"></a>
-<p>$H_n:\ {|0\rangle,…,|N-1\rangle}$</p>
-<script type="math/tex; mode=display">|x\rangle=\sum\limits_{k=0}^{N-1}x_k|k\rangle\xrightarrow{QFT}|y\rangle=\sum\limits_{j=0}^{N-1}y_j|j\rangle=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle</script><p>这里$\displaystyle\frac{1}{\sqrt{N}}\sum\limits<em>{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle=\sum\limits</em>{k=0}^{N-1}x_kQFT|k\rangle$。</p>
+<p>$H_n:\ \{|0\rangle,…,|N-1\rangle\}$</p>
+<script type="math/tex; mode=display">|x\rangle=\sum\limits_{k=0}^{N-1}x_k|k\rangle\xrightarrow{QFT}|y\rangle=\sum\limits_{j=0}^{N-1}y_j|j\rangle=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle</script><p>这里$\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j,k=0}^{N-1}e^{2\pi ijk/N}x_k|j\rangle=\sum\limits_{k=0}^{N-1}x_kQFT|k\rangle$。</p>
 <p>$iff\quad\forall k,\,QFT|k\rangle=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j=0}^{N-1}e^{2\pi ijk/N}|j\rangle$</p>
 <p>$即\ QFT:\ $</p>
 <script type="math/tex; mode=display">\forall k,|k\rangle\rightarrow\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{j=0}^{N-1}e^{2\pi ijk/N}|j\rangle</script><p>FT和QFT其实不是一个问题，但他们之间存在此种关系。</p>
 <p>那么现在的目标是：Find an efficient algorithm to implement QFT.</p>
 <p>首先，观察到QFT有一个非常好的性质。</p>
-<p>$j=j<em>0…j</em>{n-1}$</p>
-<p>$j=j<em>0\cdot2^{n-1}+j_1\cdot2^{n-2}+…+j</em>{n-1}\cdot2^{0}$</p>
-<p>所以 $j/2^n$ 是一个小数 $0.j<em>0…j</em>{n-1}$</p>
-<p>$j/2^n=j<em>0\cdot2^{-1}+j_1\cdot2^{-2}+…+j</em>{n-1}\cdot2^{-n}$</p>
+<p>$j=j_0…j_{n-1}$</p>
+<p>$j=j_0\cdot2^{n-1}+j_1\cdot2^{n-2}+…+j_{n-1}\cdot2^{0}$</p>
+<p>所以 $j/2^n$ 是一个小数 $0.j_0…j_{n-1}$</p>
+<p>$j/2^n=j_0\cdot2^{-1}+j_1\cdot2^{-2}+…+j_{n-1}\cdot2^{-n}$</p>
 <p>利用张量积的性质展开得到式（5.5）- 式（5.10）的推导。注意（5.8）$\rightarrow$（5.9）是因为整数部分其实可以扔掉，所以只看小数部分。</p>
 <p>-</p>
 <h4 id="Circuit（Fig-5-1）"><a href="#Circuit（Fig-5-1）" class="headerlink" title="Circuit（Fig 5.1）"></a>Circuit（Fig 5.1）</h4><p>因为式（5.10）中不看phase部分，每一项都是 $\displaystyle\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)$，所以每一项需要一个 $H$。</p>
 <p>再看phase部分，因为phase还要由其他位控制，所以类似Fig 4.5，是controlled phase shift gates。</p>
 <p>所以Fig 5.1中的第一个H门开始到第二个H门前的部分，相当于式（5.10）的最后一项。</p>
 <p>$|j_k\rangle\xrightarrow{H}|0\rangle+e^{2\pi i0.j_k}|1\rangle$</p>
-<p>$R_k=\left[<br>  \begin{matrix}<br>   1 &amp;  \<br>    &amp; e^{2\pi i\frac{1}{2^k}}<br>  \end{matrix}<br>  \right]$</p>
+<p>$R_k=\left[<br>  \begin{matrix}<br>   1 &amp;  \\<br>    &amp; e^{2\pi i\frac{1}{2^k}}<br>  \end{matrix}<br>  \right]$</p>
 <p>还有个小问题，$|j_k\rangle$ 的顺序是反的，可以加一组swap门($\lfloor\displaystyle\frac{n}{2}\rfloor$个)。</p>
 <!-- <img src="https://i.loli.net/2018/08/26/5b827bef82dc6.jpg" alt="QCQI Lesson Day8(1).jpg" title="QCQI Lesson Day8(1).jpg" /> -->
 <p><img src="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg" alt="QCQI Lesson Day8(1).jpg" title="QCQI Lesson Day8(1).jpg"></p>
@@ -242,11 +242,11 @@
 \end{split}
 \end{equation}</script><p>到这里，$|u\rangle$ 的任务，即提取出phase，已经完成。</p>
 <h5 id="Step-2-quad-QFT-dagger"><a href="#Step-2-quad-QFT-dagger" class="headerlink" title="Step 2 $\quad QFT^\dagger$"></a>Step 2 $\quad QFT^\dagger$</h5><script type="math/tex; mode=display">\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j=0}^{2^t-1}e^{2\pi i\phi j}|j\rangle\xrightarrow{QFT^{\dagger}}|\widetilde{\phi}\rangle</script><p>将phase从指数部分拿了下来，这实际是 $\phi$ 的一个很好的近似。</p>
-<h5 id="Step-3-用-0-rangle-1-rangle-基去测，得到-widetilde-phi-rangle-in-0-1-t"><a href="#Step-3-用-0-rangle-1-rangle-基去测，得到-widetilde-phi-rangle-in-0-1-t" class="headerlink" title="Step 3 用$|0\rangle,|1\rangle$基去测，得到$|\widetilde{\phi}\rangle\in{0,1}^{t}$"></a>Step 3 用$|0\rangle,|1\rangle$基去测，得到$|\widetilde{\phi}\rangle\in{0,1}^{t}$</h5><h4 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h4><p>QFT:</p>
+<h5 id="Step-3-用-0-rangle-1-rangle-基去测，得到-widetilde-phi-rangle-in-0-1-t"><a href="#Step-3-用-0-rangle-1-rangle-基去测，得到-widetilde-phi-rangle-in-0-1-t" class="headerlink" title="Step 3 用$|0\rangle,|1\rangle$基去测，得到$|\widetilde{\phi}\rangle\in\{0,1\}^{t}$"></a>Step 3 用$|0\rangle,|1\rangle$基去测，得到$|\widetilde{\phi}\rangle\in\{0,1\}^{t}$</h5><h4 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h4><p>QFT:</p>
 <script type="math/tex; mode=display">\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j,k=0}^{2^t-1}e^{2\pi ijk/2^t}|k\rangle\langle j|</script><p>$\Rightarrow$</p>
 <p>QFT$^{\dagger}$:</p>
-<script type="math/tex; mode=display">\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j,k=0}^{2^t-1}e^{-2\pi ijk/2^t}|j\rangle\langle k|</script><p>$(5.20)\xrightarrow{QFT^\dagger}\displaystyle\frac{1}{2^t}\sum\limits<em>{j}(\sum\limits</em>{k}e^{2\pi ik(\phi-j/2^t)})|j\rangle$</p>
-<p>取 $\beta<em>j\equiv\sum\limits</em>{k}e^{2\pi ik(\phi-j/2^t)}$。</p>
+<script type="math/tex; mode=display">\displaystyle\frac{1}{\sqrt{2^t}}\sum\limits_{j,k=0}^{2^t-1}e^{-2\pi ijk/2^t}|j\rangle\langle k|</script><p>$(5.20)\xrightarrow{QFT^\dagger}\displaystyle\frac{1}{2^t}\sum\limits_{j}(\sum\limits_{k}e^{2\pi ik(\phi-j/2^t)})|j\rangle$</p>
+<p>取 $\beta_j\equiv\sum\limits_{k}e^{2\pi ik(\phi-j/2^t)}$。</p>
 <p>令 $b=\phi_1…\phi_t,\ \delta\equiv\phi-b/2^t,0&lt;\delta&lt;2^{-t}$。</p>
 <p>假设最终测量的结果为 $m$。</p>
 <p>定义一个容错 $e$。</p>
@@ -256,7 +256,7 @@
 &=p(m>b+e)+p(m<b-e)\\
 &=\sum\limits_{m=b+e+1}^{2^t-1}|\beta_m|^2+\sum\limits_{m=0}^{b-e-1}|\beta_m|^2
 \end{split}
-\end{equation}</script><p>平移取值范围，取 $\alpha<em>j\overset{\Delta}{=}\beta</em>{j+b}\ mod\ 2^t,\ -2^{t-1}&lt;j\le2^{t-1}$</p>
+\end{equation}</script><p>平移取值范围，取 $\alpha_j\overset{\Delta}{=}\beta_{j+b}\ mod\ 2^t,\ -2^{t-1}&lt;j\le2^{t-1}$</p>
 <p>对应书上将 $j\rightarrow l$，得式（5.27）</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
@@ -264,7 +264,7 @@ p(|m-b|>e)=
 \sum\limits_{m=e+1}^{2^{t-1}}|\alpha_l|^2+\sum\limits_{m=-2^{t-1}}^{-e-1}|\alpha_l|^2
 \end{split}
 \end{equation}</script><p>接下来，求 $|\alpha|^2$，</p>
-<p>$a<em>l=\displaystyle\frac{1}{2^t}\sum\limits</em>{k}e^{2\pi ik(\phi-(b+l)/2^t)}$ ($mod\ 2^t$ 被消掉了) $\Rightarrow$ 式（5.24）</p>
+<p>$a_l=\displaystyle\frac{1}{2^t}\sum\limits_{k}e^{2\pi ik(\phi-(b+l)/2^t)}$ ($mod\ 2^t$ 被消掉了) $\Rightarrow$ 式（5.24）</p>
 <p>接下来看式（5.28）</p>
 <p>引理：$|1-exp(i\theta)|\ge\displaystyle\frac{2|\theta|}{\pi}\ if\ -\pi\le\theta\le\pi$，这个画个图即证。</p>
 <p>-</p>

@@ -176,9 +176,9 @@
 <h4 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h4><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
 <p>与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。</p>
 <p>然后再下一步，$|x\rangle$ 做QFT得式（5.23）。</p>
-<p>1）$|\phi\rangle=0.\phi<em>1\phi_2…\phi_t\phi</em>{t+1}…$</p>
+<p>1）$|\phi\rangle=0.\phi_1\phi_2…\phi_t\phi_{t+1}…$</p>
 <p>2）$b=\phi_1…\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}$</p>
-<p>3）$m\in{0,1}^t$</p>
+<p>3）$m\in\{0,1\}^t$</p>
 <p>计算 $m$ 与 $\phi$ 的距离，类似于 $m$ 与 $b$ 的距离。所以我们计算 $e$。$\forall e,\ p(|m-b|&gt;e)$</p>
 <p>回顾结束。</p>
 <p>继续求 $\alpha_l$。</p>
@@ -194,9 +194,9 @@
 <script type="math/tex; mode=display">t=n+\lceil log(2+\displaystyle\frac{1}{2\epsilon})\rceil</script><p>对于电路来说，$|\psi\rangle=\sum C_u|u\rangle\rightarrow\sum C_u|\widetilde{\phi}\rangle|u\rangle$，成功率至少 $|C_u|^2(1-\epsilon)$。</p>
 <p>-</p>
 <h4 id="Order-finding-problem"><a href="#Order-finding-problem" class="headerlink" title="Order-finding problem"></a>Order-finding problem</h4><p>问题：</p>
-<p>$Suppose\ x&lt;N\ co\text{-}prime.\ Decide\ r.\ Define\ the\ order\ of\ x\ module\ N\ as\ min{r:x^r\equiv1}$</p>
+<p>$Suppose\ x&lt;N\ co\text{-}prime.\ Decide\ r.\ Define\ the\ order\ of\ x\ module\ N\ as\ min\{r:x^r\equiv1\}$</p>
 <p>*鸽笼原理</p>
-<p>$r=|{x^n\ mod\ N:\ n\ge1}|$</p>
+<p>$r=|\{x^n\ mod\ N:\ n\ge1\}|$</p>
 <p>Define U:</p>
 <script type="math/tex; mode=display">
  \begin{equation}    
@@ -207,7 +207,7 @@
  \end{cases}
  \end{equation}</script><p>这里 $y\ge N$ 的情况是为了计算可逆，U是unitary。</p>
 <p>对于U，取它的特征向量（eigenvector），</p>
-<p>$|u<em>s\rangle=\displaystyle\frac{1}{\sqrt{r}}\sum\limits</em>{j=0}^{r-1}e^{2\pi ijs}|x^j\text{ mod } N\rangle$</p>
+<p>$|u_s\rangle=\displaystyle\frac{1}{\sqrt{r}}\sum\limits_{j=0}^{r-1}e^{2\pi ijs}|x^j\text{ mod } N\rangle$</p>
 <p>想要得到的相位 $\phi=\displaystyle\frac{s}{r}$。</p>
 <p>注意证明 $|u_s\rangle$ 合法。</p>
 <p>首先因为 $|x^j\text{ mod } N\rangle$ 遍历了集合，所以是一组正交基。又因为 $e^{2\pi ijs}$ 模长为1。所以 $|u_s\rangle$ 是一组标准正交基的线性组合。</p>
