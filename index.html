@@ -168,29 +168,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="环境配置">环境配置</h3>
-<ol type="1">
+        <h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ol>
 <li>开发环境选择VS Code，安装需要的Java插件（可参考文尾链接）。直接搜索安装。</li>
-<li>此时已可以编写java程序进行编译。出现Unresolved compilation problem报错（如下图），可参考<a href="http://blog.hotsun168.com/index.php/archives/16/" class="uri" target="_blank" rel="noopener">http://blog.hotsun168.com/index.php/archives/16/</a>。</li>
+<li>此时已可以编写java程序进行编译。出现Unresolved compilation problem报错（如下图），可参考<a href="http://blog.hotsun168.com/index.php/archives/16/" target="_blank" rel="noopener">http://blog.hotsun168.com/index.php/archives/16/</a>。</li>
 <li>配置项目管理工具Maven。</li>
 </ol>
-<p>OS X下Java路径查找参考<a href="https://www.cnblogs.com/dfyg-xiaoxiao/p/7103238.html" class="uri" target="_blank" rel="noopener">https://www.cnblogs.com/dfyg-xiaoxiao/p/7103238.html</a>。 Maven安装可以使用Homebrew。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install maven</span><br></pre></td></tr></table></figure></p>
-<p>配置settings.json和setting.xml。.xml文件在maven的安装路径下，终端中输入以下指令查看。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure></p>
-<h3 id="快速构建spring-boot项目">快速构建Spring Boot项目</h3>
-<p>VS Code中安装的插件自带Spring Initializr可以配置项目，也可以使用Maven。</p>
-<ol type="1">
-<li>Maven配置见参考链接3。
-<ul>
-<li>VS Code导入项目之后需要编译。详见<a href="https://www.cnblogs.com/liuxm2017/p/10058711.html" class="uri" target="_blank" rel="noopener">https://www.cnblogs.com/liuxm2017/p/10058711.html</a>。</li>
-</ul></li>
+<p>OS X下Java路径查找参考<a href="https://www.cnblogs.com/dfyg-xiaoxiao/p/7103238.html" target="_blank" rel="noopener">https://www.cnblogs.com/dfyg-xiaoxiao/p/7103238.html</a>。<br>Maven安装可以使用Homebrew。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install maven</span><br></pre></td></tr></table></figure></p>
+<p>配置settings.json和setting.xml。.xml文件在maven的安装路径下，终端中输入以下指令查看。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure></p>
+<h3 id="快速构建Spring-Boot项目"><a href="#快速构建Spring-Boot项目" class="headerlink" title="快速构建Spring Boot项目"></a>快速构建Spring Boot项目</h3><p>VS Code中安装的插件自带Spring Initializr可以配置项目，也可以使用Maven。</p>
+<ol>
+<li>Maven配置见参考链接3。<ul>
+<li>VS Code导入项目之后需要编译。详见<a href="https://www.cnblogs.com/liuxm2017/p/10058711.html" target="_blank" rel="noopener">https://www.cnblogs.com/liuxm2017/p/10058711.html</a>。</li>
+</ul>
+</li>
 <li>VS Code配置见参考链接1，使用Spring Initializr配置。</li>
 <li>不将MVC文件夹放在demo文件夹下，运行时出现报错。原因是Spring Boot项目的Bean装配默认规则是根据DemoApplication类所在的包位置从上往下扫描。所以必须放在同一目录下。</li>
 </ol>
-<h3 id="参考链接">参考链接</h3>
-<ol type="1">
-<li>VS Code Java 开发环境配置 <a href="https://javahello.github.io/2018/02/26/ubuntu/vscode-java-environment/" class="uri" target="_blank" rel="noopener">https://javahello.github.io/2018/02/26/ubuntu/vscode-java-environment/</a></li>
-<li>VsCode搭建Java开发环境（Spring Boot项目创建、运行、调试）<a href="https://www.cnblogs.com/miskis/p/9816135.html" class="uri" target="_blank" rel="noopener">https://www.cnblogs.com/miskis/p/9816135.html</a></li>
-<li>Spring Boot(一): 入门篇<a href="http://www.ityouknow.com/springboot/2016/01/06/spring-boot-quick-start.html" class="uri" target="_blank" rel="noopener">http://www.ityouknow.com/springboot/2016/01/06/spring-boot-quick-start.html</a></li>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ol>
+<li>VS Code Java 开发环境配置 <a href="https://javahello.github.io/2018/02/26/ubuntu/vscode-java-environment/" target="_blank" rel="noopener">https://javahello.github.io/2018/02/26/ubuntu/vscode-java-environment/</a></li>
+<li>VsCode搭建Java开发环境（Spring Boot项目创建、运行、调试）<a href="https://www.cnblogs.com/miskis/p/9816135.html" target="_blank" rel="noopener">https://www.cnblogs.com/miskis/p/9816135.html</a></li>
+<li>Spring Boot(一): 入门篇<a href="http://www.ityouknow.com/springboot/2016/01/06/spring-boot-quick-start.html" target="_blank" rel="noopener">http://www.ityouknow.com/springboot/2016/01/06/spring-boot-quick-start.html</a></li>
 </ol>
 
       
@@ -265,20 +262,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-5">Chapter 5</h3>
-<ul>
-<li><h4 id="quantum-fourier-transformation">Quantum Fourier Transformation</h4></li>
-<li><h4 id="phase-estimation-performace">Phase estimation performace</h4>
-回顾上一天的内容，见Fig 5.3，<span class="math inline">\(|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle\)</span>。</li>
-</ul>
-<p>与controlled-U不同，<span class="math inline">\(U_1...U_n\)</span> 都可以做，所以是U的x次方。</p>
-<p>然后再下一步，<span class="math inline">\(|x\rangle\)</span> 做QFT得式（5.23）。</p>
-<p>1）<span class="math inline">\(|\phi\rangle=0.\phi_1\phi_2...\phi_t\phi_{t+1}...\)</span></p>
-<p>2）<span class="math inline">\(b=\phi_1...\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}\)</span></p>
-<p>3）<span class="math inline">\(m\in\{0,1\}^t\)</span></p>
-<p>计算 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(\phi\)</span> 的距离，类似于 <span class="math inline">\(m\)</span> 与 <span class="math inline">\(b\)</span> 的距离。所以我们计算 <span class="math inline">\(e\)</span>。<span class="math inline">\(\forall e,\ p(|m-b|&gt;e)\)</span></p>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
+<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>-</p>
+<h4 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h4><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
+<p>与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。</p>
+<p>然后再下一步，$|x\rangle$ 做QFT得式（5.23）。</p>
+<p>1）$|\phi\rangle=0.\phi<em>1\phi_2…\phi_t\phi</em>{t+1}…$</p>
+<p>2）$b=\phi_1…\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}$</p>
+<p>3）$m\in{0,1}^t$</p>
+<p>计算 $m$ 与 $\phi$ 的距离，类似于 $m$ 与 $b$ 的距离。所以我们计算 $e$。$\forall e,\ p(|m-b|&gt;e)$</p>
 <p>回顾结束。</p>
-<p>继续求 <span class="math inline">\(\alpha_l\)</span>。</p>
+<p>继续求 $\alpha_l$。</p>
         
       
 
@@ -352,13 +346,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-5">Chapter 5</h3>
-<ul>
-<li><h4 id="quantum-fourier-transformation">Quantum Fourier Transformation</h4>
-经典的傅立叶变换(FT)是： <span class="math display">\[(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}\]</span> <span class="math inline">\(\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0}^{n-1}e^{2\pi ijk/N}x_k\)</span></li>
-</ul>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
+<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
+<script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y<em>j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits</em>{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
-<p>相比FT有 <span class="math inline">\(k\times2^{N}\)</span> 种可能，QFT是指数级的加速，但是 <span class="math inline">\(x_k\)</span> 是振幅，测量后是无法得到的。</p>
+<p>相比FT有 $k\times2^{N}$ 种可能，QFT是指数级的加速，但是 $x_k$ 是振幅，测量后是无法得到的。</p>
         
       
 
@@ -432,30 +424,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-4-its-exercise">Chapter 4 &amp; its Exercise</h3>
-<ul>
-<li><h4 id="section">4.8</h4>
-补充： <span class="math display">\[R_{\widehat{n}}(\theta)
-=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|\]</span> 的来源。是根据 <span class="math inline">\(U\)</span> 的谱分解 <span class="math display">\[\begin{equation}
+        <h3 id="Chapter-4-amp-its-Exercise"><a href="#Chapter-4-amp-its-Exercise" class="headerlink" title="Chapter 4 &amp; its Exercise"></a>Chapter 4 &amp; its Exercise</h3><p>-</p>
+<h4 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h4><p>补充：</p>
+<script type="math/tex; mode=display">R_{\widehat{n}}(\theta)
+=e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|</script><p>的来源。是根据 $U$ 的谱分解</p>
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
 U
-&amp;=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
-&amp;=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
+&=e^{i\lambda_1}|\lambda_1\rangle\langle\lambda_1|+e^{i\lambda_2}|\lambda_2\rangle\langle\lambda_2|\\
+&=e^{i\lambda_1}(|\lambda_1\rangle\langle\lambda_1|+e^{i(\lambda_2-\lambda_1)}|\lambda_2\rangle\langle\lambda_2|)
 \end{split}
-\end{equation}\]</span></li>
-</ul>
-<p>这里全局相位可以省略。希望 <span class="math inline">\(U\)</span> 等于 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span>。</p>
-<p>取 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span></p>
+\end{equation}</script><p>这里全局相位可以省略。希望 $U$ 等于 $R_{\widehat{n}}(\theta)$。</p>
+<p>取 $\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$</p>
 <p>则有</p>
-<p><span class="math inline">\(\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p><span class="math inline">\(U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle\)</span></p>
-<p>所以 <span class="math inline">\(\lambda_1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}\)</span> 满足我们想要的，代回 <span class="math inline">\(U\)</span> 中，得 <span class="math inline">\(R_{\widehat{n}}(\theta)\)</span> 的形式。</p>
-<h2 id="section-1">
+<p>$\forall |\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i\phi}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
+<p>$U|\psi\rangle=cos\displaystyle\frac{\alpha}{2}|\lambda_1\rangle+e^{i(\phi+\theta)}sin\displaystyle\frac{\alpha}{2}|\lambda_2\rangle$</p>
+<p>所以 $\lambda<em>1=\displaystyle\frac{\theta}{2},\ \lambda_2=-\displaystyle\frac{\theta}{2}$ 满足我们想要的，代回 $U$ 中，得 $R</em>{\widehat{n}}(\theta)$ 的形式。</p>
         
       
 
       
-    </h2></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -524,30 +513,29 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-2-bloch-sphere">Chapter 2 &amp; Bloch sphere</h3>
-<ul>
-<li><h4 id="exercise-2.64">Exercise 2.64</h4>
-<h5 id="state-discrimination">State discrimination</h5>
-量子以下两个性质：</li>
-</ul>
-<ol type="1">
+        <h3 id="Chapter-2-amp-Bloch-sphere"><a href="#Chapter-2-amp-Bloch-sphere" class="headerlink" title="Chapter 2 &amp; Bloch sphere"></a>Chapter 2 &amp; Bloch sphere</h3><p>-</p>
+<h4 id="Exercise-2-64"><a href="#Exercise-2-64" class="headerlink" title="Exercise 2.64"></a>Exercise 2.64</h4><h5 id="State-discrimination"><a href="#State-discrimination" class="headerlink" title="State discrimination"></a>State discrimination</h5><p>量子以下两个性质：</p>
+<ol>
 <li>有叠加态</li>
 <li>被观测之后塌缩</li>
 </ol>
 <p>这两个性质让量子有不可克隆性等性质。</p>
 <p>理解问题：</p>
-<p><span class="math inline">\(\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0\)</span> 正交时，可以得到一组投影测量 <span class="math inline">\(P_i=|\psi_i\rangle\langle\psi_i|\)</span>。</p>
-<p>因为 <span class="math inline">\(P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle\)</span><span class="math inline">\((即P(i)=0)\)</span>，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
+<p>$\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0$ 正交时，可以得到一组投影测量 $P_i=|\psi_i\rangle\langle\psi_i|$。</p>
+<p>因为 $P<em>i|\psi_j\rangle=\delta</em>{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
 <p>这被称为完美分辨(perfect discrimination)。</p>
-<p>那么，现在的问题是，这些状态 <span class="math inline">\(\{|\psi_i:\ i=1...n\}\)</span> 是线性无关的。 &gt;注意线性无关不能推出正交，但正交可以推出线性无关。</p>
+<p>那么，现在的问题是，这些状态 ${|\psi_i:\ i=1…n}$ 是线性无关的。</p>
+<blockquote>
+<p>注意线性无关不能推出正交，但正交可以推出线性无关。</p>
+</blockquote>
 <p>该如何构造POVM。</p>
-<p>可以定义一个映射 <span class="math inline">\(f:\{1,...,m\}\rightarrow \{1,...,n\},\ \\\forall i,\ \langle\psi_{f(i)}|E_i|\psi_{f(i)}\rangle=1.\)</span></p>
-<p>令 <span class="math inline">\(f(i)=i\)</span>，若其成立，则这就是完美分辨。</p>
-<p>但 <span class="math inline">\(f(i)=i\)</span> 并不一定成立。</p>
+<p>可以定义一个映射 $f:{1,…,m}\rightarrow {1,…,n},\ \\forall i,\ \langle\psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle=1.$</p>
+<p>令 $f(i)=i$，若其成立，则这就是完美分辨。</p>
+<p>但 $f(i)=i$ 并不一定成立。</p>
 <p>为了构造POVM，可以放松对分辨的要求，有2种选择：</p>
-<ol type="1">
-<li>近似分辨(approximate discrimination)， 比如：<span class="math inline">\(\forall i,\ \langle \psi_{f(i)}|E_i|\psi_{f(i)}\rangle\ge 0.75\)</span>。</li>
-<li><a href="https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination" title="unambiguous discrimination的维基链接" target="_blank" rel="noopener">模糊分辨(unambiguous discrimination)</a>，允许分辨的时候，说“不知道”(don't know)。即 <span class="math inline">\(\forall i,\ 1\le i\neq j\le n,\ \langle \psi_i|E_j|\psi_i\rangle=0\)</span>。 注意，完美分辨可蕴含模糊分辨，但反之不行。并且要排除 <span class="math inline">\(trivial\)</span> 的情况，即一直说“不知道”。</li>
+<ol>
+<li>近似分辨(approximate discrimination)，<br>比如：$\forall i,\ \langle \psi<em>{f(i)}|E_i|\psi</em>{f(i)}\rangle\ge 0.75$。</li>
+<li><a href="https://en.wikipedia.org/wiki/POVM#An_example:_unambiguous_quantum_state_discrimination" title="unambiguous discrimination的维基链接" target="_blank" rel="noopener">模糊分辨(unambiguous discrimination)</a>，允许分辨的时候，说“不知道”(don’t know)。即 $\forall i,\ 1\le i\neq j\le n,\ \langle \psi_i|E_j|\psi_i\rangle=0$。<br>注意，完美分辨可蕴含模糊分辨，但反之不行。并且要排除 $trivial$ 的情况，即一直说“不知道”。</li>
 </ol>
         
       
@@ -622,42 +610,38 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-4">Chapter 4</h3>
-<ul>
-<li><h4 id="universal-quantum-gates">4.5 Universal quantum gates</h4>
-这节要证明，只通过CNOT门，Hadamard门和T门(<span class="math inline">\(\pi/8\)</span>门)，就可以构成(近似)任何U门。</li>
-</ul>
-<h4 id="two-level-unitary-gates-are-universal">4.5.1 Two-level unitary gates are universal</h4>
-<p>two-level unitary gate形如： <span class="math display">\[
+        <h3 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h3><p>-</p>
+<h4 id="4-5-Universal-quantum-gates"><a href="#4-5-Universal-quantum-gates" class="headerlink" title="4.5 Universal quantum gates"></a>4.5 Universal quantum gates</h4><p>这节要证明，只通过CNOT门，Hadamard门和T门($\pi/8$门)，就可以构成(近似)任何U门。</p>
+<h4 id="4-5-1-Two-level-unitary-gates-are-universal"><a href="#4-5-1-Two-level-unitary-gates-are-universal" class="headerlink" title="4.5.1 Two-level unitary gates are universal"></a>4.5.1 Two-level unitary gates are universal</h4><p>two-level unitary gate形如：</p>
+<script type="math/tex; mode=display">
   \left[
   \begin{matrix}
-   a &amp; b &amp; \\
-   c &amp; d &amp; \\
-     &amp;   &amp; 1
+   a & b & \\
+   c & d & \\
+     &   & 1
   \end{matrix}
-  \right]
-\]</span> 或 <span class="math display">\[
+  \right]</script><p>或</p>
+<script type="math/tex; mode=display">
   \left[
   \begin{matrix}
-   1 &amp;   &amp;  \\
-     &amp; a &amp; b\\
-     &amp; c &amp; d
+   1 &   &  \\
+     & a & b\\
+     & c & d
   \end{matrix}
-  \right]
-\]</span> 或 <span class="math display">\[
+  \right]</script><p>或</p>
+<script type="math/tex; mode=display">
   \left[
   \begin{matrix}
-   a &amp;  &amp; b\\
-     &amp; 1 &amp; \\
-   c &amp;  &amp; d
+   a &  & b\\
+     & 1 & \\
+   c &  & d
   \end{matrix}
-  \right]
-\]</span>
+  \right]</script>
         
       
 
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -726,27 +710,21 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-2-4-exercise">Chapter 2, 4 Exercise</h3>
-<ul>
-<li><h4 id="section">2.73</h4>
-预备条件：</li>
-</ul>
-<p>对于<span class="math inline">\(\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|\)</span>,其中<span class="math inline">\(\{|\phi_i\rangle\}\)</span>是一组单位正交基<span class="math inline">\(\Rightarrow\)</span>线性无关。(注意：线性无关<span class="math inline">\(\not\Rightarrow\)</span>正交)</p>
+        <h3 id="Chapter-2-4-Exercise"><a href="#Chapter-2-4-Exercise" class="headerlink" title="Chapter 2, 4 Exercise"></a>Chapter 2, 4 Exercise</h3><p>-</p>
+<h4 id="2-73"><a href="#2-73" class="headerlink" title="2.73"></a>2.73</h4><p>预备条件：</p>
+<p>对于$\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|$,其中${|\phi_i\rangle}$是一组单位正交基$\Rightarrow$线性无关。(注意：线性无关$\not\Rightarrow$正交)</p>
 <p>Recall that</p>
-<p><span class="math display">\[\begin{equation}
+<script type="math/tex; mode=display">\begin{equation}
 \begin{split}
-  &amp;span\{|\widetilde{k}\rangle:k=1,...,k\}\\
-= &amp;span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
-= &amp;span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
+  &span\{|\widetilde{k}\rangle:k=1,...,k\}\\
+= &span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
+= &span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
 \end{split}
-\end{equation}\]</span> <span class="math display">\[ \sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|\]</span></p>
-<p>其中，<span class="math inline">\(span\{|\widetilde{k}\rangle\}\)</span>是最小的。若再在其中增加<span class="math inline">\(|\psi\rangle\)</span>，则<span class="math inline">\(|\psi\rangle\)</span>是<span class="math inline">\(\{|\widetilde{k}\rangle\}\)</span>的线性组合。(增加了冗余)</p>
+\end{equation}</script><script type="math/tex; mode=display">\sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|</script><p>其中，$span{|\widetilde{k}\rangle}$是最小的。若再在其中增加$|\psi\rangle$，则$|\psi\rangle$是${|\widetilde{k}\rangle}$的线性组合。(增加了冗余)</p>
 <p>理解问题：</p>
-<ol type="1">
-<li><p><span class="math inline">\(\forall |\psi\rangle\in supp(\rho),\\ \exists\ minimal\ essemble\ \{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\ s.t.\)</span></p></li>
-<li><p><span class="math inline">\(\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}\)</span></p></li>
-</ol>
-<p>思路：使用定理2.6的两个方向证明
+<p>1) $\forall |\psi\rangle\in supp(\rho),\ \exists\ minimal\ essemble\ {p_i,\ |\psi_i\rangle},\ |\psi\rangle\in{|\psi_i\rangle}\<br>s.t.$</p>
+<p>2) $\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}$</p>
+<p>思路：使用定理2.6的两个方向证明<br>
         
       
 
@@ -820,19 +798,12 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
-<ul>
-<li><h4 id="section">2.39</h4></li>
-</ul>
-<ol type="1">
-<li>证明三个性质，即第2.1.4节中的：</li>
-</ol>
+        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><p>-</p>
+<h4 id="2-39"><a href="#2-39" class="headerlink" title="2.39"></a>2.39</h4><p>1) 证明三个性质，即第2.1.4节中的：</p>
 <blockquote>
-<ol type="1">
-<li><p>Linear in the second argument.</p></li>
-<li><p><span class="math inline">\((|v \rangle,|w\rangle )=(|w\rangle,|v\rangle)^*\)</span>.</p></li>
-<li><p><span class="math inline">\((|v\rangle,|v\rangle)\ge 0\)</span> with equality iff <span class="math inline">\(|v\rangle =0\)</span>. 分别证明，</p></li>
-</ol>
+<p>(1) Linear in the second argument.</p>
+<p>(2) $(|v \rangle,|w\rangle )=(|w\rangle,|v\rangle)^*$.</p>
+<p>(3) $(|v\rangle,|v\rangle)\ge 0$ with equality iff $|v\rangle =0$.<br>分别证明，</p>
 </blockquote>
 <p>对于 (1) ，根据式（2.63）和（2.64）</p>
         
@@ -908,17 +879,19 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="chapter-2-exercise">Chapter 2 Exercise</h3>
-<h4 id="section">2.9</h4>
-<p>Ket符号的好处：可以这么看，符号 <span class="math inline">\(|\)</span> 代表 n 维，符号 <span class="math inline">\(\rangle\)</span> 代表 1 维 <span class="math display">\[| \quad \rangle\]</span> 所以外积 <span class="math display">\[| \quad \rangle\langle \quad |\]</span> 的结果是 n <span class="math inline">\(\times\)</span> n 的矩阵， 而内积 <span class="math display">\[\langle\quad | \quad \rangle\]</span> 的结果是 1 <span class="math inline">\(\times\)</span> 1 的矩阵，即一个数（复数）。</p>
-<p>对于外积<span class="math inline">\(|0\rangle\langle0|\)</span>，它代表的是矩阵 <span class="math display">\[
+        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><h4 id="2-9"><a href="#2-9" class="headerlink" title="2.9"></a>2.9</h4><p>Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维</p>
+<script type="math/tex; mode=display">| \quad \rangle</script><p>所以外积</p>
+<script type="math/tex; mode=display">| \quad \rangle\langle \quad |</script><p>的结果是 n $\times$ n 的矩阵，<br>而内积</p>
+<script type="math/tex; mode=display">\langle\quad | \quad \rangle</script><p>的结果是 1 $\times$ 1 的矩阵，即一个数（复数）。</p>
+<p>对于外积$|0\rangle\langle0|$，它代表的是矩阵</p>
+<script type="math/tex; mode=display">
 \left[
   \begin{matrix}
-   a_{00} &amp; a_{01} \\
-   a_{10} &amp; a_{11}
+   a_{00} & a_{01} \\
+   a_{10} & a_{11}
   \end{matrix}
-  \right]
-\]</span> 中，<span class="math inline">\(a_{00}=1\)</span>。 所以，量子计算中，矩阵都可表示为 <span class="math display">\[A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。\]</span></p>
+  \right]</script><p>中，$a_{00}=1$。<br>所以，量子计算中，矩阵都可表示为</p>
+<script type="math/tex; mode=display">A=\sum\limits_{ij}a_{ij}|i\rangle\langle j|\ 。</script>
         
       
 
@@ -996,7 +969,7 @@ U
 <p>IDE：Eclipse</p>
 <p>Matlab版本：R2017a</p>
 <p>报错信息：</p>
-<p>Exception in thread &quot;main&quot; java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path. This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or the current path configuration, or a mismatch with the architecture of the Java interpreter on the path. MATLAB Runtime version this component is attempting to use: 9.2. Java interpreter architecture: maci64.
+<p>Exception in thread “main”<br>java.lang.UnsatisfiedLinkError: Failed to find the required library libmwmclmcrrt.9.2.dylib on java.library.path.<br>This library is typically installed along with MATLAB or the MATLAB Runtime. Its absence may indicate an issue with that installation or<br>the current path configuration, or a mismatch with the architecture of the Java interpreter on the path.<br>MATLAB Runtime version this component is attempting to use: 9.2.<br>Java interpreter architecture: maci64.<br>
         
       
 
