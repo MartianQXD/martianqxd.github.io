@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="Chapter 2 Exercise2.9Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维 | \quad \rangle所以外积 | \quad \rangle\langle \quad |的结果是 n $\times$ n 的矩阵，而内积 \langle\quad | \quad \rangle的结果是 1 $\times$ 1 的矩阵，即一个数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-13T01:29:23.100Z">
+<meta property="og:updated_time" content="2019-05-13T08:37:04.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY1">
 <meta name="twitter:description" content="Chapter 2 Exercise2.9Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维 | \quad \rangle所以外积 | \quad \rangle\langle \quad |的结果是 n $\times$ n 的矩阵，而内积 \langle\quad | \quad \rangle的结果是 1 $\times$ 1 的矩阵，即一个数">
@@ -265,9 +265,9 @@ H^{\otimes n+1}&=\displaystyle\frac{1}{\sqrt{2}}&((-1)^{x_0y_0}|x_0\rangle\langl
 \end{array}</script><p>易见 $x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1$</p>
 <p>令 $x’,y’$</p>
 <p>则有 $H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x’,y’}(-1)^{x’y’}|x’\rangle\langle y’|$</p>
-<p>-</p>
 <h4 id="2-34"><a href="#2-34" class="headerlink" title="2.34"></a>2.34</h4><p>不用解特征方程，通过观察</p>
-<script type="math/tex; mode=display">\begin{array}{rcl}
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
 M=
   \left[
   \begin{matrix}
@@ -278,31 +278,34 @@ M=
   &=4I+3X\\
   &=4(|+\rangle\langle+|+|-\rangle\langle-|)+3(|+\rangle\langle+|-|-\rangle\langle-|)\\
   &=7|+\rangle\langle+|+|-\rangle\langle-|
-\end{array}</script><p>$\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|$</p>
+\end{split}
+\end{equation}</script><p>$\sqrt{M}=\sqrt{7}|+\rangle\langle+|+|-\rangle\langle-|$</p>
 <p>$\log{M}=\log{7}|+\rangle\langle+|$</p>
-<p>-</p>
 <h4 id="2-35"><a href="#2-35" class="headerlink" title="2.35"></a>2.35</h4><p>通过特征值为 $\pm 1$ 得到<br>$\widehat{n}\cdot\widehat{\sigma}=|\lambda_+\rangle\langle\lambda_+|-|\lambda_-\rangle\langle\lambda_-|$<br>则</p>
-<script type="math/tex; mode=display">\begin{array}{rcl}
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
 |\mu\rangle&=e^{i\theta}|\lambda_+\rangle\langle\lambda_+|+e^{-i\theta}|\lambda_-\rangle\langle\lambda_-|\\
 &=\cos{\theta}I+i\sin{\theta}\widehat{n}\cdot\widehat{\sigma}
-\end{array}</script><p>-</p>
-<h4 id="2-37"><a href="#2-37" class="headerlink" title="2.37"></a>2.37</h4><p>注意：AB不能直接交换，所以添加一个辅助的 $|j\rangle\langle j|$。</p>
-<script type="math/tex; mode=display">\begin{array}{rcl}
+\end{split}
+\end{equation}</script><h4 id="2-37"><a href="#2-37" class="headerlink" title="2.37"></a>2.37</h4><p>注意：AB不能直接交换，所以添加一个辅助的 $|j\rangle\langle j|$。</p>
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
 tr(AB)&=\sum\limits_{i}\langle i|AB|i\rangle\\
 &=\sum\limits_{i,j}\langle i|A\underline{|j\rangle\langle j|}B|i\rangle\\
 &=\sum\limits_{i,j}\langle j|B|i\rangle\langle j|A|j\rangle\\
 &=\sum\limits_{j}\langle j|BA|j\rangle
-\end{array}</script><p>-</p>
-<h4 id="2-40"><a href="#2-40" class="headerlink" title="2.40"></a>2.40</h4><p>$X,Y,Z$ 一些有趣的性质。</p>
+\end{split}
+\end{equation}</script><h4 id="2-40"><a href="#2-40" class="headerlink" title="2.40"></a>2.40</h4><p>$X,Y,Z$ 一些有趣的性质。</p>
 <p>$XY=iZ\quad YZ=iX\quad ZX=iY$</p>
 <p>$ZYZ=-Y\quad XZX=-Z\quad YXY=ZXZ=-X$</p>
 <p>对于量子电路(Quantum Circuit)的化简(Simplification)有用。</p>
-<p>-</p>
 <h4 id="2-49"><a href="#2-49" class="headerlink" title="2.49"></a>2.49</h4><p>目标是拆出一个半正定矩阵(Positive semi-definite matrix)。</p>
-<script type="math/tex; mode=display">\begin{array}{rcl}
+<script type="math/tex; mode=display">\begin{equation}
+\begin{split}
 A&=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|\lambda_i|\cdot|i\rangle\langle i|\\
 &=\sum\limits_{i}\displaystyle\frac{\lambda_i}{|\lambda_i|}\cdot|i\rangle\langle i|\cdot\sum\limits_{j}|\lambda_j|\cdot|j\rangle\langle j|
-\end{array}</script><p>因为 $|\lambda_j|\ge0$，所以得到的是一个酉矩阵乘一个半正定矩阵。</p>
+\end{split}
+\end{equation}</script><p>因为 $|\lambda_j|\ge0$，所以得到的是一个酉矩阵乘一个半正定矩阵。</p>
 <p>Recall that: Exercise 2.18 $|\lambda_i|=1$.</p>
 
       
@@ -723,6 +726,6 @@ MathJax.Hub.Queue(function() {
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
