@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>QCQI Lesson Day8 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
+  <meta name="description" content="Chapter 5Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0">
 <meta name="keywords" content="quantum computation，quantum information">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QCQI Lesson Day8">
 <meta property="og:url" content="http://yoursite.com/2018/08/20/QCQI-Lesson-Day8/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
+<meta property="og:description" content="Chapter 5Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
-<meta property="og:updated_time" content="2019-05-13T01:24:19.061Z">
+<meta property="og:updated_time" content="2019-05-17T03:05:39.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson Day8">
-<meta name="twitter:description" content="Chapter 5- Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k">
+<meta name="twitter:description" content="Chapter 5Quantum Fourier Transformation经典的傅立叶变换(FT)是： (x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0">
 <meta name="twitter:image" content="https://i.loli.net/2018/08/26/5b827e2a158e8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
@@ -173,8 +173,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
-<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
 <script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
 <p>相比FT有 $k\times2^{N}$ 种可能，QFT是指数级的加速，但是 $x_k$ 是振幅，测量后是无法得到的。</p>
@@ -191,7 +190,6 @@
 <p>所以 $j/2^n$ 是一个小数 $0.j_0…j_{n-1}$</p>
 <p>$j/2^n=j_0\cdot2^{-1}+j_1\cdot2^{-2}+…+j_{n-1}\cdot2^{-n}$</p>
 <p>利用张量积的性质展开得到式（5.5）- 式（5.10）的推导。注意（5.8）$\rightarrow$（5.9）是因为整数部分其实可以扔掉，所以只看小数部分。</p>
-<p>-</p>
 <h4 id="Circuit（Fig-5-1）"><a href="#Circuit（Fig-5-1）" class="headerlink" title="Circuit（Fig 5.1）"></a>Circuit（Fig 5.1）</h4><p>因为式（5.10）中不看phase部分，每一项都是 $\displaystyle\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)$，所以每一项需要一个 $H$。</p>
 <p>再看phase部分，因为phase还要由其他位控制，所以类似Fig 4.5，是controlled phase shift gates。</p>
 <p>所以Fig 5.1中的第一个H门开始到第二个H门前的部分，相当于式（5.10）的最后一项。</p>
@@ -210,9 +208,8 @@
 &\rightarrow|\beta\rangle\ |\alpha\rangle
 \end{split}
 \end{equation}</script><p>回过头看QFT，复杂度为 $n+n-1+…+1=\displaystyle\frac{n(n-1)}{2}=O(n^2)$</p>
-<p>-</p>
-<h4 id="Phase-estimation"><a href="#Phase-estimation" class="headerlink" title="Phase estimation"></a>Phase estimation</h4><p>Input: $U,\ |u\rangle\ s.t.\ e^{2\pi i\phi},\ \Delta,\ \epsilon,\ Controlled\text{-}U^{2^j}\ j\ge 0$</p>
-<p>Output: $\widetilde{\phi}\ s.t.\ |\widetilde{\phi}-\phi|&lt;\Delta\ with\ prob\ge1-\epsilon$</p>
+<h4 id="Phase-estimation"><a href="#Phase-estimation" class="headerlink" title="Phase estimation"></a>Phase estimation</h4><p>$Input: U,\ |u\rangle\ s.t.\ e^{2\pi i\phi},\ \Delta,\ \epsilon,\ Controlled\text{-}U^{2^j}\ j\ge 0$</p>
+<p>$Output: \widetilde{\phi}\ s.t.\ |\widetilde{\phi}-\phi|&lt;\Delta\ with\ prob\ge1-\epsilon$</p>
 <p>$\widetilde{\phi}$ 是 $\phi$ 的近似值，$\phi=0.\phi_1\phi_2\phi_3…$</p>
 <blockquote>
 <p>题外话</p>
@@ -223,11 +220,11 @@
 <p>可以通过证明，得到结论，该电路无法实现。</p>
 <p>但是物理上能够实现，可能的原因是电路无法表现实现该电路的实验。</p>
 <p>该问题的重要性：</p>
-<p>以前的量子程序都是经典控制 $if\ q_1\ then\ U[q_2]$</p>
-<p>但若是量子控制 $qif\ q_1\ then\ U[q_2]$，即</p>
+<p>以前的量子程序都是经典控制 $\mbox{if}\ q_1\ \mbox{then}\ U[q_2]$</p>
+<p>但若是量子控制 $\mbox{qif}\ q_1\ \mbox{then}\ U[q_2]$，即</p>
 <p>$|0\rangle|\psi\rangle\mapsto|0\rangle|\psi\rangle\quad|1\rangle|\psi\rangle\mapsto|1\rangle U|\psi\rangle$</p>
 <p>希望能够模块化，即编译器的模块化，则 $f$ 的缺口就是then后面的statement。</p>
-<p>更进一步，若不是U门而是另一个电路$\epsilon$，即$qif\ q_1\ then\ \epsilon[q_2]$</p>
+<p>更进一步，若不是U门而是另一个电路$\epsilon$，即$\mbox{qif}\ q_1\ \mbox{then}\ \epsilon[q_2]$</p>
 </blockquote>
 <p>言归正传，相位估计的算法。</p>
 <h4 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h4><h5 id="Step-1-（Fig-5-2）"><a href="#Step-1-（Fig-5-2）" class="headerlink" title="Step 1 （Fig 5.2）"></a>Step 1 （Fig 5.2）</h5><script type="math/tex; mode=display">\begin{equation}
@@ -267,7 +264,6 @@ p(|m-b|>e)=
 <p>$a_l=\displaystyle\frac{1}{2^t}\sum\limits_{k}e^{2\pi ik(\phi-(b+l)/2^t)}$ ($mod\ 2^t$ 被消掉了) $\Rightarrow$ 式（5.24）</p>
 <p>接下来看式（5.28）</p>
 <p>引理：$|1-exp(i\theta)|\ge\displaystyle\frac{2|\theta|}{\pi}\ if\ -\pi\le\theta\le\pi$，这个画个图即证。</p>
-<p>-</p>
 <h5 id="这里先暂停，之后再继续证明。"><a href="#这里先暂停，之后再继续证明。" class="headerlink" title="这里先暂停，之后再继续证明。"></a>这里先暂停，之后再继续证明。</h5>
       
 
@@ -507,11 +503,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">

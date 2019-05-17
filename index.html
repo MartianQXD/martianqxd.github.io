@@ -262,10 +262,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
-<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>-</p>
-<h4 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h4><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
-<p>与controlled-U不同，$U_1…U_n$ 都可以做，所以是U的x次方。</p>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><h5 id="Phase-estimation-performace"><a href="#Phase-estimation-performace" class="headerlink" title="Phase estimation performace"></a>Phase estimation performace</h5><p>回顾上一天的内容，见Fig 5.3，$|x\rangle|y\rangle\rightarrow|x\rangle U^{x}|y\rangle$。</p>
+<p>与 $controlled\mbox{-}U$ 不同，$U_1…U_n$ 都可以做，所以是 $U$ 的x次方。</p>
 <p>然后再下一步，$|x\rangle$ 做QFT得式（5.23）。</p>
 <p>1）$|\phi\rangle=0.\phi_1\phi_2…\phi_t\phi_{t+1}…$</p>
 <p>2）$b=\phi_1…\phi_t\quad\delta=\psi-b/2^t\quad0\le\delta\le2^{-t}$</p>
@@ -346,8 +344,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><p>-</p>
-<h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
+        <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><h4 id="Quantum-Fourier-Transformation"><a href="#Quantum-Fourier-Transformation" class="headerlink" title="Quantum Fourier Transformation"></a>Quantum Fourier Transformation</h4><p>经典的傅立叶变换(FT)是：</p>
 <script type="math/tex; mode=display">(x_0...x_{n-1})\in \mathbb{C}^{N}\xrightarrow{FT}(y_0...y_{n-1})\in \mathbb{C}^{N}</script><p>$\forall j,\,y_j=\displaystyle\frac{1}{\sqrt{N}}\sum\limits_{k=0}^{n-1}e^{2\pi ijk/N}x_k$</p>
 <p>而量子的傅立叶变换(QFT)是：将经典数据变换为量子态，之后再通过测量得到经典信息。</p>
 <p>相比FT有 $k\times2^{N}$ 种可能，QFT是指数级的加速，但是 $x_k$ 是振幅，测量后是无法得到的。</p>
@@ -424,8 +421,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-4-amp-its-Exercise"><a href="#Chapter-4-amp-its-Exercise" class="headerlink" title="Chapter 4 &amp; its Exercise"></a>Chapter 4 &amp; its Exercise</h3><p>-</p>
-<h4 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h4><p>补充：</p>
+        <h3 id="Chapter-4-amp-its-Exercise"><a href="#Chapter-4-amp-its-Exercise" class="headerlink" title="Chapter 4 &amp; its Exercise"></a>Chapter 4 &amp; its Exercise</h3><h4 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h4><p>补充：</p>
 <script type="math/tex; mode=display">R_{\widehat{n}}(\theta)
 =e^{\frac{-i\theta}{2}}|\lambda_+\rangle\langle\lambda_+|+e^{\frac{i\theta}{2}}|\lambda_-\rangle\langle\lambda_-|</script><p>的来源。是根据 $U$ 的谱分解</p>
 <script type="math/tex; mode=display">\begin{equation}
@@ -513,8 +509,7 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-2-amp-Bloch-sphere"><a href="#Chapter-2-amp-Bloch-sphere" class="headerlink" title="Chapter 2 &amp; Bloch sphere"></a>Chapter 2 &amp; Bloch sphere</h3><p>-</p>
-<h4 id="Exercise-2-64"><a href="#Exercise-2-64" class="headerlink" title="Exercise 2.64"></a>Exercise 2.64</h4><h5 id="State-discrimination"><a href="#State-discrimination" class="headerlink" title="State discrimination"></a>State discrimination</h5><p>量子以下两个性质：</p>
+        <h3 id="Chapter-2-amp-Bloch-sphere"><a href="#Chapter-2-amp-Bloch-sphere" class="headerlink" title="Chapter 2 &amp; Bloch sphere"></a>Chapter 2 &amp; Bloch sphere</h3><h4 id="Exercise-2-64"><a href="#Exercise-2-64" class="headerlink" title="Exercise 2.64"></a>Exercise 2.64</h4><h5 id="State-discrimination"><a href="#State-discrimination" class="headerlink" title="State discrimination"></a>State discrimination</h5><p>量子以下两个性质：</p>
 <ol>
 <li>有叠加态</li>
 <li>被观测之后塌缩</li>
@@ -522,7 +517,7 @@ U
 <p>这两个性质让量子有不可克隆性等性质。</p>
 <p>理解问题：</p>
 <p>$\forall i\neq j,\ \langle\psi_i|\psi_j\rangle=0$ 正交时，可以得到一组投影测量 $P_i=|\psi_i\rangle\langle\psi_i|$。</p>
-<p>因为 $P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle$$(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
+<p>因为 $P_i|\psi_j\rangle=\delta_{ij}|\psi_i\rangle$ $(即P(i)=0)$，所以若是没有测到qubit，也不会破坏原本的状态，。</p>
 <p>这被称为完美分辨(perfect discrimination)。</p>
 <p>那么，现在的问题是，这些状态 $\{|\psi_i:\ i=1…n\}$ 是线性无关的。</p>
 <blockquote>
@@ -610,9 +605,8 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h3><p>-</p>
-<h4 id="4-5-Universal-quantum-gates"><a href="#4-5-Universal-quantum-gates" class="headerlink" title="4.5 Universal quantum gates"></a>4.5 Universal quantum gates</h4><p>这节要证明，只通过CNOT门，Hadamard门和T门($\pi/8$门)，就可以构成(近似)任何U门。</p>
-<h4 id="4-5-1-Two-level-unitary-gates-are-universal"><a href="#4-5-1-Two-level-unitary-gates-are-universal" class="headerlink" title="4.5.1 Two-level unitary gates are universal"></a>4.5.1 Two-level unitary gates are universal</h4><p>two-level unitary gate形如：</p>
+        <h3 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h3><h4 id="4-5-Universal-quantum-gates"><a href="#4-5-Universal-quantum-gates" class="headerlink" title="4.5 Universal quantum gates"></a>4.5 Universal quantum gates</h4><p>这节要证明，只通过CNOT门，Hadamard门和T门($\pi/8$门)，就可以构成(近似)任何U门。</p>
+<h4 id="4-5-1-Two-level-unitary-gates-are-universal"><a href="#4-5-1-Two-level-unitary-gates-are-universal" class="headerlink" title="4.5.1 Two-level unitary gates are universal"></a>4.5.1 Two-level unitary gates are universal</h4><p>$\mbox{two-level unitary gate}$形如:</p>
 <script type="math/tex; mode=display">
   \left[
   \begin{matrix}
@@ -710,10 +704,9 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-2-4-Exercise"><a href="#Chapter-2-4-Exercise" class="headerlink" title="Chapter 2, 4 Exercise"></a>Chapter 2, 4 Exercise</h3><p>-</p>
-<h4 id="2-73"><a href="#2-73" class="headerlink" title="2.73"></a>2.73</h4><p>预备条件：</p>
+        <h3 id="Chapter-2-4-Exercise"><a href="#Chapter-2-4-Exercise" class="headerlink" title="Chapter 2, 4 Exercise"></a>Chapter 2, 4 Exercise</h3><h4 id="2-73"><a href="#2-73" class="headerlink" title="2.73"></a>2.73</h4><p>预备条件：</p>
 <p>对于$\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|$,其中$\{|\phi_i\rangle\}$是一组单位正交基$\Rightarrow$线性无关。(注意：线性无关$\not\Rightarrow$正交)</p>
-<p>Recall that</p>
+<p>$\mbox{Recall that}$</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
   &span\{|\widetilde{k}\rangle:k=1,...,k\}\\
@@ -722,8 +715,8 @@ U
 \end{split}
 \end{equation}</script><script type="math/tex; mode=display">\sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|</script><p>其中，$span\{|\widetilde{k}\rangle\}$是最小的。若再在其中增加$|\psi\rangle$，则$|\psi\rangle$是$\{|\widetilde{k}\rangle\}$的线性组合。(增加了冗余)</p>
 <p>理解问题：</p>
-<p>1) $\forall |\psi\rangle\in supp(\rho),\\ \exists\ minimal\ essemble\ \{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\<br>s.t.$</p>
-<p>2) $\forall\ such\ a\ minimal\ essemble\ p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}$</p>
+<p>1) $\forall |\psi\rangle\in supp(\rho),\\ \exists\mbox{minimal essemble}~\{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\<br>\mbox{s.t.}$</p>
+<p>2) $\forall\mbox{such a minimal essemble }p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}$</p>
 <p>思路：使用定理2.6的两个方向证明<br>
         
       
@@ -798,13 +791,13 @@ U
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><p>-</p>
-<h4 id="2-39"><a href="#2-39" class="headerlink" title="2.39"></a>2.39</h4><p>1) 证明三个性质，即第2.1.4节中的：</p>
+        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><h4 id="2-39"><a href="#2-39" class="headerlink" title="2.39"></a>2.39</h4><p>1) 证明三个性质，即第2.1.4节中的：</p>
 <blockquote>
 <p>(1) Linear in the second argument.</p>
 <p>(2) $(|v \rangle,|w\rangle )=(|w\rangle,|v\rangle)^*$.</p>
-<p>(3) $(|v\rangle,|v\rangle)\ge 0$ with equality iff $|v\rangle =0$.<br>分别证明，</p>
+<p>(3) $(|v\rangle,|v\rangle)\ge 0$ with equality if and only if $|v\rangle =0$.</p>
 </blockquote>
+<p>分别证明，</p>
 <p>对于 (1) ，根据式（2.63）和（2.64）</p>
         
       
@@ -1126,11 +1119,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="Chapter 2 Exercise2.9Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维 | \quad \rangle所以外积 | \quad \rangle\langle \quad |的结果是 n $\times$ n 的矩阵，而内积 \langle\quad | \quad \rangle的结果是 1 $\times$ 1 的矩阵，即一个数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-13T08:37:04.799Z">
+<meta property="og:updated_time" content="2019-05-16T12:42:49.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QCQI Lesson DAY1">
 <meta name="twitter:description" content="Chapter 2 Exercise2.9Ket符号的好处：可以这么看，符号 $|$ 代表 n 维，符号 $\rangle$ 代表 1 维 | \quad \rangle所以外积 | \quad \rangle\langle \quad |的结果是 n $\times$ n 的矩阵，而内积 \langle\quad | \quad \rangle的结果是 1 $\times$ 1 的矩阵，即一个数">
@@ -232,7 +232,7 @@
 <p>即 $U|v_R\rangle=|w_R\rangle$</p>
 <p>注：$U^\dagger U=I$</p>
 </blockquote>
-<p>注意： $\sum\limits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\limits_{i,j}IA_{ij}I=A$</p>
+<p>注意： $\sum\nolimits_{i,j}|i\rangle\langle i|A_{ij}|j\rangle\langle j|=\sum\nolimits_{i,j}IA_{ij}I=A$</p>
 <p>所以：</p>
 <script type="math/tex; mode=display">\begin{array}{rcl}
 A'_{ij} & = & \langle v_i|A|v_j\rangle
@@ -250,7 +250,7 @@ A''_{ij} & = & \langle w_i|A|w_j\rangle\\
 <p>令 $V = U^*$</p>
 <p>则 $A’’=VA’V^\dagger$</p>
 <p>还可以对结果进行验证，两个矩阵可表示为</p>
-<p>$A’’=\sum\limits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A’=\sum\limits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|$</p>
+<p>$A’’=\sum\nolimits_{i,j}\langle w_i|A|w_j\rangle|i\rangle\langle j| \quad A’=\sum\nolimits_{i,j}\langle v_i|A|v_j\rangle|i\rangle\langle j|$</p>
 <h4 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h4><p>$H^{\oplus n}$ 的一个用途：</p>
 <p>$|+\rangle^{\otimes n}=\displaystyle\frac{1}{\sqrt{2^n}}\sum\limits_{x=1}^{2^n-1}|x\rangle$<br>这个态的制备很简单，只要 1 个 $H^{\otimes n}$</p>
 <p>$|0\rangle^{\otimes n}\xrightarrow{H^{\otimes n}}|+\rangle^{\otimes n}$</p>
@@ -264,7 +264,7 @@ H^{\otimes n+1}&=\displaystyle\frac{1}{\sqrt{2}}&((-1)^{x_0y_0}|x_0\rangle\langl
 &&+(-1)^{x_1y_1}|x_1\rangle\langle y_1|)\ H^{\otimes n}
 \end{array}</script><p>易见 $x_0y_0=x_0y_1=x_1y_0=0\quad x_1y_1=1$</p>
 <p>令 $x’,y’$</p>
-<p>则有 $H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\limits_{x’,y’}(-1)^{x’y’}|x’\rangle\langle y’|$</p>
+<p>则有 $H^{\otimes n+1}=\displaystyle\frac{1}{\sqrt{2^{n+1}}}\sum\nolimits_{x’,y’}(-1)^{x’y’}|x’\rangle\langle y’|$</p>
 <h4 id="2-34"><a href="#2-34" class="headerlink" title="2.34"></a>2.34</h4><p>不用解特征方程，通过观察</p>
 <script type="math/tex; mode=display">\begin{equation}
 \begin{split}
@@ -546,11 +546,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
