@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>shadowsocks-1 | Hi, I&#39;m MartianQXD. Hello, World!</title>
+  <title>ShadowsocksR 原理及源码学习 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。 Shadowsocks 原理 背景 我们访问外网的结构：  ISP(Internet Service">
+  <meta name="description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。">
 <meta name="keywords" content="shadowsocks">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shadowsocks-1">
+<meta property="og:title" content="ShadowsocksR 原理及源码学习">
 <meta property="og:url" content="http://yoursite.com/2019/06/28/shadowsocks-1/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。 Shadowsocks 原理 背景 我们访问外网的结构：  ISP(Internet Service">
+<meta property="og:description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-04T08:18:23.745Z">
+<meta property="og:updated_time" content="2019-08-14T18:12:07.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shadowsocks-1">
-<meta name="twitter:description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。 Shadowsocks 原理 背景 我们访问外网的结构：  ISP(Internet Service">
+<meta name="twitter:title" content="ShadowsocksR 原理及源码学习">
+<meta name="twitter:description" content="ShadowsocksR 原理及源码学习最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      shadowsocks-1
+      ShadowsocksR 原理及源码学习
     </h1>
   
 
@@ -172,12 +172,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="ShadowsocksR-原理及源码学习"><a href="#ShadowsocksR-原理及源码学习" class="headerlink" title="ShadowsocksR 原理及源码学习"></a>ShadowsocksR 原理及源码学习</h1><p>最近自己买的VPN又挂了，同学借了我幸存的服务，发现都是 ShadowsocksX-NG 的框架，所决定了解一下。实际上，这些VPN应该都是SS+VPS等服务器搭建的。推测因为给很多人提供的服务，一次性租大量服务器的价格会便宜一点，所以比自己弄一个要便宜。</p>
+<a id="more"></a>
 <h2 id="Shadowsocks-原理"><a href="#Shadowsocks-原理" class="headerlink" title="Shadowsocks 原理"></a>Shadowsocks 原理</h2><hr>
 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ol>
 <li>我们访问外网的结构：</li>
 </ol>
 <p>ISP(Internet Service Provider)骨干网(backbone) $\longrightarrow$ 互联网交换中心 $\longrightarrow$ 路由器(router) $\rightarrow$ 分光(splitter) $\rightarrow$ 路由器  $\rightarrow$ … $\rightarrow$ 路由器 $\longrightarrow$ ISP国际网关(最后一跳) $\longrightarrow$ 海底光缆登陆站 $\longrightarrow$ 海底光缆</p>
-<a id="more"></a>
+<!-- more-->
 <ol>
 <li>封锁的方法主要有：</li>
 </ol>

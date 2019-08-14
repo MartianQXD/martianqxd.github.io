@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta property="og:description" content="网络流-最大流问题算法整理问题分析定义 有向图(Directed Graph/Digraph)有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。 容量(Capacity)容量是网络流图图中边的权重(Weight)值。可以用 function $c$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-14T18:07:03.212Z">
+<meta property="og:updated_time" content="2019-08-14T18:21:40.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
 <meta name="twitter:description" content="网络流-最大流问题算法整理问题分析定义 有向图(Directed Graph/Digraph)有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。 容量(Capacity)容量是网络流图图中边的权重(Weight)值。可以用 function $c$">
@@ -161,6 +161,7 @@
 <h5 id="网络-Network"><a href="#网络-Network" class="headerlink" title="网络(Network)"></a>网络(Network)</h5><p>网络是一个有向图$G=(V,E)$，其中的每条边的容量都是非负的，即$\forall (u,v)\in E, c(u,v)\ge 0$。不失一般性，当$(u,v)\not\in E$时，可以将$(u,v)$加入$E$并令其容量为0，$c(u,v)=0$。</p>
 <h5 id="流网络-Flow-Network"><a href="#流网络-Flow-Network" class="headerlink" title="流网络(Flow Network)"></a>流网络(Flow Network)</h5><p>流网络是一个网络$G=(V,E)$，其包含两个特殊的结点，源点($source$)和汇点($sink$)，分别用$s$和$t$表示。$G$中的所有结点都在源点到汇点的一条路径上，即$\text{for each vertex } v\in V,\text{flow network contains a path } s\rightsquigarrow v\rightsquigarrow t。$</p>
 <p>注意：流网络中不允许反向平行边。可以通过添加中间结点避免这种情况。</p>
+<a id="more"></a>
 <h5 id="流-Flow"><a href="#流-Flow" class="headerlink" title="流(Flow)"></a>流(Flow)</h5><p>流网络$G$中的一个流是一个映射：$V\times V\rightarrow \mathbb{R}$，满足以下两条性质：<br>    -$\textbf{容量约束(Capacity constraint)}:$ For all $u,v\in V$, we require $0\leq f(u,v)\le c(u,v).$<br>    -$\textbf{流守恒(Flow conservation)}:$ For all $u\in V-\{s,t\}$, we require $\sum_{v\in V}f(u,v)=\sum_{v\in V}f(v,u).$<br>流的值(Value) $|f|$ 定义为 $|f|=\sum_{v\in V}f(s,v)-\sum_{v\in V}f(v,s)$。</p>
 <h5 id="两个特殊的结点"><a href="#两个特殊的结点" class="headerlink" title="*两个特殊的结点"></a>*两个特殊的结点</h5><p>源点 $source: s/\nearrow/\vartriangle…$<br>汇点 $sink: t/\searrow/\blacktriangledown…$</p>
 <p>注：对于有多个源点和汇点的情况，再添加一个新的源点和汇点，分别连接原本的多个源点和汇点，并使边的容量为$\infty$即可使源点和汇点数量仍为1。</p>
@@ -174,11 +175,10 @@
 <p>特别地，在两个概率分布之间，如果将边的端点看作概率分布的支撑集(support)，边看作支撑集元素之间的匹配关系。当其的最大匹配刚好是1的时候，则可以得到这两个分布是等价的。</p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h4 id="Ford-Fulkerson方法"><a href="#Ford-Fulkerson方法" class="headerlink" title="Ford-Fulkerson方法"></a>Ford-Fulkerson方法</h4><p>称为Ford-Fulkerson方法而不是算法的原因是，其包含了若干个不同时间复杂度的实现算法。Ford-Fulkerson方法使用的是贪心算法，主要依赖于三个概念：</p>
 <ol>
-<li>剩余图/剩余网络：$G_f$<ul>
+<li>剩余图/剩余网络：$G_f$<ol>
 <li>之前提到在尽量向前推流得到一个规划策略之后，我们需要向后推流来进行一些调整，来得到最优的情况。剩余图的作用便是记录下已被使用的流以及剩余的流这些重要的信息，以帮助之后调整策略。</li>
-<li>剩余图上的$\textbf{剩余边}$分两种：1. 当边的容量与流量的差大于零，则添加一条边到 $G_f$，且这条边上的容量，称为$\textbf{剩余容量}$，为其差值，即 $c_{f}=c(u,v)-f(u,v)&gt;0$。2. 当有流经过这条边，则添加$\textbf{剩余容量}$为原边上流量，方向相反的一条边到 $G_f$ ，即 $c_f(v,u)=f(u,v)$。</li>
-<li>注意：流网络中不允许有方向平行边，但剩余图可以。</li>
-</ul>
+<li>剩余图上的$\textbf{剩余边}$分两种：1. 当边的容量与流量的差大于零，则添加一条边到 $G_f$，且这条边上的容量，称为$\textbf{剩余容量}$，为其差值，即 $c_{f}=c(u,v)-f(u,v)&gt;0$。2. 当有流经过这条边，则添加$\textbf{剩余容量}$为原边上流量，方向相反的一条边到 $G_f$ ，即 $c_f(v,u)=f(u,v)$。<br>注意：流网络中不允许有方向平行边，但剩余图可以。</li>
+</ol>
 </li>
 <li>增广路径：在剩余图上推流，能得到一些使用剩余的容量找到的新路径，可以把他们添加到原本的流中来增加流量(这需要证明)。方法使用定义了一个增广(argument)操作来更新流。<br>令 $f$ 是原图上的流，$f_r$ 是剩余图上的流。则增广操作更新新的流 $f’$：<script type="math/tex; mode=display">
 f'(u,v) = 
@@ -267,7 +267,7 @@ f(u,v)+f_r(u,v)-f_r(v,u), & \text{if $(u,v)\in E$},\\
   
   
     <a href="/2019/06/28/shadowsocks-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">shadowsocks-1</div>
+      <div class="article-nav-title">ShadowsocksR 原理及源码学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
