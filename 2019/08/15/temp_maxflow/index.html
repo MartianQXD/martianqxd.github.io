@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Hi, I&#39;m MartianQXD. Hello, World!</title>
+  <title>网络流-最大流问题算法整理 | Hi, I&#39;m MartianQXD. Hello, World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="问题分析定义 有向图(Directed Graph/Digraph)有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。 容量(Capacity)容量是网络流图图中边的权重(Weight)值。可以用 function $c$ 来表示边到其容量的映射，即">
+<meta name="keywords" content="maxflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络流-最大流问题算法整理">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/temp_maxflow/index.html">
 <meta property="og:site_name" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta property="og:description" content="问题分析定义 有向图(Directed Graph/Digraph)有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。 容量(Capacity)容量是网络流图图中边的权重(Weight)值。可以用 function $c$ 来表示边到其容量的映射，即">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-14T18:24:06.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hi, I&#39;m MartianQXD. Hello, World!">
+<meta name="twitter:title" content="网络流-最大流问题算法整理">
+<meta name="twitter:description" content="问题分析定义 有向图(Directed Graph/Digraph)有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。 容量(Capacity)容量是网络流图图中边的权重(Weight)值。可以用 function $c$ 来表示边到其容量的映射，即">
   
     <link rel="alternative" href="/atom.xml" title="Hi, I&#39;m MartianQXD. Hello, World!" type="application/atom+xml">
   
@@ -146,353 +151,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-temp_maxflow" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网络流-最大流问题算法整理
+    </h1>
+  
+
+        
+        <a href="/2019/08/15/temp_maxflow/" class="archive-article-date">
+  	<time datetime="2019-08-14T18:24:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><hr>
+<h5 id="有向图-Directed-Graph-Digraph"><a href="#有向图-Directed-Graph-Digraph" class="headerlink" title="有向图(Directed Graph/Digraph)"></a>有向图(Directed Graph/Digraph)</h5><p>有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。</p>
+<h5 id="容量-Capacity"><a href="#容量-Capacity" class="headerlink" title="容量(Capacity)"></a>容量(Capacity)</h5><p>容量是网络流图图中边的权重(Weight)值。可以用 function $c$ 来表示边到其容量的映射，即<br>$c(e)\ =\ \text{capacity of } e$ where $e\in E$。</p>
+<h5 id="网络-Network"><a href="#网络-Network" class="headerlink" title="网络(Network)"></a>网络(Network)</h5><p>网络是一个有向图$G=(V,E)$，其中的每条边的容量都是非负的，即$\forall (u,v)\in E, c(u,v)\ge 0$。不失一般性，当$(u,v)\not\in E$时，可以将$(u,v)$加入$E$并令其容量为0，$c(u,v)=0$。</p>
+<h5 id="流网络-Flow-Network"><a href="#流网络-Flow-Network" class="headerlink" title="流网络(Flow Network)"></a>流网络(Flow Network)</h5><p>流网络是一个网络$G=(V,E)$，其包含两个特殊的结点，源点($source$)和汇点($sink$)，分别用$s$和$t$表示。$G$中的所有结点都在源点到汇点的一条路径上，即$\text{for each vertex } v\in V,\text{flow network contains a path } s\rightsquigarrow v\rightsquigarrow t。$</p>
+<p>注意：流网络中不允许反向平行边。可以通过添加中间结点避免这种情况。</p>
+<a id="more"></a>
+<h5 id="流-Flow"><a href="#流-Flow" class="headerlink" title="流(Flow)"></a>流(Flow)</h5><p>流网络$G$中的一个流是一个映射：$V\times V\rightarrow \mathbb{R}$，满足以下两条性质：<br>    -$\textbf{容量约束(Capacity constraint)}:$ For all $u,v\in V$, we require $0\leq f(u,v)\le c(u,v).$<br>    -$\textbf{流守恒(Flow conservation)}:$ For all $u\in V-\{s,t\}$, we require $\sum_{v\in V}f(u,v)=\sum_{v\in V}f(v,u).$<br>流的值(Value) $|f|$ 定义为 $|f|=\sum_{v\in V}f(s,v)-\sum_{v\in V}f(v,s)$。</p>
+<h5 id="两个特殊的结点"><a href="#两个特殊的结点" class="headerlink" title="*两个特殊的结点"></a>*两个特殊的结点</h5><p>源点 $source: s/\nearrow/\vartriangle…$<br>汇点 $sink: t/\searrow/\blacktriangledown…$</p>
+<p>注：对于有多个源点和汇点的情况，再添加一个新的源点和汇点，分别连接原本的多个源点和汇点，并使边的容量为$\infty$即可使源点和汇点数量仍为1。</p>
+<h4 id="最大流问题"><a href="#最大流问题" class="headerlink" title="最大流问题"></a>最大流问题</h4><hr>
+<p>问题：给定一个网络流图$G$，找到一个具有最大值的流。</p>
+<h5 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h5><p>设计处理这个问题的算法，首先考虑的是流网络如何约束了流的最大值。假设图被划分为两个子集$A$和$B$，从$A$上的点到$B$上的点有流存在，那么从$A$到$B$的某些边上的容量会被消耗，并且在流值最大的情况下，一些边的容量会被消耗完。使用“割”描述这样一个划分，那么流量的值不会超过割的值，也就是说对于流量的值存在一个上界(即割)。求最小的容量割，与最大流问题的价值是相同的。</p>
+<p>由于最大流的问题需要全局调整，局部最优的思想目前没有适用的方法，所以排除动态规划方法。转而考虑的是贪心的方法，从零流开始，尝试先沿着一条从$s$到$t$的路径“推”这个流，得到一个尽量大的流，应该是其中经过边，它们容量值的最小值，这是因为流守恒性质。称这种“推动”方法为“前推”，需要有相应的“后推”来帮助调整构造流。对于设计的算法，要证明最终得到的是一个最大流，即要证明这样调整的结果是最优的。另外，要证明其终止性。</p>
+<h5 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h5><p>交通运输中的车流、金融交易中的现金流、控制系统中的信息流等都是类似的问题。为了效率，都希望能找到整个网络的最大流量并且找到达到最大流量的策略。</p>
+<p>例如交通运输的规划中，将地图视为一个流网络，出发点就是源点$s$，目的地就是汇点$t$，交叉路口/中转站/城市为结点$v\in V$，对应的他们之间的道路是边$e\in E$。对于每条道路，他们的堵塞程度等因素决定了通过这条道路能运送货物的数量，即边的容量$c(e)\in \mathbb{R}$。相应的，每条道路运送的货物量，就是每条边的流量f(e)。找出运送货物量的最大值和运送规划策略即为解决一个最大流问题。</p>
+<p>回归到这一类问题的起源，他们某种意义上是源于<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E5%9B%BE#%E5%8C%B9%E9%85%8D" target="_blank" rel="noopener">二分匹配问题</a>。其中的问题之一就是对一个二部图$G$，确定其最大匹配的大小。</p>
+<p>特别地，在两个概率分布之间，如果将边的端点看作概率分布的支撑集(support)，边看作支撑集元素之间的匹配关系。当其的最大匹配刚好是1的时候，则可以得到这两个分布是等价的。</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h4 id="Ford-Fulkerson方法"><a href="#Ford-Fulkerson方法" class="headerlink" title="Ford-Fulkerson方法"></a>Ford-Fulkerson方法</h4><p>称为Ford-Fulkerson方法而不是算法的原因是，其包含了若干个不同时间复杂度的实现算法。Ford-Fulkerson方法使用的是贪心算法，主要依赖于三个概念：</p>
+<ol>
+<li>剩余图/剩余网络：$G_f$<ol>
+<li>之前提到在尽量向前推流得到一个规划策略之后，我们需要向后推流来进行一些调整，来得到最优的情况。剩余图的作用便是记录下已被使用的流以及剩余的流这些重要的信息，以帮助之后调整策略。</li>
+<li>剩余图上的$\textbf{剩余边}$分两种：1. 当边的容量与流量的差大于零，则添加一条边到 $G_f$，且这条边上的容量，称为$\textbf{剩余容量}$，为其差值，即 $c_{f}=c(u,v)-f(u,v)&gt;0$。2. 当有流经过这条边，则添加$\textbf{剩余容量}$为原边上流量，方向相反的一条边到 $G_f$ ，即 $c_f(v,u)=f(u,v)$。<br>注意：流网络中不允许有方向平行边，但剩余图可以。</li>
+</ol>
+</li>
+<li>增广路径：在剩余图上推流，能得到一些使用剩余的容量找到的新路径，可以把他们添加到原本的流中来增加流量(这需要证明)。方法使用定义了一个增广(argument)操作来更新流。<br>令 $f$ 是原图上的流，$f_r$ 是剩余图上的流。则增广操作更新新的流 $f’$：<script type="math/tex; mode=display">
+f'(u,v) = 
+\begin{cases}
+f(u,v)+f_r(u,v)-f_r(v,u), & \text{if $(u,v)\in E$},\\
+0, & otherwise.
+\end{cases}</script>剩余图中的任意一条源点到汇点的路径都被认为是一条$\textbf{增广路径}$。</li>
+<li>割</li>
+</ol>
+<p>通过增广操作，不断更新流，增加流量，当无法再增加时，便获得了一个最大流。</p>
+<p>对于增广操作必定不会减少流量这个现象，笔者有一个自己的理解。直观来说，一个增广路径是从源点到达汇点的一条路径，而当路径被更新到原网络中时，根据定义，剩余图中从源点出发的有向边变成到达源点的有向边，对汇点则相反，变为从汇点出发的有向边。若要从剩余图中继续寻找一条增广路径，则必定不会再通过这些边，所以他们不会再被翻转回原方向。最终从源点出发的边上的容量会越来越小，到达汇点的边也是如此。（这里没考虑经过源点和汇点的回路的情况）</p>
+<p>而更形式化的证明是通过更新 $f’(u,v)=f(u,v)+f_r(u,v)-f_r(v,u)$ 来推导出 $|f’|=|f|+|f_r|$。即每次发现的新增广路径，会有向后推流撤销原本的选择的行为，但是新的向前推出的流，会保证总流量的增加。</p>
+<h4 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h4><h5 id="基础Ford-Fulkerson算法"><a href="#基础Ford-Fulkerson算法" class="headerlink" title="基础Ford-Fulkerson算法"></a>基础Ford-Fulkerson算法</h5><p>基础算法就是不断从剩余图中寻找增广路径，更新原图和剩余图，直到没有新的路径为止。</p>
+<p>待续…</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/25/QCQI-Lesson-Day9/" class="archive-article-date">
-  	<time datetime="2018-08-25T09:51:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/25/QCQI-Lesson-Day9/">QCQI Lesson Day9</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">maxflow</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2019/08/15/temp_maxflow/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/20/QCQI-Lesson-Day8/" class="archive-article-date">
-  	<time datetime="2018-08-20T06:33:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/28/shadowsocks-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ShadowsocksR 原理及源码学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/20/QCQI-Lesson-Day8/">QCQI Lesson Day8</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/QCQI-Lesson-DAY6/" class="archive-article-date">
-  	<time datetime="2018-08-10T01:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/QCQI-Lesson-DAY6/">QCQI Lesson DAY 6</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/05/QCQI-Lesson-Day3-4/" class="archive-article-date">
-  	<time datetime="2018-08-04T18:06:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/05/QCQI-Lesson-Day3-4/">QCQI Lesson DAY3,4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/22/QCQI-Lesson-DAY7/" class="archive-article-date">
-  	<time datetime="2018-07-22T05:38:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/22/QCQI-Lesson-DAY7/">QCQI Lesson DAY7</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/QCQI-Lesson-DAY5/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:03:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/QCQI-Lesson-DAY5/">QCQI Lesson DAY5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/QCQI-Lesson-DAY2/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:00:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/QCQI-Lesson-DAY2/">QCQI Lesson DAY2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/QCQI-Lesson-DAY1/" class="archive-article-date">
-  	<time datetime="2018-07-17T03:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/QCQI-Lesson-DAY1/">QCQI Lesson DAY1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/01/First-Post/" class="archive-article-date">
-  	<time datetime="2018-07-01T14:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/01/First-Post/">在macOS上编写java调用Matlab的函数时的一个报错</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -515,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

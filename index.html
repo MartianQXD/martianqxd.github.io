@@ -151,9 +151,24 @@
     <article id="post-temp_maxflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/15/temp_maxflow/">网络流-最大流问题算法整理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/15/temp_maxflow/" class="archive-article-date">
+  	<time datetime="2019-08-14T18:24:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-15</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="网络流-最大流问题算法整理"><a href="#网络流-最大流问题算法整理" class="headerlink" title="网络流-最大流问题算法整理"></a>网络流-最大流问题算法整理</h1><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><hr>
+        <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><hr>
 <h5 id="有向图-Directed-Graph-Digraph"><a href="#有向图-Directed-Graph-Digraph" class="headerlink" title="有向图(Directed Graph/Digraph)"></a>有向图(Directed Graph/Digraph)</h5><p>有向图可以表示为一个两元组$G=(V,E)$, 其中$V$是图中所有结点(Vertex)的集合，$E$是图中所有边(Edge)的集合，即对一组结点 $u,v\in V$ 有 $(u,v)\in E$。</p>
 <h5 id="容量-Capacity"><a href="#容量-Capacity" class="headerlink" title="容量(Capacity)"></a>容量(Capacity)</h5><p>容量是网络流图图中边的权重(Weight)值。可以用 function $c$ 来表示边到其容量的映射，即<br>$c(e)\ =\ \text{capacity of } e$ where $e\in E$。</p>
 <h5 id="网络-Network"><a href="#网络-Network" class="headerlink" title="网络(Network)"></a>网络(Network)</h5><p>网络是一个有向图$G=(V,E)$，其中的每条边的容量都是非负的，即$\forall (u,v)\in E, c(u,v)\ge 0$。不失一般性，当$(u,v)\not\in E$时，可以将$(u,v)$加入$E$并令其容量为0，$c(u,v)=0$。</p>
@@ -167,11 +182,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">maxflow</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/04/temp_maxflow/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/15/temp_maxflow/">展开全文 >></a>
         </p>
       
 
@@ -1116,6 +1142,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Spring Boot, VS Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">maxflow</a>
               </li>
             
             <div class="clearfix"></div>
