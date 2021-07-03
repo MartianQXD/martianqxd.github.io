@@ -148,6 +148,212 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-springboot-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/09/springboot-2/">Springboot+Vue项目开发教程学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/09/springboot-2/" class="archive-article-date">
+  	<time datetime="2021-06-09T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="教程链接"><a href="#教程链接" class="headerlink" title="教程链接"></a>教程链接</h3><p><a href="https://www.bilibili.com/video/BV1q5411s7wH" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1q5411s7wH</a></p>
+<h3 id="MacOSX下MySQL安装、创建DB"><a href="#MacOSX下MySQL安装、创建DB" class="headerlink" title="MacOSX下MySQL安装、创建DB"></a>MacOSX下MySQL安装、创建DB</h3><p>MySQL官网下载MySQL Community Server，并安装。系统偏好设置中启动MySQL Server。</p>
+<ol>
+<li>show databses 查看当前服务器上所有数据库。</li>
+<li>按照教程展示的信息添加数据库： create database &lt;数据库名&gt;。</li>
+<li>选择数据库：use &lt;数据库名&gt;。</li>
+<li>按照教程展示的信息添加表：create table &lt;表名&gt; (&lt;信息&gt;[,&lt;信息&gt;])。</li>
+<li>重复第4步至完成。</li>
+</ol>
+<h3 id="后端配置：MacOSX下构建Spring-Boot项目"><a href="#后端配置：MacOSX下构建Spring-Boot项目" class="headerlink" title="后端配置：MacOSX下构建Spring Boot项目"></a>后端配置：MacOSX下构建Spring Boot项目</h3><p>按照上一篇的步骤完成创建之后，发生报错“Java 11 or more recent is required to run. Please download and install a recent JDK”。这是因为VSCode for Java需要Eclipse的Eclipse JDT.LS server，而Eclipse决定将Java 11作为其2020年9月发布版本的最低需求，目前本机使用的是Java 8，因此需要更高版本的Java。具体参见以下链接：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/63043585/visual-studio-code-showing-java-11-or-more-recent-is-required-to-run-please-do" target="_blank" rel="noopener">https://stackoverflow.com/questions/63043585/visual-studio-code-showing-java-11-or-more-recent-is-required-to-run-please-do</a></li>
+<li><a href="https://devblogs.microsoft.com/java/java-on-visual-studio-code-update-june-2020/" target="_blank" rel="noopener">https://devblogs.microsoft.com/java/java-on-visual-studio-code-update-june-2020/</a></li>
+</ul>
+<p>根据链接中的指引完成更新，并且根据其中方法仍使用Java 8运行项目。（注意请修改User Settings的json而不是Workspace Setting的json，否则调试时报错，见<a href="https://github.com/microsoft/vscode-maven/issues/539）" target="_blank" rel="noopener">https://github.com/microsoft/vscode-maven/issues/539）</a></p>
+<p>在Configure Java Runtime中，选择Java Tooling Runtim选项卡，将JDK for Language Server的路径改为Java 11+版本的路径，然后Reload Window。若新安装版本路径未出现，多Reload Window几次。</p>
+<h4 id="测试：创建项目"><a href="#测试：创建项目" class="headerlink" title="测试：创建项目"></a>测试：创建项目</h4><hr>
+<p>创建controller完成后，启动run&amp;debug(shift+command+D)，配置launch.json，启动调试。默认地址是localhost:8080，访问该地址查看结果。</p>
+<h4 id="添加更多依赖"><a href="#添加更多依赖" class="headerlink" title="添加更多依赖"></a>添加更多依赖</h4><hr>
+<p>参考官网 <a href="https://code.visualstudio.com/docs/java/java-spring-boot" target="_blank" rel="noopener">https://code.visualstudio.com/docs/java/java-spring-boot</a><br>在pom.xml文件中，右键-&gt;Add Starters…-&gt;搜索/编辑依赖-&gt;更新。</p>
+<p>根据视频第三节介绍，添加JDBC API、MyBatis Framework、MySQL Driver。此时，启动调试失败，报错信息为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">***************************</span><br><span class="line">APPLICATION FAILED TO START</span><br><span class="line">***************************</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line"></span><br><span class="line">Failed to configure a DataSource: &apos;url&apos; attribute is not specified and no embedded datasource could be configured.</span><br><span class="line"></span><br><span class="line">Reason: Failed to determine a suitable driver class</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Action:</span><br><span class="line"></span><br><span class="line">Consider the following:</span><br><span class="line">        If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.</span><br><span class="line">        If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).</span><br></pre></td></tr></table></figure></p>
+<p>这是因为配置了Mybatis之后，其需要一个数据源。为其配置一个application.yml解决问题。(xml、yml…再发展发展是不是会有zml、aml、bml…)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#MySQL</span><br><span class="line">spring:</span><br><span class="line">    datasource:</span><br><span class="line">        #MySQL配置</span><br><span class="line">        driverClassName: com.mysql.cj.jdbc.Driver</span><br><span class="line">        url: jdbc:mysql://localhost:3306/easyproject?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC</span><br><span class="line">        username: root</span><br><span class="line">        password: root</span><br><span class="line"></span><br><span class="line">mybatis:</span><br><span class="line">    #配置SQL映射文件路径</span><br><span class="line">    mapper-locations: classpath:mapper/*.xml</span><br><span class="line">    #配置别名</span><br><span class="line">    type-aliases-package: com.example.demo.model</span><br><span class="line">    #驼峰命名</span><br><span class="line">    configuration:</span><br><span class="line">        map-underscore-to-camel-case: true</span><br><span class="line"></span><br><span class="line">server:</span><br><span class="line">    #端口号</span><br><span class="line">    port: 9306</span><br></pre></td></tr></table></figure></p>
+<p>配置完成后可以运行/调试。</p>
+<h4 id="测试：后台配置"><a href="#测试：后台配置" class="headerlink" title="测试：后台配置"></a>测试：后台配置</h4><hr>
+<p>增加新的LoginController作为测试。使用@RestController注解。（之前已创建了HomeController测试，这里不添加了。）</p>
+<p>@RestController注解 = @ResponseBody ＋ @Controller。@ResponseBody的作用是将java对象转换为json格式的数据。故@RestController返回的是一个字符串，这样前段直接解析json渲染页面，不用管后端的对象，有利于前后端各做各的。</p>
+<p>PS：顺便添加了Spring Security、Thymeleaf。被挡在localhost:9306/login了。</p>
+<h4 id="跨域处理"><a href="#跨域处理" class="headerlink" title="跨域处理"></a>跨域处理</h4><hr>
+<p>原因：项目采用前后端分离架构，前后端（Vue与SpringBoot）部署在两个不同的Tomcat上，端口不同。</p>
+<p>使用方法：后端跨域</p>
+<ol>
+<li>使用注解@CrossOrigin。但是其只适用于一些方法如get、post，有一些方法如put，需要额外且繁琐的配置。</li>
+<li>使用配置类。在util下创建WebConfig.java。</li>
+</ol>
+<p>这里详细说第二种方法。</p>
+<p>注意WebMvcConfigurerAdapter方法已经被淘汰了，没有后续更新，extends WebMvcConfigurerAdapter可改为implements WebMvcConfigurer。</p>
+<p>WebMvcConfigurerAdapter是Spring内部的一种配置方式，采用JavaBean代替xml文件，对框架进行个性化定制。常用于解决跨域问题、添加拦截器、配置视图解析器等。（另，因为使用了@RestController注解，视图解析器InternalResourceViewResolver实际也不起作用。）</p>
+<ul>
+<li>添加跨域：addCrosMappings</li>
+<li>添加拦截器：addInterceptors</li>
+<li>添加视图跳转控制器：addViewControllers</li>
+<li>添加静态资源处理器：addResourceHandlers</li>
+<li>配置视图解析器：configureViewResolver</li>
+<li>配置内容裁决：configureContentNegotiation</li>
+<li>配置默认静态资源处理器：configureDefultServletHandling</li>
+</ul>
+<p>从名称上看，WebMvcConfigurerAdapter是WebMvcConfigurer的适配器，其实也是实现了WebMvcConfigurer类。</p>
+<p>加入@Configuration注解，表示类为全局配置，可替换xml配置文件。加入解决跨域问题的方法addCorsMappings，进行配置。</p>
+<h3 id="前端配置：MacOSX下构建Vue项目"><a href="#前端配置：MacOSX下构建Vue项目" class="headerlink" title="前端配置：MacOSX下构建Vue项目"></a>前端配置：MacOSX下构建Vue项目</h3><p>开发环境选择VS Code，安装需要的Vue插件（可参考 <a href="https://segmentfault.com/a/1190000022861278" target="_blank" rel="noopener">https://segmentfault.com/a/1190000022861278</a> ）。直接搜索安装。</p>
+<p>根据Vue官网的guide，安装Vue.js。<a href="https://v3.cn.vuejs.org/guide/introduction.html" target="_blank" rel="noopener">https://v3.cn.vuejs.org/guide/introduction.html</a><br>此处选择通过npm安装。（因此需要事先安装node.js）</p>
+<h4 id="测试：创建项目-1"><a href="#测试：创建项目-1" class="headerlink" title="测试：创建项目"></a>测试：创建项目</h4><p>在VS Code中创建新的窗口、文件夹、保存为新的工作区。这样可以禁用无关的插件。（笔者有使用C、Python等）在其中进行测试。</p>
+<ol>
+<li>创建page.html文件，输入guide中的html代码。</li>
+<li>创建page.js文件，输入guide中的js代码。</li>
+<li>head标签中添加script标签src路径为Vue的CDN。</li>
+<li>body标签，且需要尽量在&lt;/body&gt;前，添加script标签src路径为创建的js文件。这是因为渲染顺序的问题，可能会导致mount找不到对象，则在生成页面后，查看Console（笔者使用Chrome浏览器），会发现“Failed to mount app: mount target selector returned null”警告。</li>
+<li>创建page.css文件，继续后续代码测试。head标签中添加link标签href路径为css文件。</li>
+</ol>
+<p>根据Vue教程，熟悉Vue。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring Boot, Vue, VS Code</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/09/springboot-2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-HandsOnMLTF-1-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/08/HandsOnMLTF-1-md/">机器学习+深度学习+TensorFlow NOTE1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/08/HandsOnMLTF-1-md/" class="archive-article-date">
+  	<time datetime="2021-06-08T07:13:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍"></a>参考书籍</h3><p>Hands-on Machine Learning with Scikit-Learn and TensorFlow</p>
+<h3 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h3><ul>
+<li>20世纪90年代为止深度学习的想法被大多数研究员放弃</li>
+<li>2006年，Geoffrey Hinton等论文，提出了“Deep Learning”的概念，使其重新变得热门</li>
+<li>2016年，Google，基于深度学习开发的AlphaGo</li>
+</ul>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><p>处理大量的数据 -&gt; 分类、预测、推荐…</p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>“机器学习的目标是给你实际 $\underline{实现能够从数据中学习的程序}$ 所需的概念，直觉和工具。”</p>
+<h3 id="现成的Python框架"><a href="#现成的Python框架" class="headerlink" title="现成的Python框架"></a>现成的Python框架</h3><ul>
+<li>Scikit-learn -&gt; 将在机器学习部分使用</li>
+<li>TensorFlow -&gt; 将在深度学习部分使用</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/08/HandsOnMLTF-1-md/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-temp_maxflow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -301,19 +507,19 @@
 
 
   
-    <article id="post-springboot1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-springboot-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/06/springboot1/">Mac OS X下VS Code配置开发环境+搭建Spring Boot项目</a>
+      <a class="article-title" href="/2019/05/06/springboot-1/">Mac OS X下VS Code配置开发环境+搭建Spring Boot项目</a>
     </h1>
   
 
         
-        <a href="/2019/05/06/springboot1/" class="archive-article-date">
+        <a href="/2019/05/06/springboot-1/" class="archive-article-date">
   	<time datetime="2019-05-06T09:05:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
 </a>
         
@@ -348,7 +554,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/06/springboot1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/06/springboot-1/">展开全文 >></a>
         </p>
       
 
@@ -820,174 +1026,6 @@ U
 
 
   
-    <article id="post-QCQI-Lesson-DAY5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY5/">QCQI Lesson DAY5</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY5/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:03:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Chapter-2-4-Exercise"><a href="#Chapter-2-4-Exercise" class="headerlink" title="Chapter 2, 4 Exercise"></a>Chapter 2, 4 Exercise</h3><h4 id="2-73"><a href="#2-73" class="headerlink" title="2.73"></a>2.73</h4><p>预备条件：</p>
-<p>对于$\rho = \sum\limits_{i=1}^n\lambda_i|\phi_i\rangle\langle\phi_i|$,其中$\{|\phi_i\rangle\}$是一组单位正交基$\Rightarrow$线性无关。(注意：线性无关$\not\Rightarrow$正交)</p>
-<p>$\mbox{Recall that}$</p>
-<script type="math/tex; mode=display">\begin{equation}
-\begin{split}
-  &span\{|\widetilde{k}\rangle:k=1,...,k\}\\
-= &span\{|\widetilde{\psi_i}\rangle:i=1,...,n\}\\
-= &span\{|\widetilde{\phi_j}\rangle:j=1,...,n\}
-\end{split}
-\end{equation}</script><script type="math/tex; mode=display">\sum\limits_i |\widetilde{\psi_i}\rangle\langle\widetilde{\psi_i}|=\sum\limits_j |\widetilde{\phi_j}\rangle\langle\widetilde{\phi_j}|=\sum\limits_i |\widetilde{k}\rangle\langle\widetilde{k}|</script><p>其中，$span\{|\widetilde{k}\rangle\}$是最小的。若再在其中增加$|\psi\rangle$，则$|\psi\rangle$是$\{|\widetilde{k}\rangle\}$的线性组合。(增加了冗余)</p>
-<p>理解问题：</p>
-<p>1) $\forall |\psi\rangle\in supp(\rho),\\ \exists\mbox{minimal essemble}~\{p_i,\ |\psi_i\rangle\},\ |\psi\rangle\in\{|\psi_i\rangle\}\\<br>\mbox{s.t.}$</p>
-<p>2) $\forall\mbox{such a minimal essemble }p(\psi)=\langle\psi|\rho^{-1}|\psi\rangle^{-1}$</p>
-<p>思路：使用定理2.6的两个方向证明<br>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">quantum computation, quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-QCQI-Lesson-DAY2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/QCQI-Lesson-DAY2/">QCQI Lesson DAY2</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/QCQI-Lesson-DAY2/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:00:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Chapter-2-Exercise"><a href="#Chapter-2-Exercise" class="headerlink" title="Chapter 2 Exercise"></a>Chapter 2 Exercise</h3><h4 id="2-39"><a href="#2-39" class="headerlink" title="2.39"></a>2.39</h4><p>1) 证明三个性质，即第2.1.4节中的：</p>
-<blockquote>
-<p>(1) Linear in the second argument.</p>
-<p>(2) $(|v \rangle,|w\rangle )=(|w\rangle,|v\rangle)^*$.</p>
-<p>(3) $(|v\rangle,|v\rangle)\ge 0$ with equality if and only if $|v\rangle =0$.</p>
-</blockquote>
-<p>分别证明，</p>
-<p>对于 (1) ，根据式（2.63）和（2.64）</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">quantum computation，quantum information</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/QCQI-Lesson-DAY2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1002,7 +1040,7 @@ U
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 MartianQXD
+    		&copy; 2021 MartianQXD
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1106,19 +1144,23 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">quantum computation，quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
+                <a href="javascript:void(0)" class="js-tag color1">quantum computation, quantum information</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Spring Boot, VS Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Spring Boot, Vue, VS Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">
